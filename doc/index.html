@@ -6,15 +6,15 @@
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   <body>
     <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" id="menuButton" onclick="toggleMenu()"><i class="iconoir-menu-scale"></i></a>
+        <a class="navbar-item" id="menuButton" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
         <p class="navbar-item"><img width="68" src="images/nwhite.png"/></p>
         <a class="navbar-item" href=".">SR Linux Protobuf Doc</a>
         <a class="navbar-item" href="https://learn.srlinux.dev/ndk/intro/">NDK</a>
@@ -30,12 +30,9 @@
           <a class="delete is-small" onclick="toggleMenu()"></a>
         </div>
       </div>
-      <p class="control has-icons-left mb-4">
-        <span class="icon is-left">
-          <i class="iconoir-search"></i>
-        </span>
+      <div class="control mb-4">
         <input class="input" type="text" placeholder="Search" id="search" onkeyup="searchSideMenu()">
-      </p>
+      </div>
       <div class="menu-container">
         <ul class="menu-list">
           <li>
