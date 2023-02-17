@@ -1,0 +1,95 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+#title {
+  margin-top: 40px;
+}
+
+.menu {
+  left: 0;
+  top: 52px;
+  z-index: 5;
+  float: left;
+  position: fixed;
+  width: fit-content;
+}
+
+.menu-container {
+  height: 100vh;
+  overflow: auto;
+  font-size: 14px;
+}
+
+.menu-list {
+  height: 85%;
+  overflow: auto;
+}
+
+.menu-item {
+  scroll-margin-top: 70px;
+}
+
+
+/* specific */
+.divider {
+  padding-bottom: 0.5ex;
+  border-bottom: 1px solid #aaa;
+}
+
+.menu .list-item, .menu-item {
+  color: #124191;
+}
+td a {
+  color: #124191;
+  font-weight: 800;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: fit-content;
+}
+.message {
+  color: black;
+  background-color: #D9E8AC;
+}
+.enum {
+  color: white;
+  background-color: #4D5766;
+}
+.extension {
+  color: black;
+  background-color: #BEC8D2;
+}
+.service {
+  color: white;
+  background-color: #124191;
+}
+
+.file-heading {
+  width: 100%;
+  display: table;
+  margin: 4em 0 1.5em 0;
+  border-bottom: 1px solid #aaa;
+}
+.file-heading .title {
+  border: none;
+  display: table-cell;
+}
+.file-heading a {
+  text-align: right;
+  display: table-cell;
+}
+
+.table {
+  font-size: 14px;
+}
+.table thead {
+  font-weight: 700;
+  background-color: #dcdcdc;
+}

@@ -1,0 +1,71 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+#title {
+  margin-top: 50px;
+}
+
+.menu {
+  left: 0;
+  top: 52px;
+  z-index: 5;
+  float: left;
+  position: fixed;
+  width: fit-content;
+}
+
+.menu-container {
+  height: 100vh;
+  overflow: auto;
+  font-size: 14px;
+}
+
+.menu-list {
+  height: 85%;
+  overflow: auto;
+}
+
+.service-item {
+  scroll-margin-top: 70px;
+}
+
+
+/* specific */
+.badge {
+  width: 30px;
+}
+
+.file-heading {
+  margin: 3em 0 2em 0;
+}
+.file-heading .title {
+  border: none;
+  display: table-cell;
+}
+.file-heading a {
+  text-align: right;
+  display: table-cell;
+}
+
+.divider {
+  padding-bottom: 0.5ex;
+  border-bottom: 1px solid #aaa;
+}
+
+.menu .list-item, .menu-item {
+  color: #124191;
+}
+
+.table {
+  font-size: 14px;
+}
+.table thead {
+  font-weight: 700;
+  background-color: #dcdcdc;
+}
+td a {
+  color: #124191;
+}
