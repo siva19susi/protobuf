@@ -18,14 +18,40 @@
   margin-top: 50px;
 }
 
-.menu {
-  left: 0;
-  top: 52px;
-  z-index: 5;
-  float: left;
-  position: fixed;
-  width: fit-content;
+@media screen and (min-width: 1024px) {
+  .menu {
+    top: 52px;
+    bottom: 0;
+    position: sticky;
+    display: inline-block;
+    vertical-align: top;
+    max-height: 100vh;
+  }
+  .detail {
+    display: inline-flex;
+  }
 }
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    left: 0;
+    top: 52px;
+    z-index: 5;
+    float: left;
+    position: fixed;
+    width: fit-content;
+  }
+}
+
+.menu-container {
+  height: 100vh;
+  overflow: auto;
+}
+
+.menu-list {
+  height: 85%;
+  overflow: auto;
+}​
 
 #search {
   font-size: 14px;
@@ -36,24 +62,12 @@
   font-size: 13px;
 }
 
-.menu-container {
-  height: 100vh;
-  overflow: auto;
-  scrollbar-width: thin;
-}
-
-.menu-list {
-  height: 85%;
-  overflow: auto;
-}
-
 .service, .service-item {
   scroll-margin-top: 70px;
 }
 
 .badge {
   width: 30px;
-  white-space: nowrap;
 }
 
 .table {

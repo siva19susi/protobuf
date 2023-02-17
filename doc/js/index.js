@@ -2,19 +2,17 @@
 function toggleMenu() {
   const menu = document.getElementById("sideMenu");
   const mcn = menu.className;
-  const hcn = "is-hidden";
+  const hcn = "is-hidden-touch";
   const fadeIn = "animate__fadeInLeft";
   const fadeOut = "animate__fadeOutLeft";
-  function hide() {
-    
-  }
   if(mcn.includes(fadeIn)) {
+    menu.classList.remove(hcn);
     menu.classList.remove(fadeIn);
     menu.classList.add(fadeOut);
-  } else if(mcn.includes(fadeOut)) {
+  } 
+  else if(mcn.includes(fadeOut)) {
     menu.classList.remove(fadeOut)
     menu.classList.add(fadeIn);
-    menu.classList.remove(hcn);
   }
 }
 
