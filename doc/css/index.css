@@ -39,6 +39,7 @@
 .menu-container {
   height: 100vh;
   overflow: auto;
+  scrollbar-width: thin;
 }
 
 .menu-list {
