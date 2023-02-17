@@ -6,6 +6,7 @@
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -21,20 +22,33 @@
       </div>
     </nav>
     <aside class="menu box animate__animated animate__fadeInLeft" id="sideMenu">
-      <p class="menu-label">Table of Contents</p>
+      <div class="level is-mobile">
+        <div class="level-left">
+          <p class="menu-label">Table of Contents</p>
+        </div>
+        <div class="level-right">
+          <a class="delete is-small" onclick="toggleMenu()"></a>
+        </div>
+      </div>
+      <p class="control has-icons-left mb-4">
+        <span class="icon is-left">
+          <i class="iconoir-search"></i>
+        </span>
+        <input class="input" type="text" placeholder="Search" id="search" onkeyup="searchSideMenu()">
+      </p>
       <div class="menu-container">
         <ul class="menu-list">
           {{ range .Files -}}
           {{ $file_name := .Name -}}
           <li>
-            <a href="#{{ .Name }}" class="service has-text-weight-bold">{{ .Name }}</a>
+            <a href="#{{ .Name }}" class="service has-text-weight-bold is-size-6">{{ .Name }}</a>
             <ul>
               {{ range .Messages -}}
               <li>
                 <a class="list-item" href="#{{ .FullName }}">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">{{ .LongName }}</div>
                     </div>
                   </div>
@@ -89,21 +103,23 @@
         <div class="hero-body">
           <div class="container">
             {{ $file_name := .Name -}}
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="{{.Name}}" href="#{{ .Name }}">{{ .Name }}</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="{{.Name}}" href="#{{ .Name }}">{{ .Name }}</a></p>
               {{ if .Description -}}
               <p class="subtitle is-6">{{ .Description }}</p>
               {{ end -}}
             </div>
-            
+            <hr/>
 
             {{ range .Messages -}}
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="{{ .FullName }}" href="#{{ .FullName }}">{{ .LongName }}</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="{{ .FullName }}" href="#{{ .FullName }}">{{ .LongName }}</a>
+            </p>
             <p class="subtitle is-6">{{ .Description }}</p>
             {{ if .HasFields -}}
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -131,7 +147,7 @@
             <h4>Validated Fields</h4>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Validations</td>
@@ -157,7 +173,7 @@
             <h4>Fields with {{ . }} option</h4>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Name</td>
                     <td>Option</td>
@@ -181,7 +197,7 @@
             <br>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Extension</td>
                     <td>Type</td>
@@ -207,11 +223,13 @@
             {{ end -}}
 
             {{ range .Enums -}}
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="{{ .FullName }}" href="#{{ .FullName }}">{{ .LongName }}</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="{{ .FullName }}" href="#{{ .FullName }}">{{ .LongName }}</a>
+            </p>
             <p class="subtitle is-6">{{ .Description }}</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -228,10 +246,12 @@
             {{ end -}}
 
             {{ if .HasExtensions -}}
-            <p class="is-size-5 mb-4"><a class="service-item" id="{{ $file_name }}-extensions" href="#{{ $file_name }}-extensions">File-level Extensions</a></p>
+            <p class="is-size-5 mb-4">
+              <a class="service-item" id="{{ $file_name }}-extensions" href="#{{ $file_name }}-extensions">File-level Extensions</a>
+            </p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Extension</td>
                     <td>Type</td>
@@ -256,11 +276,13 @@
             {{ end -}}
 
             {{ range .Services -}}
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="{{ .FullName }}" href="#{{ .FullName }}">{{ .LongName }}</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="{{ .FullName }}" href="#{{ .FullName }}">{{ .LongName }}</a>
+            </p>
             <p class="subtitle is-6">{{ .Description }}</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -282,7 +304,7 @@
             <h4>Methods with HTTP bindings</h4>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Method Name</td>
                     <td>Method</td>
@@ -309,7 +331,7 @@
             <h4>Methods with {{ . }} option</h4>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Method Name</td>
                     <td>Option</td>
@@ -335,10 +357,12 @@
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <p class="is-size-5 mb-4"><a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a></p>
+            <p class="title is-6 has-text-weight-normal mb-4">
+              <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
+            </p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>.proto Type</td>
                     <td>Notes</td>

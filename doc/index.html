@@ -6,6 +6,7 @@
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -21,17 +22,30 @@
       </div>
     </nav>
     <aside class="menu box animate__animated animate__fadeInLeft" id="sideMenu">
-      <p class="menu-label">Table of Contents</p>
+      <div class="level is-mobile">
+        <div class="level-left">
+          <p class="menu-label">Table of Contents</p>
+        </div>
+        <div class="level-right">
+          <a class="delete is-small" onclick="toggleMenu()"></a>
+        </div>
+      </div>
+      <p class="control has-icons-left mb-4">
+        <span class="icon is-left">
+          <i class="iconoir-search"></i>
+        </span>
+        <input class="input" type="text" placeholder="Search" id="search" onkeyup="searchSideMenu()">
+      </p>
       <div class="menu-container">
         <ul class="menu-list">
           <li>
-            <a href="#ndk/appid_service.proto" class="service has-text-weight-bold">ndk/appid_service.proto</a>
+            <a href="#ndk/appid_service.proto" class="service has-text-weight-bold is-size-6">ndk/appid_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.AppIdentData">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">AppIdentData</div>
                     </div>
                   </div>
@@ -41,7 +55,7 @@
                 <a class="list-item" href="#srlinux.sdk.AppIdentKey">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">AppIdentKey</div>
                     </div>
                   </div>
@@ -51,7 +65,7 @@
                 <a class="list-item" href="#srlinux.sdk.AppIdentNotification">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">AppIdentNotification</div>
                     </div>
                   </div>
@@ -61,7 +75,7 @@
                 <a class="list-item" href="#srlinux.sdk.AppIdentSubscriptionRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">AppIdentSubscriptionRequest</div>
                     </div>
                   </div>
@@ -70,13 +84,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/bfd_service.proto" class="service has-text-weight-bold">ndk/bfd_service.proto</a>
+            <a href="#ndk/bfd_service.proto" class="service has-text-weight-bold is-size-6">ndk/bfd_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.BfdSessionNotification">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">BfdSessionNotification</div>
                     </div>
                   </div>
@@ -86,7 +100,7 @@
                 <a class="list-item" href="#srlinux.sdk.BfdSessionSubscriptionRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">BfdSessionSubscriptionRequest</div>
                     </div>
                   </div>
@@ -96,7 +110,7 @@
                 <a class="list-item" href="#srlinux.sdk.BfdmgrGeneralSessionDataPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">BfdmgrGeneralSessionDataPb</div>
                     </div>
                   </div>
@@ -106,7 +120,7 @@
                 <a class="list-item" href="#srlinux.sdk.BfdmgrGeneralSessionKeyPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">BfdmgrGeneralSessionKeyPb</div>
                     </div>
                   </div>
@@ -145,13 +159,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/config_service.proto" class="service has-text-weight-bold">ndk/config_service.proto</a>
+            <a href="#ndk/config_service.proto" class="service has-text-weight-bold is-size-6">ndk/config_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.ConfigData">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">ConfigData</div>
                     </div>
                   </div>
@@ -161,7 +175,7 @@
                 <a class="list-item" href="#srlinux.sdk.ConfigKey">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">ConfigKey</div>
                     </div>
                   </div>
@@ -171,7 +185,7 @@
                 <a class="list-item" href="#srlinux.sdk.ConfigNotification">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">ConfigNotification</div>
                     </div>
                   </div>
@@ -181,7 +195,7 @@
                 <a class="list-item" href="#srlinux.sdk.ConfigSubscriptionRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">ConfigSubscriptionRequest</div>
                     </div>
                   </div>
@@ -190,13 +204,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/interface_service.proto" class="service has-text-weight-bold">ndk/interface_service.proto</a>
+            <a href="#ndk/interface_service.proto" class="service has-text-weight-bold is-size-6">ndk/interface_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.InterfaceData">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">InterfaceData</div>
                     </div>
                   </div>
@@ -206,7 +220,7 @@
                 <a class="list-item" href="#srlinux.sdk.InterfaceKey">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">InterfaceKey</div>
                     </div>
                   </div>
@@ -216,7 +230,7 @@
                 <a class="list-item" href="#srlinux.sdk.InterfaceNotification">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">InterfaceNotification</div>
                     </div>
                   </div>
@@ -226,7 +240,7 @@
                 <a class="list-item" href="#srlinux.sdk.InterfaceSubscriptionRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">InterfaceSubscriptionRequest</div>
                     </div>
                   </div>
@@ -235,13 +249,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/lldp_service.proto" class="service has-text-weight-bold">ndk/lldp_service.proto</a>
+            <a href="#ndk/lldp_service.proto" class="service has-text-weight-bold is-size-6">ndk/lldp_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.LldpNeighborDataPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">LldpNeighborDataPb</div>
                     </div>
                   </div>
@@ -251,7 +265,7 @@
                 <a class="list-item" href="#srlinux.sdk.LldpNeighborKeyPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">LldpNeighborKeyPb</div>
                     </div>
                   </div>
@@ -261,7 +275,7 @@
                 <a class="list-item" href="#srlinux.sdk.LldpNeighborNotification">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">LldpNeighborNotification</div>
                     </div>
                   </div>
@@ -271,7 +285,7 @@
                 <a class="list-item" href="#srlinux.sdk.LldpNeighborSubscriptionRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">LldpNeighborSubscriptionRequest</div>
                     </div>
                   </div>
@@ -300,13 +314,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/mpls_service.proto" class="service has-text-weight-bold">ndk/mpls_service.proto</a>
+            <a href="#ndk/mpls_service.proto" class="service has-text-weight-bold is-size-6">ndk/mpls_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.MplsRouteAddRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MplsRouteAddRequest</div>
                     </div>
                   </div>
@@ -316,7 +330,7 @@
                 <a class="list-item" href="#srlinux.sdk.MplsRouteAddResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MplsRouteAddResponse</div>
                     </div>
                   </div>
@@ -326,7 +340,7 @@
                 <a class="list-item" href="#srlinux.sdk.MplsRouteDeleteRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MplsRouteDeleteRequest</div>
                     </div>
                   </div>
@@ -336,7 +350,7 @@
                 <a class="list-item" href="#srlinux.sdk.MplsRouteDeleteResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MplsRouteDeleteResponse</div>
                     </div>
                   </div>
@@ -346,7 +360,7 @@
                 <a class="list-item" href="#srlinux.sdk.MplsRouteInfo">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MplsRouteInfo</div>
                     </div>
                   </div>
@@ -356,7 +370,7 @@
                 <a class="list-item" href="#srlinux.sdk.MplsRouteKeyPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MplsRouteKeyPb</div>
                     </div>
                   </div>
@@ -366,7 +380,7 @@
                 <a class="list-item" href="#srlinux.sdk.MplsRoutePb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MplsRoutePb</div>
                     </div>
                   </div>
@@ -395,13 +409,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/networkinstance_service.proto" class="service has-text-weight-bold">ndk/networkinstance_service.proto</a>
+            <a href="#ndk/networkinstance_service.proto" class="service has-text-weight-bold is-size-6">ndk/networkinstance_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.NetworkInstanceData">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NetworkInstanceData</div>
                     </div>
                   </div>
@@ -411,7 +425,7 @@
                 <a class="list-item" href="#srlinux.sdk.NetworkInstanceKey">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NetworkInstanceKey</div>
                     </div>
                   </div>
@@ -421,7 +435,7 @@
                 <a class="list-item" href="#srlinux.sdk.NetworkInstanceNotification">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NetworkInstanceNotification</div>
                     </div>
                   </div>
@@ -431,7 +445,7 @@
                 <a class="list-item" href="#srlinux.sdk.NetworkInstanceSubscriptionRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NetworkInstanceSubscriptionRequest</div>
                     </div>
                   </div>
@@ -450,13 +464,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/nexthop_group_service.proto" class="service has-text-weight-bold">ndk/nexthop_group_service.proto</a>
+            <a href="#ndk/nexthop_group_service.proto" class="service has-text-weight-bold is-size-6">ndk/nexthop_group_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.MplsNextHop">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MplsNextHop</div>
                     </div>
                   </div>
@@ -466,7 +480,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHop">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHop</div>
                     </div>
                   </div>
@@ -476,7 +490,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHopGroup">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHopGroup</div>
                     </div>
                   </div>
@@ -486,7 +500,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHopGroupDeleteRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHopGroupDeleteRequest</div>
                     </div>
                   </div>
@@ -496,7 +510,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHopGroupDeleteResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHopGroupDeleteResponse</div>
                     </div>
                   </div>
@@ -506,7 +520,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHopGroupInfo">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHopGroupInfo</div>
                     </div>
                   </div>
@@ -516,7 +530,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHopGroupKey">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHopGroupKey</div>
                     </div>
                   </div>
@@ -526,7 +540,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHopGroupNotification">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHopGroupNotification</div>
                     </div>
                   </div>
@@ -536,7 +550,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHopGroupRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHopGroupRequest</div>
                     </div>
                   </div>
@@ -546,7 +560,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHopGroupResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHopGroupResponse</div>
                     </div>
                   </div>
@@ -556,7 +570,7 @@
                 <a class="list-item" href="#srlinux.sdk.NextHopGroupSubscriptionRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NextHopGroupSubscriptionRequest</div>
                     </div>
                   </div>
@@ -595,13 +609,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/route_service.proto" class="service has-text-weight-bold">ndk/route_service.proto</a>
+            <a href="#ndk/route_service.proto" class="service has-text-weight-bold is-size-6">ndk/route_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.IpRouteNotification">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">IpRouteNotification</div>
                     </div>
                   </div>
@@ -611,7 +625,7 @@
                 <a class="list-item" href="#srlinux.sdk.IpRouteSubscriptionRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">IpRouteSubscriptionRequest</div>
                     </div>
                   </div>
@@ -621,7 +635,7 @@
                 <a class="list-item" href="#srlinux.sdk.RouteAddRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">RouteAddRequest</div>
                     </div>
                   </div>
@@ -631,7 +645,7 @@
                 <a class="list-item" href="#srlinux.sdk.RouteAddResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">RouteAddResponse</div>
                     </div>
                   </div>
@@ -641,7 +655,7 @@
                 <a class="list-item" href="#srlinux.sdk.RouteDeleteRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">RouteDeleteRequest</div>
                     </div>
                   </div>
@@ -651,7 +665,7 @@
                 <a class="list-item" href="#srlinux.sdk.RouteDeleteResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">RouteDeleteResponse</div>
                     </div>
                   </div>
@@ -661,7 +675,7 @@
                 <a class="list-item" href="#srlinux.sdk.RouteInfo">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">RouteInfo</div>
                     </div>
                   </div>
@@ -671,7 +685,7 @@
                 <a class="list-item" href="#srlinux.sdk.RouteKeyPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">RouteKeyPb</div>
                     </div>
                   </div>
@@ -681,7 +695,7 @@
                 <a class="list-item" href="#srlinux.sdk.RoutePb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">RoutePb</div>
                     </div>
                   </div>
@@ -700,13 +714,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/sdk_common.proto" class="service has-text-weight-bold">ndk/sdk_common.proto</a>
+            <a href="#ndk/sdk_common.proto" class="service has-text-weight-bold is-size-6">ndk/sdk_common.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.AgentReply">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">AgentReply</div>
                     </div>
                   </div>
@@ -716,7 +730,7 @@
                 <a class="list-item" href="#srlinux.sdk.EvpnEthSegIdPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">EvpnEthSegIdPb</div>
                     </div>
                   </div>
@@ -726,7 +740,7 @@
                 <a class="list-item" href="#srlinux.sdk.GlobalIfId">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">GlobalIfId</div>
                     </div>
                   </div>
@@ -736,7 +750,7 @@
                 <a class="list-item" href="#srlinux.sdk.IpAddrPrefLenPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">IpAddrPrefLenPb</div>
                     </div>
                   </div>
@@ -746,7 +760,7 @@
                 <a class="list-item" href="#srlinux.sdk.IpAddressPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">IpAddressPb</div>
                     </div>
                   </div>
@@ -756,7 +770,7 @@
                 <a class="list-item" href="#srlinux.sdk.IpInterfaceAddrPrefixPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">IpInterfaceAddrPrefixPb</div>
                     </div>
                   </div>
@@ -766,7 +780,7 @@
                 <a class="list-item" href="#srlinux.sdk.MacAddressPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MacAddressPb</div>
                     </div>
                   </div>
@@ -776,7 +790,7 @@
                 <a class="list-item" href="#srlinux.sdk.MplsLabel">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">MplsLabel</div>
                     </div>
                   </div>
@@ -786,7 +800,7 @@
                 <a class="list-item" href="#srlinux.sdk.NetInstanceId">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NetInstanceId</div>
                     </div>
                   </div>
@@ -796,7 +810,7 @@
                 <a class="list-item" href="#srlinux.sdk.PortIdPb">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">PortIdPb</div>
                     </div>
                   </div>
@@ -806,7 +820,7 @@
                 <a class="list-item" href="#srlinux.sdk.SyncRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">SyncRequest</div>
                     </div>
                   </div>
@@ -816,7 +830,7 @@
                 <a class="list-item" href="#srlinux.sdk.SyncResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">SyncResponse</div>
                     </div>
                   </div>
@@ -915,13 +929,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/sdk_service.proto" class="service has-text-weight-bold">ndk/sdk_service.proto</a>
+            <a href="#ndk/sdk_service.proto" class="service has-text-weight-bold is-size-6">ndk/sdk_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.AgentRegistrationRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">AgentRegistrationRequest</div>
                     </div>
                   </div>
@@ -931,7 +945,7 @@
                 <a class="list-item" href="#srlinux.sdk.AgentRegistrationResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">AgentRegistrationResponse</div>
                     </div>
                   </div>
@@ -941,7 +955,7 @@
                 <a class="list-item" href="#srlinux.sdk.AppIdRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">AppIdRequest</div>
                     </div>
                   </div>
@@ -951,7 +965,7 @@
                 <a class="list-item" href="#srlinux.sdk.AppIdResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">AppIdResponse</div>
                     </div>
                   </div>
@@ -961,7 +975,7 @@
                 <a class="list-item" href="#srlinux.sdk.KeepAliveRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">KeepAliveRequest</div>
                     </div>
                   </div>
@@ -971,7 +985,7 @@
                 <a class="list-item" href="#srlinux.sdk.KeepAliveResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">KeepAliveResponse</div>
                     </div>
                   </div>
@@ -981,7 +995,7 @@
                 <a class="list-item" href="#srlinux.sdk.Notification">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">Notification</div>
                     </div>
                   </div>
@@ -991,7 +1005,7 @@
                 <a class="list-item" href="#srlinux.sdk.NotificationQueryRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NotificationQueryRequest</div>
                     </div>
                   </div>
@@ -1001,7 +1015,7 @@
                 <a class="list-item" href="#srlinux.sdk.NotificationQueryResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NotificationQueryResponse</div>
                     </div>
                   </div>
@@ -1011,7 +1025,7 @@
                 <a class="list-item" href="#srlinux.sdk.NotificationQuerySubscription">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NotificationQuerySubscription</div>
                     </div>
                   </div>
@@ -1021,7 +1035,7 @@
                 <a class="list-item" href="#srlinux.sdk.NotificationRegisterRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NotificationRegisterRequest</div>
                     </div>
                   </div>
@@ -1031,7 +1045,7 @@
                 <a class="list-item" href="#srlinux.sdk.NotificationRegisterResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NotificationRegisterResponse</div>
                     </div>
                   </div>
@@ -1041,7 +1055,7 @@
                 <a class="list-item" href="#srlinux.sdk.NotificationStreamRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NotificationStreamRequest</div>
                     </div>
                   </div>
@@ -1051,7 +1065,7 @@
                 <a class="list-item" href="#srlinux.sdk.NotificationStreamResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">NotificationStreamResponse</div>
                     </div>
                   </div>
@@ -1090,13 +1104,13 @@
               </ul>
           </li>
           <li>
-            <a href="#ndk/telemetry_service.proto" class="service has-text-weight-bold">ndk/telemetry_service.proto</a>
+            <a href="#ndk/telemetry_service.proto" class="service has-text-weight-bold is-size-6">ndk/telemetry_service.proto</a>
             <ul>
               <li>
                 <a class="list-item" href="#srlinux.sdk.TelemetryData">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">TelemetryData</div>
                     </div>
                   </div>
@@ -1106,7 +1120,7 @@
                 <a class="list-item" href="#srlinux.sdk.TelemetryDeleteRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">TelemetryDeleteRequest</div>
                     </div>
                   </div>
@@ -1116,7 +1130,7 @@
                 <a class="list-item" href="#srlinux.sdk.TelemetryDeleteResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">TelemetryDeleteResponse</div>
                     </div>
                   </div>
@@ -1126,7 +1140,7 @@
                 <a class="list-item" href="#srlinux.sdk.TelemetryInfo">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">TelemetryInfo</div>
                     </div>
                   </div>
@@ -1136,7 +1150,7 @@
                 <a class="list-item" href="#srlinux.sdk.TelemetryKey">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">TelemetryKey</div>
                     </div>
                   </div>
@@ -1146,7 +1160,7 @@
                 <a class="list-item" href="#srlinux.sdk.TelemetryUpdateRequest">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">TelemetryUpdateRequest</div>
                     </div>
                   </div>
@@ -1156,7 +1170,7 @@
                 <a class="list-item" href="#srlinux.sdk.TelemetryUpdateResponse">
                   <div class="level is-mobile">
                     <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-warning badge">M</span></div>
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
                       <div class="level-item">TelemetryUpdateResponse</div>
                     </div>
                   </div>
@@ -1181,16 +1195,18 @@
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/appid_service.proto" href="#ndk/appid_service.proto">ndk/appid_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/appid_service.proto" href="#ndk/appid_service.proto">ndk/appid_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.AppIdentData" href="#srlinux.sdk.AppIdentData">AppIdentData</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.AppIdentData" href="#srlinux.sdk.AppIdentData">AppIdentData</a>
+            </p>
             <p class="subtitle is-6">Represents appid data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1227,11 +1243,13 @@
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.AppIdentKey" href="#srlinux.sdk.AppIdentKey">AppIdentKey</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.AppIdentKey" href="#srlinux.sdk.AppIdentKey">AppIdentKey</a>
+            </p>
             <p class="subtitle is-6">Represents appid key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1250,11 +1268,13 @@
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.AppIdentNotification" href="#srlinux.sdk.AppIdentNotification">AppIdentNotification</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.AppIdentNotification" href="#srlinux.sdk.AppIdentNotification">AppIdentNotification</a>
+            </p>
             <p class="subtitle is-6">Represents appid notification.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1285,11 +1305,13 @@
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.AppIdentSubscriptionRequest" href="#srlinux.sdk.AppIdentSubscriptionRequest">AppIdentSubscriptionRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.AppIdentSubscriptionRequest" href="#srlinux.sdk.AppIdentSubscriptionRequest">AppIdentSubscriptionRequest</a>
+            </p>
             <p class="subtitle is-6">Represents appid subscription request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1314,16 +1336,18 @@
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/bfd_service.proto" href="#ndk/bfd_service.proto">ndk/bfd_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/bfd_service.proto" href="#ndk/bfd_service.proto">ndk/bfd_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.BfdSessionNotification" href="#srlinux.sdk.BfdSessionNotification">BfdSessionNotification</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.BfdSessionNotification" href="#srlinux.sdk.BfdSessionNotification">BfdSessionNotification</a>
+            </p>
             <p class="subtitle is-6">Represents BFD session notification.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1354,11 +1378,13 @@
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.BfdSessionSubscriptionRequest" href="#srlinux.sdk.BfdSessionSubscriptionRequest">BfdSessionSubscriptionRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.BfdSessionSubscriptionRequest" href="#srlinux.sdk.BfdSessionSubscriptionRequest">BfdSessionSubscriptionRequest</a>
+            </p>
             <p class="subtitle is-6">Represents BFD session subscription request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1377,11 +1403,13 @@
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.BfdmgrGeneralSessionDataPb" href="#srlinux.sdk.BfdmgrGeneralSessionDataPb">BfdmgrGeneralSessionDataPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.BfdmgrGeneralSessionDataPb" href="#srlinux.sdk.BfdmgrGeneralSessionDataPb">BfdmgrGeneralSessionDataPb</a>
+            </p>
             <p class="subtitle is-6">Represents BFD session data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1414,11 +1442,13 @@ Source interface ID </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.BfdmgrGeneralSessionKeyPb" href="#srlinux.sdk.BfdmgrGeneralSessionKeyPb">BfdmgrGeneralSessionKeyPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.BfdmgrGeneralSessionKeyPb" href="#srlinux.sdk.BfdmgrGeneralSessionKeyPb">BfdmgrGeneralSessionKeyPb</a>
+            </p>
             <p class="subtitle is-6">Represents BFD session key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1473,11 +1503,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType" href="#srlinux.sdk.BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType">BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType" href="#srlinux.sdk.BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType">BfdmgrGeneralSessionDataPb.BfdmgrSessionSubType</a>
+            </p>
             <p class="subtitle is-6">Represents BFD session subtype.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -1504,11 +1536,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.BfdmgrSessionStatus" href="#srlinux.sdk.BfdmgrSessionStatus">BfdmgrSessionStatus</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.BfdmgrSessionStatus" href="#srlinux.sdk.BfdmgrSessionStatus">BfdmgrSessionStatus</a>
+            </p>
             <p class="subtitle is-6">Represents BFD session status.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -1540,11 +1574,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.BfdmgrSessionType" href="#srlinux.sdk.BfdmgrSessionType">BfdmgrSessionType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.BfdmgrSessionType" href="#srlinux.sdk.BfdmgrSessionType">BfdmgrSessionType</a>
+            </p>
             <p class="subtitle is-6">Represents BFD session type.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -1572,16 +1608,18 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/config_service.proto" href="#ndk/config_service.proto">ndk/config_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/config_service.proto" href="#ndk/config_service.proto">ndk/config_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.ConfigData" href="#srlinux.sdk.ConfigData">ConfigData</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.ConfigData" href="#srlinux.sdk.ConfigData">ConfigData</a>
+            </p>
             <p class="subtitle is-6">Represents configuration data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1600,11 +1638,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.ConfigKey" href="#srlinux.sdk.ConfigKey">ConfigKey</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.ConfigKey" href="#srlinux.sdk.ConfigKey">ConfigKey</a>
+            </p>
             <p class="subtitle is-6">Represents configuration key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1629,11 +1669,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.ConfigNotification" href="#srlinux.sdk.ConfigNotification">ConfigNotification</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.ConfigNotification" href="#srlinux.sdk.ConfigNotification">ConfigNotification</a>
+            </p>
             <p class="subtitle is-6">Represents configuration notification message to subscribe to configuration events</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1664,11 +1706,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.ConfigSubscriptionRequest" href="#srlinux.sdk.ConfigSubscriptionRequest">ConfigSubscriptionRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.ConfigSubscriptionRequest" href="#srlinux.sdk.ConfigSubscriptionRequest">ConfigSubscriptionRequest</a>
+            </p>
             <p class="subtitle is-6">Represents configuration subscription request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1693,16 +1737,18 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/interface_service.proto" href="#ndk/interface_service.proto">ndk/interface_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/interface_service.proto" href="#ndk/interface_service.proto">ndk/interface_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.InterfaceData" href="#srlinux.sdk.InterfaceData">InterfaceData</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.InterfaceData" href="#srlinux.sdk.InterfaceData">InterfaceData</a>
+            </p>
             <p class="subtitle is-6">Represents interface data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1763,11 +1809,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.InterfaceKey" href="#srlinux.sdk.InterfaceKey">InterfaceKey</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.InterfaceKey" href="#srlinux.sdk.InterfaceKey">InterfaceKey</a>
+            </p>
             <p class="subtitle is-6">Represents interface key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1786,11 +1834,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.InterfaceNotification" href="#srlinux.sdk.InterfaceNotification">InterfaceNotification</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.InterfaceNotification" href="#srlinux.sdk.InterfaceNotification">InterfaceNotification</a>
+            </p>
             <p class="subtitle is-6">Represents interface notification.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1821,11 +1871,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.InterfaceSubscriptionRequest" href="#srlinux.sdk.InterfaceSubscriptionRequest">InterfaceSubscriptionRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.InterfaceSubscriptionRequest" href="#srlinux.sdk.InterfaceSubscriptionRequest">InterfaceSubscriptionRequest</a>
+            </p>
             <p class="subtitle is-6">Represents interface subscription request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1850,16 +1902,18 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/lldp_service.proto" href="#ndk/lldp_service.proto">ndk/lldp_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/lldp_service.proto" href="#ndk/lldp_service.proto">ndk/lldp_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.LldpNeighborDataPb" href="#srlinux.sdk.LldpNeighborDataPb">LldpNeighborDataPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.LldpNeighborDataPb" href="#srlinux.sdk.LldpNeighborDataPb">LldpNeighborDataPb</a>
+            </p>
             <p class="subtitle is-6">Represents LLDP neighbor data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1914,11 +1968,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.LldpNeighborKeyPb" href="#srlinux.sdk.LldpNeighborKeyPb">LldpNeighborKeyPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.LldpNeighborKeyPb" href="#srlinux.sdk.LldpNeighborKeyPb">LldpNeighborKeyPb</a>
+            </p>
             <p class="subtitle is-6">Represents LLDP neighbor key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1949,11 +2005,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.LldpNeighborNotification" href="#srlinux.sdk.LldpNeighborNotification">LldpNeighborNotification</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.LldpNeighborNotification" href="#srlinux.sdk.LldpNeighborNotification">LldpNeighborNotification</a>
+            </p>
             <p class="subtitle is-6">Represents LLDP neighbor notification.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -1984,11 +2042,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.LldpNeighborSubscriptionRequest" href="#srlinux.sdk.LldpNeighborSubscriptionRequest">LldpNeighborSubscriptionRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.LldpNeighborSubscriptionRequest" href="#srlinux.sdk.LldpNeighborSubscriptionRequest">LldpNeighborSubscriptionRequest</a>
+            </p>
             <p class="subtitle is-6">Represents LLDP neighbor subscription request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2007,11 +2067,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.LldpNeighborDataPb.PortSubType" href="#srlinux.sdk.LldpNeighborDataPb.PortSubType">LldpNeighborDataPb.PortSubType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.LldpNeighborDataPb.PortSubType" href="#srlinux.sdk.LldpNeighborDataPb.PortSubType">LldpNeighborDataPb.PortSubType</a>
+            </p>
             <p class="subtitle is-6">Represents port subtype.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -2058,11 +2120,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.LldpNeighborKeyPb.ChassisIdType" href="#srlinux.sdk.LldpNeighborKeyPb.ChassisIdType">LldpNeighborKeyPb.ChassisIdType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.LldpNeighborKeyPb.ChassisIdType" href="#srlinux.sdk.LldpNeighborKeyPb.ChassisIdType">LldpNeighborKeyPb.ChassisIdType</a>
+            </p>
             <p class="subtitle is-6">Represents chassis type.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -2115,16 +2179,18 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/mpls_service.proto" href="#ndk/mpls_service.proto">ndk/mpls_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/mpls_service.proto" href="#ndk/mpls_service.proto">ndk/mpls_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsRouteAddRequest" href="#srlinux.sdk.MplsRouteAddRequest">MplsRouteAddRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsRouteAddRequest" href="#srlinux.sdk.MplsRouteAddRequest">MplsRouteAddRequest</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS route add request, which can include one or more MPLS routes.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2143,11 +2209,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsRouteAddResponse" href="#srlinux.sdk.MplsRouteAddResponse">MplsRouteAddResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsRouteAddResponse" href="#srlinux.sdk.MplsRouteAddResponse">MplsRouteAddResponse</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS route add response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2172,11 +2240,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsRouteDeleteRequest" href="#srlinux.sdk.MplsRouteDeleteRequest">MplsRouteDeleteRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsRouteDeleteRequest" href="#srlinux.sdk.MplsRouteDeleteRequest">MplsRouteDeleteRequest</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS route delete request, which can include one or more MPLS routes.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2195,11 +2265,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsRouteDeleteResponse" href="#srlinux.sdk.MplsRouteDeleteResponse">MplsRouteDeleteResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsRouteDeleteResponse" href="#srlinux.sdk.MplsRouteDeleteResponse">MplsRouteDeleteResponse</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS route delete response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2224,11 +2296,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsRouteInfo" href="#srlinux.sdk.MplsRouteInfo">MplsRouteInfo</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsRouteInfo" href="#srlinux.sdk.MplsRouteInfo">MplsRouteInfo</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS route information; contains key and data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2253,11 +2327,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsRouteKeyPb" href="#srlinux.sdk.MplsRouteKeyPb">MplsRouteKeyPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsRouteKeyPb" href="#srlinux.sdk.MplsRouteKeyPb">MplsRouteKeyPb</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS route key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2282,11 +2358,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsRoutePb" href="#srlinux.sdk.MplsRoutePb">MplsRoutePb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsRoutePb" href="#srlinux.sdk.MplsRoutePb">MplsRoutePb</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS route data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2317,11 +2395,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsRoutePb.Operation" href="#srlinux.sdk.MplsRoutePb.Operation">MplsRoutePb.Operation</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsRoutePb.Operation" href="#srlinux.sdk.MplsRoutePb.Operation">MplsRoutePb.Operation</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS operation.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -2343,11 +2423,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SdkMgrMplsRouteService" href="#srlinux.sdk.SdkMgrMplsRouteService">SdkMgrMplsRouteService</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SdkMgrMplsRouteService" href="#srlinux.sdk.SdkMgrMplsRouteService">SdkMgrMplsRouteService</a>
+            </p>
             <p class="subtitle is-6">Represents service for MPLS programming.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -2381,7 +2463,7 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
             <h4>Methods with deprecated option</h4>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Method Name</td>
                     <td>Option</td>
@@ -2405,16 +2487,18 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/networkinstance_service.proto" href="#ndk/networkinstance_service.proto">ndk/networkinstance_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/networkinstance_service.proto" href="#ndk/networkinstance_service.proto">ndk/networkinstance_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NetworkInstanceData" href="#srlinux.sdk.NetworkInstanceData">NetworkInstanceData</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NetworkInstanceData" href="#srlinux.sdk.NetworkInstanceData">NetworkInstanceData</a>
+            </p>
             <p class="subtitle is-6">Represents network instance data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2463,11 +2547,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NetworkInstanceKey" href="#srlinux.sdk.NetworkInstanceKey">NetworkInstanceKey</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NetworkInstanceKey" href="#srlinux.sdk.NetworkInstanceKey">NetworkInstanceKey</a>
+            </p>
             <p class="subtitle is-6">Represents network instance key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2486,11 +2572,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NetworkInstanceNotification" href="#srlinux.sdk.NetworkInstanceNotification">NetworkInstanceNotification</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NetworkInstanceNotification" href="#srlinux.sdk.NetworkInstanceNotification">NetworkInstanceNotification</a>
+            </p>
             <p class="subtitle is-6">Represents network instance notification.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2521,13 +2609,17 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NetworkInstanceSubscriptionRequest" href="#srlinux.sdk.NetworkInstanceSubscriptionRequest">NetworkInstanceSubscriptionRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NetworkInstanceSubscriptionRequest" href="#srlinux.sdk.NetworkInstanceSubscriptionRequest">NetworkInstanceSubscriptionRequest</a>
+            </p>
             <p class="subtitle is-6">Represents network instance subscription request.</p>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NetworkInstanceData.NetInstType" href="#srlinux.sdk.NetworkInstanceData.NetInstType">NetworkInstanceData.NetInstType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NetworkInstanceData.NetInstType" href="#srlinux.sdk.NetworkInstanceData.NetInstType">NetworkInstanceData.NetInstType</a>
+            </p>
             <p class="subtitle is-6">Represents network instance type.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -2550,16 +2642,18 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/nexthop_group_service.proto" href="#ndk/nexthop_group_service.proto">ndk/nexthop_group_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/nexthop_group_service.proto" href="#ndk/nexthop_group_service.proto">ndk/nexthop_group_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsNextHop" href="#srlinux.sdk.MplsNextHop">MplsNextHop</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsNextHop" href="#srlinux.sdk.MplsNextHop">MplsNextHop</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS next hop.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2584,11 +2678,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHop" href="#srlinux.sdk.NextHop">NextHop</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHop" href="#srlinux.sdk.NextHop">NextHop</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2625,11 +2721,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHopGroup" href="#srlinux.sdk.NextHopGroup">NextHopGroup</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHopGroup" href="#srlinux.sdk.NextHopGroup">NextHopGroup</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop group.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2648,11 +2746,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHopGroupDeleteRequest" href="#srlinux.sdk.NextHopGroupDeleteRequest">NextHopGroupDeleteRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHopGroupDeleteRequest" href="#srlinux.sdk.NextHopGroupDeleteRequest">NextHopGroupDeleteRequest</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop group delete request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2671,11 +2771,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHopGroupDeleteResponse" href="#srlinux.sdk.NextHopGroupDeleteResponse">NextHopGroupDeleteResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHopGroupDeleteResponse" href="#srlinux.sdk.NextHopGroupDeleteResponse">NextHopGroupDeleteResponse</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop group delete response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2700,11 +2802,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHopGroupInfo" href="#srlinux.sdk.NextHopGroupInfo">NextHopGroupInfo</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHopGroupInfo" href="#srlinux.sdk.NextHopGroupInfo">NextHopGroupInfo</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop group information.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2729,11 +2833,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHopGroupKey" href="#srlinux.sdk.NextHopGroupKey">NextHopGroupKey</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHopGroupKey" href="#srlinux.sdk.NextHopGroupKey">NextHopGroupKey</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop group key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2758,11 +2864,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHopGroupNotification" href="#srlinux.sdk.NextHopGroupNotification">NextHopGroupNotification</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHopGroupNotification" href="#srlinux.sdk.NextHopGroupNotification">NextHopGroupNotification</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop group notification.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2793,11 +2901,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHopGroupRequest" href="#srlinux.sdk.NextHopGroupRequest">NextHopGroupRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHopGroupRequest" href="#srlinux.sdk.NextHopGroupRequest">NextHopGroupRequest</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop group request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2816,11 +2926,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHopGroupResponse" href="#srlinux.sdk.NextHopGroupResponse">NextHopGroupResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHopGroupResponse" href="#srlinux.sdk.NextHopGroupResponse">NextHopGroupResponse</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop group response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2845,11 +2957,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHopGroupSubscriptionRequest" href="#srlinux.sdk.NextHopGroupSubscriptionRequest">NextHopGroupSubscriptionRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHopGroupSubscriptionRequest" href="#srlinux.sdk.NextHopGroupSubscriptionRequest">NextHopGroupSubscriptionRequest</a>
+            </p>
             <p class="subtitle is-6">Represents next-hop group subscription request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -2868,11 +2982,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHop.ResolutionType" href="#srlinux.sdk.NextHop.ResolutionType">NextHop.ResolutionType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHop.ResolutionType" href="#srlinux.sdk.NextHop.ResolutionType">NextHop.ResolutionType</a>
+            </p>
             <p class="subtitle is-6">Represents resolution type.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -2894,11 +3010,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NextHop.ResolveToType" href="#srlinux.sdk.NextHop.ResolveToType">NextHop.ResolveToType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NextHop.ResolveToType" href="#srlinux.sdk.NextHop.ResolveToType">NextHop.ResolveToType</a>
+            </p>
             <p class="subtitle is-6">Represents resolve-to type.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -2920,11 +3038,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SdkMgrNextHopGroupService" href="#srlinux.sdk.SdkMgrNextHopGroupService">SdkMgrNextHopGroupService</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SdkMgrNextHopGroupService" href="#srlinux.sdk.SdkMgrNextHopGroupService">SdkMgrNextHopGroupService</a>
+            </p>
             <p class="subtitle is-6">Represents service for next-hop group operations.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -2961,16 +3081,18 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/route_service.proto" href="#ndk/route_service.proto">ndk/route_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/route_service.proto" href="#ndk/route_service.proto">ndk/route_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IpRouteNotification" href="#srlinux.sdk.IpRouteNotification">IpRouteNotification</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IpRouteNotification" href="#srlinux.sdk.IpRouteNotification">IpRouteNotification</a>
+            </p>
             <p class="subtitle is-6">Represents IP route notification.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3001,11 +3123,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IpRouteSubscriptionRequest" href="#srlinux.sdk.IpRouteSubscriptionRequest">IpRouteSubscriptionRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IpRouteSubscriptionRequest" href="#srlinux.sdk.IpRouteSubscriptionRequest">IpRouteSubscriptionRequest</a>
+            </p>
             <p class="subtitle is-6">Represents IP route subscription request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3024,11 +3148,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.RouteAddRequest" href="#srlinux.sdk.RouteAddRequest">RouteAddRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.RouteAddRequest" href="#srlinux.sdk.RouteAddRequest">RouteAddRequest</a>
+            </p>
             <p class="subtitle is-6">Represents route add request; can contain more than one route.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3047,11 +3173,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.RouteAddResponse" href="#srlinux.sdk.RouteAddResponse">RouteAddResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.RouteAddResponse" href="#srlinux.sdk.RouteAddResponse">RouteAddResponse</a>
+            </p>
             <p class="subtitle is-6">Represents route add response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3076,11 +3204,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.RouteDeleteRequest" href="#srlinux.sdk.RouteDeleteRequest">RouteDeleteRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.RouteDeleteRequest" href="#srlinux.sdk.RouteDeleteRequest">RouteDeleteRequest</a>
+            </p>
             <p class="subtitle is-6">Represents route delete request; can contain more than one route.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3099,11 +3229,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.RouteDeleteResponse" href="#srlinux.sdk.RouteDeleteResponse">RouteDeleteResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.RouteDeleteResponse" href="#srlinux.sdk.RouteDeleteResponse">RouteDeleteResponse</a>
+            </p>
             <p class="subtitle is-6">Represents route delete response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3128,11 +3260,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.RouteInfo" href="#srlinux.sdk.RouteInfo">RouteInfo</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.RouteInfo" href="#srlinux.sdk.RouteInfo">RouteInfo</a>
+            </p>
             <p class="subtitle is-6">Represents route information.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3157,11 +3291,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.RouteKeyPb" href="#srlinux.sdk.RouteKeyPb">RouteKeyPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.RouteKeyPb" href="#srlinux.sdk.RouteKeyPb">RouteKeyPb</a>
+            </p>
             <p class="subtitle is-6">Represents route key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3186,11 +3322,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.RoutePb" href="#srlinux.sdk.RoutePb">RoutePb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.RoutePb" href="#srlinux.sdk.RoutePb">RoutePb</a>
+            </p>
             <p class="subtitle is-6">Represents route data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3239,11 +3377,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SdkMgrRouteService" href="#srlinux.sdk.SdkMgrRouteService">SdkMgrRouteService</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SdkMgrRouteService" href="#srlinux.sdk.SdkMgrRouteService">SdkMgrRouteService</a>
+            </p>
             <p class="subtitle is-6">Represents service for IP route operations.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3280,18 +3420,22 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/sdk_common.proto" href="#ndk/sdk_common.proto">ndk/sdk_common.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/sdk_common.proto" href="#ndk/sdk_common.proto">ndk/sdk_common.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.AgentReply" href="#srlinux.sdk.AgentReply">AgentReply</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.AgentReply" href="#srlinux.sdk.AgentReply">AgentReply</a>
+            </p>
             <p class="subtitle is-6">Empty message from agent.</p>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.EvpnEthSegIdPb" href="#srlinux.sdk.EvpnEthSegIdPb">EvpnEthSegIdPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.EvpnEthSegIdPb" href="#srlinux.sdk.EvpnEthSegIdPb">EvpnEthSegIdPb</a>
+            </p>
             <p class="subtitle is-6"></p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3310,11 +3454,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.GlobalIfId" href="#srlinux.sdk.GlobalIfId">GlobalIfId</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.GlobalIfId" href="#srlinux.sdk.GlobalIfId">GlobalIfId</a>
+            </p>
             <p class="subtitle is-6">Represents global interface identifier.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3333,11 +3479,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IpAddrPrefLenPb" href="#srlinux.sdk.IpAddrPrefLenPb">IpAddrPrefLenPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IpAddrPrefLenPb" href="#srlinux.sdk.IpAddrPrefLenPb">IpAddrPrefLenPb</a>
+            </p>
             <p class="subtitle is-6">Represents IP prefix.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3362,11 +3510,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IpAddressPb" href="#srlinux.sdk.IpAddressPb">IpAddressPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IpAddressPb" href="#srlinux.sdk.IpAddressPb">IpAddressPb</a>
+            </p>
             <p class="subtitle is-6">Represents IP address.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3385,11 +3535,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IpInterfaceAddrPrefixPb" href="#srlinux.sdk.IpInterfaceAddrPrefixPb">IpInterfaceAddrPrefixPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IpInterfaceAddrPrefixPb" href="#srlinux.sdk.IpInterfaceAddrPrefixPb">IpInterfaceAddrPrefixPb</a>
+            </p>
             <p class="subtitle is-6">Represents IP prefix state.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3414,11 +3566,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MacAddressPb" href="#srlinux.sdk.MacAddressPb">MacAddressPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MacAddressPb" href="#srlinux.sdk.MacAddressPb">MacAddressPb</a>
+            </p>
             <p class="subtitle is-6">Represents MAC address.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3437,11 +3591,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.MplsLabel" href="#srlinux.sdk.MplsLabel">MplsLabel</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.MplsLabel" href="#srlinux.sdk.MplsLabel">MplsLabel</a>
+            </p>
             <p class="subtitle is-6">Represents MPLS label.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3460,11 +3616,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NetInstanceId" href="#srlinux.sdk.NetInstanceId">NetInstanceId</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NetInstanceId" href="#srlinux.sdk.NetInstanceId">NetInstanceId</a>
+            </p>
             <p class="subtitle is-6">Represents network instance identifier.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3483,11 +3641,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.PortIdPb" href="#srlinux.sdk.PortIdPb">PortIdPb</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.PortIdPb" href="#srlinux.sdk.PortIdPb">PortIdPb</a>
+            </p>
             <p class="subtitle is-6">Represents port identifier.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3506,13 +3666,17 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SyncRequest" href="#srlinux.sdk.SyncRequest">SyncRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SyncRequest" href="#srlinux.sdk.SyncRequest">SyncRequest</a>
+            </p>
             <p class="subtitle is-6">Empty message for synchronization request.</p>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SyncResponse" href="#srlinux.sdk.SyncResponse">SyncResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SyncResponse" href="#srlinux.sdk.SyncResponse">SyncResponse</a>
+            </p>
             <p class="subtitle is-6">Empty message for synchronization end.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -3537,11 +3701,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IfEthernetDuplexModeType" href="#srlinux.sdk.IfEthernetDuplexModeType">IfEthernetDuplexModeType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IfEthernetDuplexModeType" href="#srlinux.sdk.IfEthernetDuplexModeType">IfEthernetDuplexModeType</a>
+            </p>
             <p class="subtitle is-6">Represents interface ethernet duplex mode. Corresponds to yang values</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3563,11 +3729,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IfEthernetPortSpeedType" href="#srlinux.sdk.IfEthernetPortSpeedType">IfEthernetPortSpeedType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IfEthernetPortSpeedType" href="#srlinux.sdk.IfEthernetPortSpeedType">IfEthernetPortSpeedType</a>
+            </p>
             <p class="subtitle is-6">Represents interface ethernet port speed. Corresponds to yang values</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3634,11 +3802,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IfMgrIfType" href="#srlinux.sdk.IfMgrIfType">IfMgrIfType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IfMgrIfType" href="#srlinux.sdk.IfMgrIfType">IfMgrIfType</a>
+            </p>
             <p class="subtitle is-6">Represents interface type.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3680,11 +3850,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IfOperDownReason" href="#srlinux.sdk.IfOperDownReason">IfOperDownReason</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IfOperDownReason" href="#srlinux.sdk.IfOperDownReason">IfOperDownReason</a>
+            </p>
             <p class="subtitle is-6"></p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3811,11 +3983,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IfOperStateType" href="#srlinux.sdk.IfOperStateType">IfOperStateType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IfOperStateType" href="#srlinux.sdk.IfOperStateType">IfOperStateType</a>
+            </p>
             <p class="subtitle is-6">Represents interface operational state.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3857,11 +4031,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IfTransceiverFecType" href="#srlinux.sdk.IfTransceiverFecType">IfTransceiverFecType</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IfTransceiverFecType" href="#srlinux.sdk.IfTransceiverFecType">IfTransceiverFecType</a>
+            </p>
             <p class="subtitle is-6">Represents interface transceiver fec. Corresponds to yang values</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3898,11 +4074,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.IpAddressState" href="#srlinux.sdk.IpAddressState">IpAddressState</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.IpAddressState" href="#srlinux.sdk.IpAddressState">IpAddressState</a>
+            </p>
             <p class="subtitle is-6">Represents IP address state.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3939,11 +4117,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SdkMgrOperation" href="#srlinux.sdk.SdkMgrOperation">SdkMgrOperation</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SdkMgrOperation" href="#srlinux.sdk.SdkMgrOperation">SdkMgrOperation</a>
+            </p>
             <p class="subtitle is-6">Represents enumeration value for operation in subscription.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3965,11 +4145,13 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SdkMgrStatus" href="#srlinux.sdk.SdkMgrStatus">SdkMgrStatus</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SdkMgrStatus" href="#srlinux.sdk.SdkMgrStatus">SdkMgrStatus</a>
+            </p>
             <p class="subtitle is-6">Represents status of network programming service calls.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -3992,17 +4174,19 @@ Global if id for ipv6 link local session, otherwise 0 </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/sdk_service.proto" href="#ndk/sdk_service.proto">ndk/sdk_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/sdk_service.proto" href="#ndk/sdk_service.proto">ndk/sdk_service.proto</a></p>
               <p class="subtitle is-6">Network programming APIs and messages. This is the base layer for agent registration, router event notifications such as interface, LLDP, BFD, and so on; also provides keepalive functionality to detect agent liveliness</p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.AgentRegistrationRequest" href="#srlinux.sdk.AgentRegistrationRequest">AgentRegistrationRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.AgentRegistrationRequest" href="#srlinux.sdk.AgentRegistrationRequest">AgentRegistrationRequest</a>
+            </p>
             <p class="subtitle is-6">Represents registration request message used in agent register and unregister.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4031,11 +4215,13 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.AgentRegistrationResponse" href="#srlinux.sdk.AgentRegistrationResponse">AgentRegistrationResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.AgentRegistrationResponse" href="#srlinux.sdk.AgentRegistrationResponse">AgentRegistrationResponse</a>
+            </p>
             <p class="subtitle is-6">Represents registration response in reply to registration request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4066,11 +4252,13 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.AppIdRequest" href="#srlinux.sdk.AppIdRequest">AppIdRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.AppIdRequest" href="#srlinux.sdk.AppIdRequest">AppIdRequest</a>
+            </p>
             <p class="subtitle is-6">Represents application identifier request from agent. All applications are assigned an identifier by IDB.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4089,11 +4277,13 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.AppIdResponse" href="#srlinux.sdk.AppIdResponse">AppIdResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.AppIdResponse" href="#srlinux.sdk.AppIdResponse">AppIdResponse</a>
+            </p>
             <p class="subtitle is-6">Represents application identifier response to agent.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4118,13 +4308,17 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.KeepAliveRequest" href="#srlinux.sdk.KeepAliveRequest">KeepAliveRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.KeepAliveRequest" href="#srlinux.sdk.KeepAliveRequest">KeepAliveRequest</a>
+            </p>
             <p class="subtitle is-6">Represents keep alive request from agent to refresh liveliness of the agent.</p>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.KeepAliveResponse" href="#srlinux.sdk.KeepAliveResponse">KeepAliveResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.KeepAliveResponse" href="#srlinux.sdk.KeepAliveResponse">KeepAliveResponse</a>
+            </p>
             <p class="subtitle is-6">Represents keepalive response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4143,11 +4337,13 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.Notification" href="#srlinux.sdk.Notification">Notification</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.Notification" href="#srlinux.sdk.Notification">Notification</a>
+            </p>
             <p class="subtitle is-6">Represents notification stream response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4214,11 +4410,13 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NotificationQueryRequest" href="#srlinux.sdk.NotificationQueryRequest">NotificationQueryRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NotificationQueryRequest" href="#srlinux.sdk.NotificationQueryRequest">NotificationQueryRequest</a>
+            </p>
             <p class="subtitle is-6">Represents notification query to return specific subscription details.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4237,11 +4435,13 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NotificationQueryResponse" href="#srlinux.sdk.NotificationQueryResponse">NotificationQueryResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NotificationQueryResponse" href="#srlinux.sdk.NotificationQueryResponse">NotificationQueryResponse</a>
+            </p>
             <p class="subtitle is-6">Represents notification query response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4266,11 +4466,13 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NotificationQuerySubscription" href="#srlinux.sdk.NotificationQuerySubscription">NotificationQuerySubscription</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NotificationQuerySubscription" href="#srlinux.sdk.NotificationQuerySubscription">NotificationQuerySubscription</a>
+            </p>
             <p class="subtitle is-6">Represents notification subscription.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4295,11 +4497,13 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NotificationRegisterRequest" href="#srlinux.sdk.NotificationRegisterRequest">NotificationRegisterRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NotificationRegisterRequest" href="#srlinux.sdk.NotificationRegisterRequest">NotificationRegisterRequest</a>
+            </p>
             <p class="subtitle is-6">Represents notification request from agent. Agent uses this message to subscribe to router events such as interface create, delete, or update, as well as LLDP neighbor create, delete, or update, and so on.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4378,11 +4582,13 @@ means do not monitor this agent for liveliness. </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NotificationRegisterResponse" href="#srlinux.sdk.NotificationRegisterResponse">NotificationRegisterResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NotificationRegisterResponse" href="#srlinux.sdk.NotificationRegisterResponse">NotificationRegisterResponse</a>
+            </p>
             <p class="subtitle is-6">Represents notification response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4414,11 +4620,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NotificationStreamRequest" href="#srlinux.sdk.NotificationStreamRequest">NotificationStreamRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NotificationStreamRequest" href="#srlinux.sdk.NotificationStreamRequest">NotificationStreamRequest</a>
+            </p>
             <p class="subtitle is-6">Represents notification stream request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4437,11 +4645,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NotificationStreamResponse" href="#srlinux.sdk.NotificationStreamResponse">NotificationStreamResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NotificationStreamResponse" href="#srlinux.sdk.NotificationStreamResponse">NotificationStreamResponse</a>
+            </p>
             <p class="subtitle is-6">Represents notification stream response that contains one or more notification.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4460,11 +4670,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.NotificationRegisterRequest.Operation" href="#srlinux.sdk.NotificationRegisterRequest.Operation">NotificationRegisterRequest.Operation</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.NotificationRegisterRequest.Operation" href="#srlinux.sdk.NotificationRegisterRequest.Operation">NotificationRegisterRequest.Operation</a>
+            </p>
             <p class="subtitle is-6">Represents notification stream subscription request operation.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Name</td><td>Number</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -4491,11 +4703,13 @@ subscription changes specific to the current subscription </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SdkMgrService" href="#srlinux.sdk.SdkMgrService">SdkMgrService</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SdkMgrService" href="#srlinux.sdk.SdkMgrService">SdkMgrService</a>
+            </p>
             <p class="subtitle is-6">Represents base service that defines agent registration, unregistration, notification subscriptions, and keepalive messages.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -4538,11 +4752,13 @@ subscription changes specific to the current subscription </p></td>
                   </tbody>
               </table>
             </div>
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SdkNotificationService" href="#srlinux.sdk.SdkNotificationService">SdkNotificationService</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SdkNotificationService" href="#srlinux.sdk.SdkNotificationService">SdkNotificationService</a>
+            </p>
             <p class="subtitle is-6">Represents service for handling notifications.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -4561,16 +4777,18 @@ subscription changes specific to the current subscription </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <div class="has-background-light p-4 mb-5 has-text-centered">
-              <p class="title is-5"><a class="has-text-black service-item" id="ndk/telemetry_service.proto" href="#ndk/telemetry_service.proto">ndk/telemetry_service.proto</a></p>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="ndk/telemetry_service.proto" href="#ndk/telemetry_service.proto">ndk/telemetry_service.proto</a></p>
               </div>
-            
+            <hr/>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.TelemetryData" href="#srlinux.sdk.TelemetryData">TelemetryData</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.TelemetryData" href="#srlinux.sdk.TelemetryData">TelemetryData</a>
+            </p>
             <p class="subtitle is-6">Represents telemetry data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4589,11 +4807,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.TelemetryDeleteRequest" href="#srlinux.sdk.TelemetryDeleteRequest">TelemetryDeleteRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.TelemetryDeleteRequest" href="#srlinux.sdk.TelemetryDeleteRequest">TelemetryDeleteRequest</a>
+            </p>
             <p class="subtitle is-6">Represents telemetry delete request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4612,11 +4832,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.TelemetryDeleteResponse" href="#srlinux.sdk.TelemetryDeleteResponse">TelemetryDeleteResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.TelemetryDeleteResponse" href="#srlinux.sdk.TelemetryDeleteResponse">TelemetryDeleteResponse</a>
+            </p>
             <p class="subtitle is-6">Represents telemetry delete response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4641,11 +4863,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.TelemetryInfo" href="#srlinux.sdk.TelemetryInfo">TelemetryInfo</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.TelemetryInfo" href="#srlinux.sdk.TelemetryInfo">TelemetryInfo</a>
+            </p>
             <p class="subtitle is-6">Represents telemetry information.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4670,11 +4894,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.TelemetryKey" href="#srlinux.sdk.TelemetryKey">TelemetryKey</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.TelemetryKey" href="#srlinux.sdk.TelemetryKey">TelemetryKey</a>
+            </p>
             <p class="subtitle is-6">Represents telemetry key.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4693,11 +4919,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.TelemetryUpdateRequest" href="#srlinux.sdk.TelemetryUpdateRequest">TelemetryUpdateRequest</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.TelemetryUpdateRequest" href="#srlinux.sdk.TelemetryUpdateRequest">TelemetryUpdateRequest</a>
+            </p>
             <p class="subtitle is-6">Represents telemetry update request.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4716,11 +4944,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.TelemetryUpdateResponse" href="#srlinux.sdk.TelemetryUpdateResponse">TelemetryUpdateResponse</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.TelemetryUpdateResponse" href="#srlinux.sdk.TelemetryUpdateResponse">TelemetryUpdateResponse</a>
+            </p>
             <p class="subtitle is-6">Represents telemetry update response.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>Field</td>
                     <td>Type</td>
@@ -4745,11 +4975,13 @@ subscription changes specific to the current subscription </p></td>
               </table>
             </div>
 
-            <p class="title is-5 has-text-weight-normal"><a class="service-item" id="srlinux.sdk.SdkMgrTelemetryService" href="#srlinux.sdk.SdkMgrTelemetryService">SdkMgrTelemetryService</a></p>
+            <p class="title is-6 has-text-weight-normal">
+              <a class="service-item" id="srlinux.sdk.SdkMgrTelemetryService" href="#srlinux.sdk.SdkMgrTelemetryService">SdkMgrTelemetryService</a>
+            </p>
             <p class="subtitle is-6">Represents service for telemetry service to store state data.</p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
                 </thead>
                 <tbody>
@@ -4774,10 +5006,12 @@ subscription changes specific to the current subscription </p></td>
       <div class="hero">
         <div class="hero-body">
           <div class="container">
-            <p class="is-size-5 mb-4"><a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a></p>
+            <p class="title is-6 has-text-weight-normal mb-4">
+              <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
+            </p>
             <div class="table-container">
               <table class="table is-fullwidth">
-                <thead>
+                <thead class="has-background-light has-text-weight-bold">
                   <tr>
                     <td>.proto Type</td>
                     <td>Notes</td>

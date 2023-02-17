@@ -36,3 +36,11 @@ $navbarBurgers.forEach( el => {
   });
 });
 */
+
+function searchSideMenu() {
+  const searchKey = document.getElementById("search");
+  const menuItem = document.querySelectorAll("list-item");
+  var matches = $(".menu-list").find("li:contains(" + searchKey.value + ")");
+  $("li", ".menu-list").not(matches).slideUp();
+  matches.slideDown();
+}

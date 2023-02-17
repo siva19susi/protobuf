@@ -1,7 +1,17 @@
 /* default */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+@font-face {
+  font-family: "NokiaPureText";
+  src: url("./NokiaPureText_Rg.ttf");
+}
+
 * {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "NokiaPureText", monospace;
+}
+
+.level-item, .service-item {
+  font-family: "Fira Code", monospace;
 }
 
 #title {
@@ -17,10 +27,18 @@
   width: fit-content;
 }
 
+#search {
+  font-size: 14px;
+  font-family: "NokiaPureText", monospace;
+}
+
+.level-item {
+  font-size: 13px;
+}
+
 .menu-container {
   height: 100vh;
   overflow: auto;
-  font-size: 14px;
 }
 
 .menu-list {
@@ -28,44 +46,20 @@
   overflow: auto;
 }
 
-.service-item {
+.service, .service-item {
   scroll-margin-top: 70px;
 }
 
-
-/* specific */
 .badge {
   width: 30px;
-}
-
-.file-heading {
-  margin: 3em 0 2em 0;
-}
-.file-heading .title {
-  border: none;
-  display: table-cell;
-}
-.file-heading a {
-  text-align: right;
-  display: table-cell;
-}
-
-.divider {
-  padding-bottom: 0.5ex;
-  border-bottom: 1px solid #aaa;
-}
-
-.menu .list-item, .menu-item {
-  color: #124191;
+  white-space: nowrap;
 }
 
 .table {
   font-size: 14px;
 }
-.table thead {
-  font-weight: 700;
-  background-color: #dcdcdc;
-}
+
 td a {
   color: #124191;
+  font-family: "Fira Code", monospace;
 }
