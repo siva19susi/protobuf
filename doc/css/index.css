@@ -6,7 +6,7 @@
   src: url("./NokiaPureText_Rg.ttf");
 }
 
-* {
+*, input[type=text] {
   font-family: "NokiaPureText", monospace;
 }
 
@@ -15,59 +15,36 @@
 }
 
 #title {
-  margin-top: 50px;
-}
-
-@media screen and (min-width: 1024px) {
-  .menu {
-    top: 52px;
-    bottom: 0;
-    position: sticky;
-    display: inline-block;
-    vertical-align: top;
-    max-height: 100vh;
-  }
-  .detail {
-    display: inline-flex;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .menu {
-    left: 0;
-    top: 52px;
-    z-index: 5;
-    float: left;
-    position: fixed;
-    width: fit-content;
-  }
-}
-
-.menu-container {
-  height: 100vh;
-  overflow: auto;
-}
-
-.menu-list {
-  height: 85%;
-  overflow: auto;
-}​
-
-#search {
-  font-size: 14px;
-  font-family: "NokiaPureText", monospace;
+  margin-top: 52px;
 }
 
 .level-item {
   font-size: 13px;
 }
 
-.service, .service-item {
-  scroll-margin-top: 70px;
-}
-
 .badge {
   width: 30px;
+}
+
+#sideMenu {
+  left: 0;
+  bottom: 0;
+  top: 52px;
+  height: 100vh;
+  position: sticky;
+}
+
+.menu-list {
+  height: calc(100vh - 180px);
+  overflow: auto;
+}
+
+#detail {
+  display: inline-flex;
+}
+
+.service, .service-item {
+  scroll-margin-top: 70px;
 }
 
 .table {
@@ -78,3 +55,55 @@ td a {
   color: #124191;
   font-family: "Fira Code", monospace;
 }
+
+/*
+@media screen and (min-width: 1024px) {
+  #sideMenu {
+    top: 52px;
+    bottom: 0;
+    position: sticky;
+    max-height: 100vh;
+  }
+  .detail {
+    display: inline-flex;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #sideMenu {
+    left: 0;
+    top: 52px;
+    z-index: 5;
+    float: left;
+    position: fixed;
+    width: fit-content;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeOutLeft;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+*/
