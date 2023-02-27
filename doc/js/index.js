@@ -1,18 +1,4 @@
 // MENU TOGGLE
-/*function toggleMenu() {
-  const menu = document.getElementById("sideMenu");
-  const mbtn = document.getElementById("menuButton");
-  const mcn = menu.className;
-  const animation = menu.style.animationName;
-  if(animation == "" || animation == "fadeOutLeft") {
-    menu.style.animationName = "fadeInLeft";
-    mbtn.innerHTML = "<i class='bx bx-x bx-sm'></i>";
-  } else {
-    menu.style.animationName = "fadeOutLeft";
-    mbtn.innerHTML = "<i class='bx bx-menu-alt-left bx-sm'></i>";
-  }
-}*/
-
 function toggleMenu() {
   const menu = document.getElementsByClassName("menu")[0];
   const mcn = menu.className;
@@ -30,6 +16,13 @@ const menuItem = document.getElementsByClassName("list-item");
 Array.from(service).forEach(el => el.addEventListener("click", toggleMenu));
 Array.from(menuItem).forEach(el => el.addEventListener("click", toggleMenu));
 
+// JQUERY CASE INSENSITIVE CONTAINS
+jQuery.expr[':'].contains = function(a, i, m) {
+  return jQuery(a).text().toUpperCase()
+    .indexOf(m[3].toUpperCase()) >= 0;
+};
+
+// SEARCH SIDE MENU
 function searchSideMenu() {
   const searchKey = document.getElementById("search");
   const menuItem = document.querySelectorAll("list-item");
