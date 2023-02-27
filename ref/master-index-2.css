@@ -1,0 +1,110 @@
+/* default */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+@font-face {
+  font-family: "NokiaPureText";
+  src: url("./NokiaPureText_Rg.ttf");
+}
+
+*, input[type=text] {
+  font-family: "NokiaPureText", monospace;
+}
+
+.level-item, .service-item {
+  font-family: "Fira Code", monospace;
+}
+
+#title {
+  margin-top: 52px;
+}
+
+.level-item {
+  font-size: 13px;
+}
+
+.badge {
+  width: 30px;
+}
+
+/*@media screen and (min-width: 1024px) {
+  #sideMenu {
+    left: 0;
+    bottom: 0;
+    top: 52px;
+    padding: 20px;
+    height: 100vh;
+    position: sticky;
+    border-right: thin solid #ded5d5;
+  }
+  .detail {
+    display: inline-flex;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #sideMenu {
+    left: 0;
+    top: 52px;
+    z-index: 5;
+    float: left;
+    position: fixed;
+    width: fit-content;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeOutLeft;
+  }
+}*/
+
+#sideMenu {
+  left: 0;
+  bottom: 0;
+  top: 52px;
+  padding: 20px;
+  height: 100vh;
+  position: sticky;
+  border-right: thin solid #ded5d5;
+}
+
+.menu-list {
+  height: calc(100vh - 180px);
+  overflow: auto;
+}
+
+.service, .service-item {
+  scroll-margin-top: 70px;
+}
+
+.table {
+  font-size: 14px;
+}
+
+td a {
+  color: #124191;
+  font-family: "Fira Code", monospace;
+}
+
+/*
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+*/

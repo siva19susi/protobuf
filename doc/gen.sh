@@ -20,4 +20,4 @@ docker run --rm \
 sed -i '' "s|__NDK_VER__|$1|g" doc/index.html
 
 # change link
-sed -i "s|/v.\+/|/v$1/|g" README.md
+# sed -i "s|/v.\+/|/v$1/|g" README.md

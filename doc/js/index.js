@@ -14,7 +14,7 @@
 }*/
 
 function toggleMenu() {
-  const menu = document.getElementById("sideMenu");
+  const menu = document.getElementsByClassName("menu")[0];
   const mcn = menu.className;
   const hideClass = "is-hidden-touch";
   if(mcn.includes(hideClass)) {
