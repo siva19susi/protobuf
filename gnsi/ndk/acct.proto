@@ -36,7 +36,7 @@ package gnsi.accounting;
 import "google/protobuf/any.proto";
 import "google/protobuf/timestamp.proto";
 
-import "ndk/types.proto";
+import "ndk/import/types.proto";
 
 option go_package = "github.com/openconfig/gnsi/accounting";
 option (gnoi.types.gnoi_version) = "0.2.0";

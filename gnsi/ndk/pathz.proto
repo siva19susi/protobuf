@@ -20,8 +20,8 @@ syntax = "proto3";
 
 package gnsi.pathz;
 
-import "ndk/gnmi.proto";
-import "ndk/types.proto";
+import "ndk/import/gnmi.proto";
+import "ndk/import/types.proto";
 import "ndk/authorization.proto";
 
 option go_package = "github.com/openconfig/gnsi/pathz";

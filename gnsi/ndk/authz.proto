@@ -20,7 +20,7 @@ syntax = "proto3";
 
 package gnsi.authz;
 
-import "ndk/types.proto";
+import "ndk/import/types.proto";
 
 option go_package = "github.com/openconfig/gnsi/authz";
 option (gnoi.types.gnoi_version) = "0.2.0";
