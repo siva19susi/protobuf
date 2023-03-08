@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+  <head>
+    <title>__KIND__ NDK Protobuf Documentation v__NDK_VER__</title>
+    <link rel="icon" type="image/svg+xml" href="images/srlinux.svg">
+    <meta charset="UTF-8">
+    <meta name="author" content="Siva Sivakumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar is-dark is-fixed-top">
+      <div class="navbar-brand">
+        <a class="navbar-item is-hidden-desktop" id="menuButton" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
+        <p class="navbar-item"><img width="60" src="../static/images/nwhite.png"/></p>
+        <div class="navbar-item">
+          <p class="content">__KIND__ <a class="has-text-primary" href="https://learn.srlinux.dev/ndk/intro/" target="_blank">NDK</a> Protobuf Documentation</p>
+        </div>
+        <a class="navbar-item" href="https://github.com/nokia/srlinux-ndk-protobufs/tree/v__NDK_VER__/ndk" target="_blank">v__NDK_VER__</a>
+      </div>
+    </nav>
+    <div class="">
+      <div class="columns is-gapless is-mobile">
+        <div class="column is-narrow">
+          <aside class="menu is-hidden-touch p-5 is-sticky-left">
+            <p class="menu-label">Table of Contents</p>
+            <div class="control">
+              <input class="input" type="text" placeholder="Search" id="search" onkeyup="searchSideMenu()">
+            </div>
+            <div class="menu-container pt-2">
+              <ul class="menu-list">
+                {{ range .Files -}}
+                {{ $file_name := .Name -}}
+                <li>
+                  <a href="#{{ .Name }}" class="service has-text-weight-bold is-size-6">{{ .Name }}</a>
+                  <ul>
+                    {{ range .Messages -}}
+                    <li>
+                      <a class="list-item" href="#{{ .FullName }}">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                            <div class="level-item">{{ .LongName }}</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    {{ end -}}
+                    {{ range .Enums -}}
+                    <li>
+                      <a class="list-item" href="#{{ .FullName }}">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                            <div class="level-item">{{ .LongName }}</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    {{ end -}}
+                    {{ range .Extensions -}}
+                    <li>
+                      <a class="list-item" href="#{{ $file_name }}-extensions">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small badge">X</span></div>
+                            <div class="level-item">File-level Extensions</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    {{ end -}}
+                    {{ range .Services -}}
+                    <li>
+                      <a class="list-item" href="#{{ .FullName }}">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">{{ .Name }}</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    {{ end -}}
+                  </ul>
+                </li>
+                {{ end -}}
+              </ul>
+            </div>
+          </aside>
+        </div>
+  
+        <div class="column">
+          <div class="container mt-6">
+            {{ range .Files -}}
+            <div class="hero">
+              <div class="hero-body">
+                {{ $file_name := .Name -}}
+                <div class="p-1 mb-5 has-text-centered">
+                  <p class="title is-5"><a class="has-text-black service" id="{{.Name}}" href="#{{ .Name }}">{{ .Name }}</a></p>
+                  {{ if .Description -}}
+                  <!-- <p class="subtitle is-6 has-text-left">{{ .Description }}</p> -->
+                  {{ end -}}
+                </div>
+                <hr/>
+  
+                {{ range .Messages -}}
+                <p class="title is-6 has-text-weight-normal">
+                  <a class="service-item" id="{{ .FullName }}" href="#{{ .FullName }}">{{ .LongName }}</a>
+                </p>
+                <p class="subtitle is-6">{{ .Description }}</p>
+                {{ if .HasFields -}}
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{ range .Fields -}}
+                      <tr>
+                        <td>{{ .Name }}</td>
+                        <td><a href="#{{ .FullType }}">{{ .LongType }}</a></td>
+                        <td>{{ .Label }}</td>
+                        <td><p>{{ if (index .Options "deprecated"|default false) }}<strong>Deprecated.</strong> {{ end }}{{ .Description }} {{ if .DefaultValue }}Default: {{ .DefaultValue }}{{ end }}</p></td>
+                      </tr>
+                      {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+  
+                {{ $message := . -}}
+                {{ range .FieldOptions -}}
+                {{ $option := . -}}
+                {{ if eq . "validator.field" "validate.rules" -}}
+                <h4>Validated Fields</h4>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Validations</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{ range $message.FieldsWithOption . -}}
+                      <tr>
+                        <td>{{ .Name }}</td>
+                        <td>
+                          <ul>
+                            {{ range (.Option $option).Rules -}}
+                            <li>{{ .Name }}: {{ .Value }}</li>
+                            {{ end -}}
+                          </ul>
+                        </td>
+                      </tr>
+                      {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+                {{ else -}}
+                <h4>Fields with {{ . }} option</h4>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Name</td>
+                        <td>Option</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {{ range $message.FieldsWithOption . -}}
+                      <tr>
+                        <td>{{ .Name }}</td>
+                        <td><p>{{ printf "%+v" (.Option $option) }}</p></td>
+                      </tr>
+                    {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+                {{ end -}}
+                {{ end -}}
+                {{ end -}}
+  
+                {{ if .HasExtensions -}}
+                <br>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Extension</td>
+                        <td>Type</td>
+                        <td>Base</td>
+                        <td>Number</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{ range .Extensions -}}
+                      <tr>
+                        <td>{{ .Name }}</td>
+                        <td><a href="#{{ .FullType }}">{{ .LongType }}</a></td>
+                        <td><a href="#{{ .ContainingFullType }}">{{ .ContainingLongType }}</a></td>
+                        <td>{{.Number}}</td>
+                        <td><p>{{ .Description }}{{ if .DefaultValue }} Default: {{ .DefaultValue }}{{ end }}</p></td>
+                      </tr>
+                      {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+                {{ end -}}
+                {{ end -}}
+  
+                {{ range .Enums -}}
+                <p class="title is-6 has-text-weight-normal">
+                  <a class="service-item" id="{{ .FullName }}" href="#{{ .FullName }}">{{ .LongName }}</a>
+                </p>
+                <p class="subtitle is-6">{{ .Description }}</p>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                    </thead>
+                    <tbody>
+                      {{ range .Values -}}
+                      <tr>
+                        <td>{{ .Name }}</td>
+                        <td>{{ .Number }}</td>
+                        <td><p>{{ .Description }}</p></td>
+                      </tr>
+                      {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+                {{ end -}}
+  
+                {{ if .HasExtensions -}}
+                <p class="is-size-5 mb-4">
+                  <a class="service-item" id="{{ $file_name }}-extensions" href="#{{ $file_name }}-extensions">File-level Extensions</a>
+                </p>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Extension</td>
+                        <td>Type</td>
+                        <td>Base</td>
+                        <td>Number</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{ range .Extensions -}}
+                      <tr>
+                        <td>{{.Name}}</td>
+                        <td><a href="#{{ .FullType }}">{{ .LongType }}</a></td>
+                        <td><a href="#{{ .ContainingFullType }}">{{ .ContainingLongType }}</a></td>
+                        <td>{{ .Number }}</td>
+                        <td><p>{{ .Description }}{{ if .DefaultValue }} Default: {{ .DefaultValue }}{{ end }}</p></td>
+                      </tr>
+                      {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+                {{ end -}}
+  
+                {{ range .Services -}}
+                <p class="title is-6 has-text-weight-normal">
+                  <a class="service-item" id="{{ .FullName }}" href="#{{ .FullName }}">{{ .LongName }}</a>
+                </p>
+                <p class="subtitle is-6">{{ .Description }}</p>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+                    </thead>
+                    <tbody>
+                      {{ range .Methods -}}
+                        <tr>
+                          <td>{{ .Name }}</td>
+                          <td><a href="#{{ .RequestFullType }}">{{ .RequestLongType }}</a>{{ if .RequestStreaming }} stream{{ end }}</td>
+                          <td><a href="#{{ .ResponseFullType }}">{{ .ResponseLongType }}</a>{{ if .ResponseStreaming }} stream{{ end }}</td>
+                          <td><p>{{ .Description }}</p></td>
+                        </tr>
+                      {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+                {{ $service := . -}}
+                {{ range .MethodOptions -}}
+                {{ $option := . -}}
+                {{ if eq . "google.api.http" -}}
+                <h4>Methods with HTTP bindings</h4>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Method Name</td>
+                        <td>Method</td>
+                        <td>Pattern</td>
+                        <td>Body</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{ range $service.MethodsWithOption . -}}
+                      {{ $name := .Name -}}
+                      {{ range (.Option $option).Rules -}}
+                      <tr>
+                        <td>{{ $name }}</td>
+                        <td>{{ .Method }}</td>
+                        <td>{{ .Pattern }}</td>
+                        <td>{{ .Body }}</td>
+                      </tr>
+                      {{ end -}}
+                      {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+                {{ else -}}
+                <h4>Methods with {{ . }} option</h4>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Method Name</td>
+                        <td>Option</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{range $service.MethodsWithOption . -}}
+                      <tr>
+                        <td>{{ .Name }}</td>
+                        <td><p>{{ printf "%+v" (.Option $option) }}</p></td>
+                      </tr>
+                      {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+                {{ end -}}
+                {{ end -}}
+                {{ end -}}
+              </div>
+            </div>
+            {{ end -}}
+            <div class="hero">
+              <div class="hero-body">
+                <p class="title is-6 has-text-weight-normal mb-4">
+                  <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
+                </p>
+                <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>.proto Type</td>
+                        <td>Notes</td>
+                        <td>C++</td>
+                        <td>Java</td>
+                        <td>Python</td>
+                        <td>Go</td>
+                        <td>C#</td>
+                        <td>PHP</td>
+                        <td>Ruby</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{ range .Scalars -}}
+                        <tr id="{{ .ProtoType}}">
+                          <td>{{ .ProtoType }}</td>
+                          <td>{{ .Notes }}</td>
+                          <td>{{ .CppType }}</td>
+                          <td>{{ .JavaType }}</td>
+                          <td>{{ .PythonType }}</td>
+                          <td>{{ .GoType }}</td>
+                          <td>{{ .CSharp }}</td>
+                          <td>{{ .PhpType }}</td>
+                          <td>{{ .RubyType }}</td>
+                        </tr>
+                      {{ end -}}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="hero is-small is-light">
+              <div class="hero-body">
+                <div class="container has-text-centered is-fluid">
+                  <p>Created by
+                    <a class="has-text-link" href="https://www.linkedin.com/in/siva19susi" target="_blank">Siva Sivakumar</a> /
+                    <a class="has-text-link" href="https://www.linkedin.com/in/rdodin" target="_blank">Roman Dodin</a> /
+                    <a class="has-text-link" href="https://github.com/srl-labs" target="_blank"><i class="fab fa-github"></i>
+                      srl-labs</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/index.js"></script>
+  </body> 
+</html>
