@@ -1,11 +1,11 @@
 <!DOCTYPE html>
   <head>
-    <title>__KIND__ NDK Protobuf Documentation v__NDK_VER__</title>
-    <link rel="icon" type="image/svg+xml" href="images/srlinux.svg">
+    <title>__KIND__ Protobuf Documentation v__NDK_VER__</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -14,15 +14,15 @@
     <nav class="navbar is-dark is-fixed-top">
       <div class="navbar-brand">
         <a class="navbar-item is-hidden-desktop" id="menuButton" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <p class="navbar-item"><img width="60" src="../static/images/nwhite.png"/></p>
+        <a class="navbar-item" href="../"><i class='bx bxs-home'></i></a>
         <div class="navbar-item">
-          <p class="content">__KIND__ <a class="has-text-primary" href="https://learn.srlinux.dev/ndk/intro/" target="_blank">NDK</a> Protobuf Documentation</p>
+          <p class="content">__KIND__ Protobuf Documentation</p>
         </div>
         <a class="navbar-item" href="https://github.com/nokia/srlinux-ndk-protobufs/tree/v__NDK_VER__/ndk" target="_blank">v__NDK_VER__</a>
       </div>
     </nav>
     <div class="">
-      <div class="columns is-gapless is-mobile">
+      <div class="columns is-gapless">
         <div class="column is-narrow">
           <aside class="menu is-hidden-touch p-5 is-sticky-left">
             <p class="menu-label">Table of Contents</p>
@@ -36,6 +36,18 @@
                 <li>
                   <a href="#{{ .Name }}" class="service has-text-weight-bold is-size-6">{{ .Name }}</a>
                   <ul>
+                    {{ range .Services -}}
+                    <li>
+                      <a class="list-item" href="#{{ .FullName }}">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">{{ .Name }}</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    {{ end -}}
                     {{ range .Messages -}}
                     <li>
                       <a class="list-item" href="#{{ .FullName }}">
@@ -67,18 +79,6 @@
                           <div class="level-left">
                             <div class="level-item"><span class="button is-small badge">X</span></div>
                             <div class="level-item">File-level Extensions</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    {{ end -}}
-                    {{ range .Services -}}
-                    <li>
-                      <a class="list-item" href="#{{ .FullName }}">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">{{ .Name }}</div>
                           </div>
                         </div>
                       </a>
@@ -403,6 +403,6 @@
         </div>
       </div>
     </div>
-    <script src="../static/js/index.js"></script>
+    <script src="../assets/js/index.js"></script>
   </body> 
 </html>

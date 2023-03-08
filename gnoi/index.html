@@ -1,11 +1,11 @@
 <!DOCTYPE html>
   <head>
-    <title>gNOI NDK Protobuf Documentation v0.1.0</title>
-    <link rel="icon" type="image/svg+xml" href="images/srlinux.svg">
+    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -14,15 +14,15 @@
     <nav class="navbar is-dark is-fixed-top">
       <div class="navbar-brand">
         <a class="navbar-item is-hidden-desktop" id="menuButton" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <p class="navbar-item"><img width="60" src="../static/images/nwhite.png"/></p>
+        <a class="navbar-item" href="../"><i class='bx bxs-home'></i></a>
         <div class="navbar-item">
-          <p class="content">gNOI <a class="has-text-primary" href="https://learn.srlinux.dev/ndk/intro/" target="_blank">NDK</a> Protobuf Documentation</p>
+          <p class="content">gNOI Protobuf Documentation</p>
         </div>
         <a class="navbar-item" href="https://github.com/nokia/srlinux-ndk-protobufs/tree/v0.1.0/ndk" target="_blank">v0.1.0</a>
       </div>
     </nav>
     <div class="">
-      <div class="columns is-gapless is-mobile">
+      <div class="columns is-gapless">
         <div class="column is-narrow">
           <aside class="menu is-hidden-touch p-5 is-sticky-left">
             <p class="menu-label">Table of Contents</p>
@@ -34,6 +34,16 @@
                 <li>
                   <a href="#bgp.proto" class="service has-text-weight-bold is-size-6">bgp.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.bgp.BGP">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">BGP</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.bgp.ClearBGPNeighborRequest">
                         <div class="level is-mobile">
@@ -64,21 +74,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.bgp.BGP">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">BGP</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#cert.proto" class="service has-text-weight-bold is-size-6">cert.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.certificate.CertificateManagement">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">CertificateManagement</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.certificate.CSR">
                         <div class="level is-mobile">
@@ -349,16 +359,6 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.certificate.CertificateManagement">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">CertificateManagement</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
@@ -389,6 +389,16 @@
                 <li>
                   <a href="#diag.proto" class="service has-text-weight-bold is-size-6">diag.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.diag.Diag">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">Diag</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.diag.GetBERTResultRequest">
                         <div class="level is-mobile">
@@ -529,21 +539,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.diag.Diag">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">Diag</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#factory_reset.proto" class="service has-text-weight-bold is-size-6">factory_reset.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.factory_reset.FactoryReset">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">FactoryReset</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.factory_reset.ResetError">
                         <div class="level is-mobile">
@@ -584,21 +594,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.factory_reset.FactoryReset">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">FactoryReset</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#file.proto" class="service has-text-weight-bold is-size-6">file.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.file.File">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">File</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.file.GetRequest">
                         <div class="level is-mobile">
@@ -719,21 +729,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.file.File">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">File</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#healthz.proto" class="service has-text-weight-bold is-size-6">healthz.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.healthz.Healthz">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">Healthz</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.healthz.AcknowledgeRequest">
                         <div class="level is-mobile">
@@ -894,21 +904,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.healthz.Healthz">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">Healthz</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#interface.proto" class="service has-text-weight-bold is-size-6">interface.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.interface.Interface">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">Interface</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.interface.ClearInterfaceCountersRequest">
                         <div class="level is-mobile">
@@ -969,21 +979,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.interface.Interface">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">Interface</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#layer2.proto" class="service has-text-weight-bold is-size-6">layer2.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.layer2.Layer2">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">Layer2</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.layer2.ClearLLDPInterfaceRequest">
                         <div class="level is-mobile">
@@ -1094,21 +1104,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.layer2.Layer2">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">Layer2</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#mpls.proto" class="service has-text-weight-bold is-size-6">mpls.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.mpls.MPLS">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">MPLS</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.mpls.ClearLSPCountersRequest">
                         <div class="level is-mobile">
@@ -1219,21 +1229,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.mpls.MPLS">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">MPLS</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#os.proto" class="service has-text-weight-bold is-size-6">os.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.os.OS">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">OS</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.os.ActivateError">
                         <div class="level is-mobile">
@@ -1444,21 +1454,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.os.OS">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">OS</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#otdr.proto" class="service has-text-weight-bold is-size-6">otdr.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.optical.OTDR">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">OTDR</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.optical.Event">
                         <div class="level is-mobile">
@@ -1579,21 +1589,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.optical.OTDR">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">OTDR</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#packet_link_qualification.proto" class="service has-text-weight-bold is-size-6">packet_link_qualification.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.packet_link_qualification.LinkQualification">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">LinkQualification</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.packet_link_qualification.AsicLoopbackCapabilities">
                         <div class="level is-mobile">
@@ -1904,21 +1914,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.packet_link_qualification.LinkQualification">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">LinkQualification</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#system.proto" class="service has-text-weight-bold is-size-6">system.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.system.System">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">System</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.system.CancelRebootRequest">
                         <div class="level is-mobile">
@@ -2159,16 +2169,6 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.system.System">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">System</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
@@ -2259,6 +2259,16 @@
                 <li>
                   <a href="#wavelength_router.proto" class="service has-text-weight-bold is-size-6">wavelength_router.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnoi.optical.WavelengthRouter">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">WavelengthRouter</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnoi.optical.AdjustPSDError">
                         <div class="level is-mobile">
@@ -2415,16 +2425,6 @@
                           <div class="level-left">
                             <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
                             <div class="level-item">AdjustSpectrumRequest.SignalDirection</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="list-item" href="#gnoi.optical.WavelengthRouter">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">WavelengthRouter</div>
                           </div>
                         </div>
                       </a>
@@ -11012,6 +11012,6 @@ should return successfully.</p></td>
         </div>
       </div>
     </div>
-    <script src="../static/js/index.js"></script>
+    <script src="../assets/js/index.js"></script>
   </body> 
 </html>

@@ -1,13 +1,9 @@
 /* default */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
-@font-face {
-  font-family: "NokiaPureText";
-  src: url("./NokiaPureText_Rg.ttf");
-}
-
 *, input[type=text] {
-  font-family: "NokiaPureText", monospace;
+  font-family: 'Nunito', sans-serif;
 }
 
 .level-item, .service-item {
@@ -44,4 +40,9 @@
 td a {
   color: #124191;
   font-family: "Fira Code", monospace;
+}
+
+.has-header-img {
+  background: url(../images/pointed.jpg)center center;
+  background-size: cover;
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
   <head>
-    <title>gNSI NDK Protobuf Documentation v0.1.0</title>
-    <link rel="icon" type="image/svg+xml" href="images/srlinux.svg">
+    <title>gNSI Protobuf Documentation v0.1.0</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -14,15 +14,15 @@
     <nav class="navbar is-dark is-fixed-top">
       <div class="navbar-brand">
         <a class="navbar-item is-hidden-desktop" id="menuButton" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <p class="navbar-item"><img width="60" src="../static/images/nwhite.png"/></p>
+        <a class="navbar-item" href="../"><i class='bx bxs-home'></i></a>
         <div class="navbar-item">
-          <p class="content">gNSI <a class="has-text-primary" href="https://learn.srlinux.dev/ndk/intro/" target="_blank">NDK</a> Protobuf Documentation</p>
+          <p class="content">gNSI Protobuf Documentation</p>
         </div>
         <a class="navbar-item" href="https://github.com/nokia/srlinux-ndk-protobufs/tree/v0.1.0/ndk" target="_blank">v0.1.0</a>
       </div>
     </nav>
     <div class="">
-      <div class="columns is-gapless is-mobile">
+      <div class="columns is-gapless">
         <div class="column is-narrow">
           <aside class="menu is-hidden-touch p-5 is-sticky-left">
             <p class="menu-label">Table of Contents</p>
@@ -195,6 +195,16 @@
                   <a href="#authz.proto" class="service has-text-weight-bold is-size-6">authz.proto</a>
                   <ul>
                     <li>
+                      <a class="list-item" href="#gnsi.authz.Authz">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">Authz</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
                       <a class="list-item" href="#gnsi.authz.FinalizeRequest">
                         <div class="level is-mobile">
                           <div class="level-left">
@@ -294,21 +304,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnsi.authz.Authz">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">Authz</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#certz.proto" class="service has-text-weight-bold is-size-6">certz.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnsi.certz.Certz">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">Certz</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnsi.certz.AddProfileRequest">
                         <div class="level is-mobile">
@@ -569,21 +579,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnsi.certz.Certz">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">Certz</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#credentialz.proto" class="service has-text-weight-bold is-size-6">credentialz.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnsi.credentialz.Credentialz">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">Credentialz</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnsi.credentialz.AccountCredentials">
                         <div class="level is-mobile">
@@ -944,21 +954,21 @@
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a class="list-item" href="#gnsi.credentialz.Credentialz">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">Credentialz</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
                     </ul>
                 </li>
                 <li>
                   <a href="#pathz.proto" class="service has-text-weight-bold is-size-6">pathz.proto</a>
                   <ul>
+                    <li>
+                      <a class="list-item" href="#gnsi.pathz.Pathz">
+                        <div class="level is-mobile">
+                          <div class="level-left">
+                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                            <div class="level-item">Pathz</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
                     <li>
                       <a class="list-item" href="#gnsi.pathz.FinalizeRequest">
                         <div class="level is-mobile">
@@ -1055,16 +1065,6 @@
                           <div class="level-left">
                             <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
                             <div class="level-item">PolicyInstance</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="list-item" href="#gnsi.pathz.Pathz">
-                        <div class="level is-mobile">
-                          <div class="level-left">
-                            <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                            <div class="level-item">Pathz</div>
                           </div>
                         </div>
                       </a>
@@ -5231,6 +5231,6 @@ Authorization Policy together with its version and created-on information.</p></
         </div>
       </div>
     </div>
-    <script src="../static/js/index.js"></script>
+    <script src="../assets/js/index.js"></script>
   </body> 
 </html>
