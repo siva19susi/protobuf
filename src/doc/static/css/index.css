@@ -1,0 +1,47 @@
+/* default */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+@font-face {
+  font-family: "NokiaPureText";
+  src: url("./NokiaPureText_Rg.ttf");
+}
+
+*, input[type=text] {
+  font-family: "NokiaPureText", monospace;
+}
+
+.level-item, .service-item {
+  font-family: "Fira Code", monospace;
+}
+
+.level-item {
+  font-size: 13px;
+}
+
+.badge {
+  width: 30px;
+}
+
+.is-sticky-left {
+  left: 0;
+  top: 52px;
+  position: sticky;
+}
+
+.menu-container {
+  height: calc(100vh - 160px);
+  overflow: auto;
+}
+
+.service, .service-item {
+  scroll-margin-top: 80px;
+}
+
+.table {
+  font-size: 14px;
+}
+
+td a {
+  color: #124191;
+  font-family: "Fira Code", monospace;
+}
