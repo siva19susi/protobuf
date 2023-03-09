@@ -1,21 +1,13 @@
 /* default */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
-@font-face {
-  font-family: "NokiaPureText";
-  src: url("./NokiaPureText_Rg.ttf");
-}
-
 *, input[type=text] {
-  font-family: "NokiaPureText", monospace;
+  font-family: 'Nunito', sans-serif;
 }
 
 .level-item, .service-item {
   font-family: "Fira Code", monospace;
-}
-
-#title {
-  margin-top: 52px;
 }
 
 .level-item {
@@ -26,24 +18,58 @@
   width: 30px;
 }
 
+/*.is-sticky-left {
+  left: 0;
+  top: 52px;
+  position: sticky;
+  border-right: thin solid #ded5d5;
+}*/
+
+.menu {
+  left: 0;
+  top: 52px;
+  z-index: 5;
+  float: left;
+  position: fixed;
+  width: fit-content;
+}
+
+.menu-container {
+  height: calc(100vh - 160px);
+  overflow: auto;
+}
+
+.service, .service-item {
+  scroll-margin-top: 80px;
+}
+
+.table {
+  font-size: 14px;
+}
+
+td a {
+  color: #124191;
+  font-family: "Fira Code", monospace;
+}
+
+.has-header-img {
+  background: url(../images/pointed.jpg)center center;
+  background-size: cover;
+}
+
+
 /*
 @media screen and (min-width: 1024px) {
-  #sideMenu {
+  .menu {
     left: 0;
-    bottom: 0;
     top: 52px;
-    padding: 20px;
-    height: 100vh;
     position: sticky;
     border-right: thin solid #ded5d5;
-  }
-  .detail {
-    display: inline-flex;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  #sideMenu {
+  .menu {
     left: 0;
     top: 52px;
     z-index: 5;
@@ -80,31 +106,3 @@
   }
 }
 */
-
-#sideMenu {
-  left: 0;
-  bottom: 0;
-  top: 52px;
-  padding: 20px;
-  height: 100vh;
-  position: sticky;
-  border-right: thin solid #ded5d5;
-}
-
-.menu-list {
-  height: calc(100vh - 180px);
-  overflow: auto;
-}
-
-.service, .service-item {
-  scroll-margin-top: 70px;
-}
-
-.table {
-  font-size: 14px;
-}
-
-td a {
-  color: #124191;
-  font-family: "Fira Code", monospace;
-}

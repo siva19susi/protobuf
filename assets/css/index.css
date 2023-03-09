@@ -20,12 +20,14 @@
 
 .is-sticky-left {
   left: 0;
-  top: 52px;
-  position: sticky;
+  z-index: 5;
+  float: left;
+  position: fixed;
+  width: fit-content;
 }
 
 .menu-container {
-  height: calc(100vh - 160px);
+  max-height: calc(100vh - 180px);
   overflow: auto;
 }
 
@@ -43,6 +45,6 @@ td a {
 }
 
 .has-header-img {
-  background: url(../images/pointed.jpg)center center;
+  background: url(../images/random.jpg)center center;
   background-size: cover;
 }
