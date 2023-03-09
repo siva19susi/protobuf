@@ -1,0 +1,1055 @@
+<html class="has-navbar-fixed-top">
+  <head>
+    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="author" content="Siva Sivakumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <aside class="menu box is-hidden p-5 is-sticky-left">
+      <p class="menu-label">Table of Contents</p>
+      <div class="control">
+        <input class="input" type="text" placeholder="Search" id="search" onkeyup="searchSideMenu()">
+      </div>
+      <div class="menu-container pt-2">
+        <ul class="menu-list">
+          <li>
+            <a href="#diag.proto" class="service has-text-weight-bold is-size-6">diag.proto</a>
+            <ul>
+              <li>
+                <a class="list-item" href="#gnoi.diag.Diag">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                      <div class="level-item">Diag</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.GetBERTResultRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">GetBERTResultRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.GetBERTResultRequest.PerPortRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">GetBERTResultRequest.PerPortRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.GetBERTResultResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">GetBERTResultResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.GetBERTResultResponse.PerPortResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">GetBERTResultResponse.PerPortResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.StartBERTRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">StartBERTRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.StartBERTRequest.PerPortRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">StartBERTRequest.PerPortRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.StartBERTResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">StartBERTResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.StartBERTResponse.PerPortResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">StartBERTResponse.PerPortResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.StopBERTRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">StopBERTRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.StopBERTRequest.PerPortRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">StopBERTRequest.PerPortRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.StopBERTResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">StopBERTResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.StopBERTResponse.PerPortResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">StopBERTResponse.PerPortResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.BertStatus">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                      <div class="level-item">BertStatus</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.diag.PrbsPolynomial">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                      <div class="level-item">PrbsPolynomial</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              </ul>
+          </li>
+          </ul>
+      </div>
+    </aside>
+    <nav class="navbar is-mobile is-fixed-top has-header-img">
+      <div class="navbar-brand">
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
+        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
+        <p class="navbar-item has-text-warning">gNOI Protobuf Documentation</p>
+        <a class="navbar-item has-text-white">v0.1.0</a>
+      </div>
+    </nav>
+    <div class="section">
+      <div class="container">
+        <div class="defintion-1">
+          <div class="p-1 mb-5 has-text-centered">
+            <p class="title is-5"><a class="has-text-black service" id="diag.proto" href="#diag.proto">diag.proto</a></p>
+            <!-- <p class="subtitle is-6 has-text-left">This file defines the gNOI APIs used to perform diagnostic operations on a
+network device.</p> -->
+            </div>
+          <hr/>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.GetBERTResultRequest" href="#gnoi.diag.GetBERTResultRequest">GetBERTResultRequest</a>
+          </p>
+          <p class="subtitle is-6">TODO: If there is no use case to get the BERT results for all the ports
+independent of the bert_operation_id, we can simplify this message and
+return the results for all the ports associated with an operation ID.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>bert_operation_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The same BERT operation ID given when BERT operation was started. </p></td>
+                </tr>
+                <tr>
+                  <td>per_port_requests</td>
+                  <td><a href="#gnoi.diag.GetBERTResultRequest.PerPortRequest">GetBERTResultRequest.PerPortRequest</a></td>
+                  <td>repeated</td>
+                  <td><p>All the per-port BERTs result of which we want to query. Must be part of
+the BERT operation specified by the `bert_operation_id` above. </p></td>
+                </tr>
+                <tr>
+                  <td>result_from_all_ports</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>If set to true, the results for all the per-port BERTs will be returned.
+`bert_operation_id` and `per_port_requests` will be ignored will be
+ignored in that case. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.GetBERTResultRequest.PerPortRequest" href="#gnoi.diag.GetBERTResultRequest.PerPortRequest">GetBERTResultRequest.PerPortRequest</a>
+          </p>
+          <p class="subtitle is-6">Per-port BERT get result requests.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>interface</td>
+                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                  <td></td>
+                  <td><p>Path to the interface corresponding to the port. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.GetBERTResultResponse" href="#gnoi.diag.GetBERTResultResponse">GetBERTResultResponse</a>
+          </p>
+          <p class="subtitle is-6"></p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>per_port_responses</td>
+                  <td><a href="#gnoi.diag.GetBERTResultResponse.PerPortResponse">GetBERTResultResponse.PerPortResponse</a></td>
+                  <td>repeated</td>
+                  <td><p>Captures the BERT results on a per-port basis. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.GetBERTResultResponse.PerPortResponse" href="#gnoi.diag.GetBERTResultResponse.PerPortResponse">GetBERTResultResponse.PerPortResponse</a>
+          </p>
+          <p class="subtitle is-6">Per-port BERT results/status.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>interface</td>
+                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                  <td></td>
+                  <td><p>Path to the interface corresponding to the port. </p></td>
+                </tr>
+                <tr>
+                  <td>status</td>
+                  <td><a href="#gnoi.diag.BertStatus">BertStatus</a></td>
+                  <td></td>
+                  <td><p>BERT result get status for this port. Only if the status is
+BERT_STATUS_OK are the rest of the fields meaningful. </p></td>
+                </tr>
+                <tr>
+                  <td>bert_operation_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The ID of the BERT operation running on this port. Since the caller
+can query the BERT results for all the ports, ID can potentially be
+different for different ports. </p></td>
+                </tr>
+                <tr>
+                  <td>prbs_polynomial</td>
+                  <td><a href="#gnoi.diag.PrbsPolynomial">PrbsPolynomial</a></td>
+                  <td></td>
+                  <td><p>The selected PRBS generating polynomial for BERT on this port. </p></td>
+                </tr>
+                <tr>
+                  <td>last_bert_start_timestamp</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>The last time BERT started on this port. </p></td>
+                </tr>
+                <tr>
+                  <td>last_bert_get_result_timestamp</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>The last time BERT results were read for this port. </p></td>
+                </tr>
+                <tr>
+                  <td>peer_lock_established</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>Indicate whether BERT peer lock has was established. If false,
+`bert_lock_lost`, `error_count_per_minute`, and `total_errors` will not
+be meaningful. </p></td>
+                </tr>
+                <tr>
+                  <td>peer_lock_lost</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>Indicate whether BERT peer lock was lost after being established
+once. </p></td>
+                </tr>
+                <tr>
+                  <td>error_count_per_minute</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>repeated</td>
+                  <td><p>Sequence of bit errors per min since lock was established. </p></td>
+                </tr>
+                <tr>
+                  <td>total_errors</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>Total number of bit errors accumulated since lock was established. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.StartBERTRequest" href="#gnoi.diag.StartBERTRequest">StartBERTRequest</a>
+          </p>
+          <p class="subtitle is-6"></p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>bert_operation_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Unique BERT operation ID specified by the client. Multiple BERTs run on
+different ports can have the same BERT operation ID. This ID will be used
+later to stop the operation and/or get its results.
+TODO: Investigate whether we can use numerical IDs instead. </p></td>
+                </tr>
+                <tr>
+                  <td>per_port_requests</td>
+                  <td><a href="#gnoi.diag.StartBERTRequest.PerPortRequest">StartBERTRequest.PerPortRequest</a></td>
+                  <td>repeated</td>
+                  <td><p>All the per-port BERTs that are considered one BERT operation and have the
+same BERT operation ID. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.StartBERTRequest.PerPortRequest" href="#gnoi.diag.StartBERTRequest.PerPortRequest">StartBERTRequest.PerPortRequest</a>
+          </p>
+          <p class="subtitle is-6">Per port BERT start requests.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>interface</td>
+                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                  <td></td>
+                  <td><p>Path to the interface corresponding to the port.
+
+required </p></td>
+                </tr>
+                <tr>
+                  <td>prbs_polynomial</td>
+                  <td><a href="#gnoi.diag.PrbsPolynomial">PrbsPolynomial</a></td>
+                  <td></td>
+                  <td><p>The selected PRBS generating polynomial for BERT.
+
+required </p></td>
+                </tr>
+                <tr>
+                  <td>test_duration_in_secs</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>BERT duration in seconds. Must be a positive number.
+
+required </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.StartBERTResponse" href="#gnoi.diag.StartBERTResponse">StartBERTResponse</a>
+          </p>
+          <p class="subtitle is-6"></p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>bert_operation_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The same BERT operation ID given by the request. </p></td>
+                </tr>
+                <tr>
+                  <td>per_port_responses</td>
+                  <td><a href="#gnoi.diag.StartBERTResponse.PerPortResponse">StartBERTResponse.PerPortResponse</a></td>
+                  <td>repeated</td>
+                  <td><p>Captures the results of starting BERT on a per-port basis. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.StartBERTResponse.PerPortResponse" href="#gnoi.diag.StartBERTResponse.PerPortResponse">StartBERTResponse.PerPortResponse</a>
+          </p>
+          <p class="subtitle is-6">Per-port BERT start responses.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>interface</td>
+                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                  <td></td>
+                  <td><p>Path to the interface corresponding to the port. </p></td>
+                </tr>
+                <tr>
+                  <td>status</td>
+                  <td><a href="#gnoi.diag.BertStatus">BertStatus</a></td>
+                  <td></td>
+                  <td><p>BERT start status for this port. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.StopBERTRequest" href="#gnoi.diag.StopBERTRequest">StopBERTRequest</a>
+          </p>
+          <p class="subtitle is-6"></p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>bert_operation_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The same BERT operation ID given when BERT operation was started. </p></td>
+                </tr>
+                <tr>
+                  <td>per_port_requests</td>
+                  <td><a href="#gnoi.diag.StopBERTRequest.PerPortRequest">StopBERTRequest.PerPortRequest</a></td>
+                  <td>repeated</td>
+                  <td><p>All the per-port BERTs that need to be stopped. Must be part of the BERT
+operation specified by the `bert_operation_id` above. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.StopBERTRequest.PerPortRequest" href="#gnoi.diag.StopBERTRequest.PerPortRequest">StopBERTRequest.PerPortRequest</a>
+          </p>
+          <p class="subtitle is-6">Per-port BERT stop requests.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>interface</td>
+                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                  <td></td>
+                  <td><p>Path to the interface corresponding to the port. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.StopBERTResponse" href="#gnoi.diag.StopBERTResponse">StopBERTResponse</a>
+          </p>
+          <p class="subtitle is-6"></p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>bert_operation_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The same BERT operation ID given by the request. </p></td>
+                </tr>
+                <tr>
+                  <td>per_port_responses</td>
+                  <td><a href="#gnoi.diag.StopBERTResponse.PerPortResponse">StopBERTResponse.PerPortResponse</a></td>
+                  <td>repeated</td>
+                  <td><p>Captures the results of stopping BERT on a per-port basis. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.StopBERTResponse.PerPortResponse" href="#gnoi.diag.StopBERTResponse.PerPortResponse">StopBERTResponse.PerPortResponse</a>
+          </p>
+          <p class="subtitle is-6">Per-port BERT stop responses.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>interface</td>
+                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                  <td></td>
+                  <td><p>Path to the interface corresponding to the port. </p></td>
+                </tr>
+                <tr>
+                  <td>status</td>
+                  <td><a href="#gnoi.diag.BertStatus">BertStatus</a></td>
+                  <td></td>
+                  <td><p>BERT stop status for this port. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.BertStatus" href="#gnoi.diag.BertStatus">BertStatus</a>
+          </p>
+          <p class="subtitle is-6">Status returned for each per-port BERT request.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>BERT_STATUS_UNKNOWN</td>
+                  <td>0</td>
+                  <td><p>default invalid choice.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_OK</td>
+                  <td>1</td>
+                  <td><p>BERT requests (Start, Stop, GetStatus) were processed successfully.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_NON_EXISTENT_PORT</td>
+                  <td>2</td>
+                  <td><p>The specified port was not found.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_HARDWARE_ACCESS_ERROR</td>
+                  <td>3</td>
+                  <td><p>HW error was encountered while performing BERT operation.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_UNSUPPORTED_PRBS_POLYNOMIAL</td>
+                  <td>4</td>
+                  <td><p>PRBS generating polynomial is not supported by the target.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_PORT_ALREADY_IN_BERT</td>
+                  <td>5</td>
+                  <td><p>There is already a BERT running on the specified port. Returned when
+`StartBert` RPC tries to add run BERT on an already in-use port.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_PORT_NOT_RUNNING_BERT</td>
+                  <td>6</td>
+                  <td><p>There is no BERT running on the specified port. Returned when `StopBert`
+or `GetBertResult` RPC was called for an idle port.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_TEST_DURATION_TOO_SHORT</td>
+                  <td>7</td>
+                  <td><p>The specified test duration is too small.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_TEST_DURATION_TOO_LONG</td>
+                  <td>8</td>
+                  <td><p>The specified test duration is larger than maximum allowed.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_OPERATION_ID_NOT_FOUND</td>
+                  <td>9</td>
+                  <td><p>The given BERT operation ID is not known. Returned for `StopBert` and
+`GetBertResult` RPCs.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_OPERATION_ID_IN_USE</td>
+                  <td>10</td>
+                  <td><p>The given BERT operation ID is already in use. Returned when `StartBert`
+RPC uses an ID which is already memorized for a BERT operation.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_PEER_LOCK_FAILURE</td>
+                  <td>11</td>
+                  <td><p>Failure to get the peer lock.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_PEER_LOCK_LOST</td>
+                  <td>12</td>
+                  <td><p>Lost the peer lock after locking once.</p></td>
+                </tr>
+                <tr>
+                  <td>BERT_STATUS_INTERNAL_ERROR</td>
+                  <td>13</td>
+                  <td><p>Misc internal errors that cannot be categorized by any of the previous
+error codes.</p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.PrbsPolynomial" href="#gnoi.diag.PrbsPolynomial">PrbsPolynomial</a>
+          </p>
+          <p class="subtitle is-6">Common sequence generating monic polynomials used for PRBS.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PRBS_POLYNOMIAL_UNKNOWN</td>
+                  <td>0</td>
+                  <td><p>default invalid choice.</p></td>
+                </tr>
+                <tr>
+                  <td>PRBS_POLYNOMIAL_PRBS7</td>
+                  <td>1</td>
+                  <td><p></p></td>
+                </tr>
+                <tr>
+                  <td>PRBS_POLYNOMIAL_PRBS9</td>
+                  <td>2</td>
+                  <td><p></p></td>
+                </tr>
+                <tr>
+                  <td>PRBS_POLYNOMIAL_PRBS15</td>
+                  <td>3</td>
+                  <td><p></p></td>
+                </tr>
+                <tr>
+                  <td>PRBS_POLYNOMIAL_PRBS20</td>
+                  <td>4</td>
+                  <td><p></p></td>
+                </tr>
+                <tr>
+                  <td>PRBS_POLYNOMIAL_PRBS23</td>
+                  <td>5</td>
+                  <td><p></p></td>
+                </tr>
+                <tr>
+                  <td>PRBS_POLYNOMIAL_PRBS31</td>
+                  <td>6</td>
+                  <td><p></p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.diag.Diag" href="#gnoi.diag.Diag">Diag</a>
+          </p>
+          <p class="subtitle is-6">The Diag service exports to main set of RPCs:
+1- BERT related RPCs: Used to perform Bit Error Rate Test (BERT)
+   operations on a set of ports.
+2- BURNIN related RPCs: Used to perform a vendor-provided Burnin test on the
+   network device to ensure the device is ready to start serving traffic.
+   Burnin tests are typically run in the field, as part of turnup or repair
+   workflow.
+Note: The RPCs defined here are are stateless operations and them
+failing/passing should not leave any permanent artifact on the network device
+ (unless there is something wrong HW-wise).
+Note: By "port" we refer to a channelized frontpanel or backplane port on a
+chassis. In OpenConfig YANG models, there is a one-to-one relationship
+between a port as used here and an "interface". Therefore, the "types.Path"
+fields below for ports correspond to "/interfaces/interface" in YANG models.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>StartBERT</td>
+                    <td><a href="#gnoi.diag.StartBERTRequest">StartBERTRequest</a></td>
+                    <td><a href="#gnoi.diag.StartBERTResponse">StartBERTResponse</a></td>
+                    <td><p>Starts BERT operation on a set of ports. Each BERT operation is uniquely
+identified by an ID, which is given by the caller. The caller can then
+use this ID (as well as the list of the ports) to stop the BERT operation
+and/or get the BERT results. This RPC is expected to return an error status
+in the following situations:
+- When BERT operation is supported on none of the ports specified by
+  the request.
+- When BERT is already in progress on any port specified by the request.
+- In case of any low-level HW/SW internal errors.
+The RPC returns an OK status of none of these situations is encountered.</p></td>
+                  </tr>
+                <tr>
+                    <td>StopBERT</td>
+                    <td><a href="#gnoi.diag.StopBERTRequest">StopBERTRequest</a></td>
+                    <td><a href="#gnoi.diag.StopBERTResponse">StopBERTResponse</a></td>
+                    <td><p>Stops an already in-progress BERT operation on a set of ports. The caller
+uses the BERT operation ID it previously used when starting the operation
+to stop it. The RPC is expected to return an error status in the following
+situations:
+- When there is at least one BERT operation in progress on a port which
+  cannot be stopped in the middle of the operation (either due to lack of
+  support or internal problems).
+- When no BERT operation, which matches the given BERT operation ID, is in
+  progress or completed on any of the ports specified by the request.
+- When the BERT operation ID does not match the in progress or completed
+  BERT operation on any of the ports specified by the request.
+The RPC returns an OK status of none of these situations is encountered.
+Note that a BERT operation is considered completed if the device has a
+record/history of it. Also note that it is OK to receive a stop request for
+a port which has completed BERT, as long as the recorded BERT operation ID
+matches the one specified by the request.</p></td>
+                  </tr>
+                <tr>
+                    <td>GetBERTResult</td>
+                    <td><a href="#gnoi.diag.GetBERTResultRequest">GetBERTResultRequest</a></td>
+                    <td><a href="#gnoi.diag.GetBERTResultResponse">GetBERTResultResponse</a></td>
+                    <td><p>Gets BERT results during the BERT operation or after it completes. The
+caller uses the BERT operation ID it previously used when starting the
+operation to query it. The device is expected to keep the results for
+last N BERT operations for some amount of time, as specified by the
+product requirement. This RPC is expected to return error status in the
+following situations:
+- When no BERT operation, which matches the given BERT operation ID, is in
+  progress or completed on any of the ports specified by the request.
+- When the BERT operation ID does not match the in progress or completed
+  BERT operation on any of the ports specified by the request.
+The RPC returns an OK status of none of these situations is encountered.
+Note that a BERT operation is considered completed if device has a
+record of it.</p></td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          </div>
+        <div class="defintion-2">
+          <p class="title is-6 has-text-weight-normal mb-4">
+            <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
+          </p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>.proto Type</td>
+                  <td>Notes</td>
+                  <td>C++</td>
+                  <td>Java</td>
+                  <td>Python</td>
+                  <td>Go</td>
+                  <td>C#</td>
+                  <td>PHP</td>
+                  <td>Ruby</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="double">
+                    <td>double</td>
+                    <td></td>
+                    <td>double</td>
+                    <td>double</td>
+                    <td>float</td>
+                    <td>float64</td>
+                    <td>double</td>
+                    <td>float</td>
+                    <td>Float</td>
+                  </tr>
+                <tr id="float">
+                    <td>float</td>
+                    <td></td>
+                    <td>float</td>
+                    <td>float</td>
+                    <td>float</td>
+                    <td>float32</td>
+                    <td>float</td>
+                    <td>float</td>
+                    <td>Float</td>
+                  </tr>
+                <tr id="int32">
+                    <td>int32</td>
+                    <td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>int</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="int64">
+                    <td>int64</td>
+                    <td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>integer/string</td>
+                    <td>Bignum</td>
+                  </tr>
+                <tr id="uint32">
+                    <td>uint32</td>
+                    <td>Uses variable-length encoding.</td>
+                    <td>uint32</td>
+                    <td>int</td>
+                    <td>int/long</td>
+                    <td>uint32</td>
+                    <td>uint</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="uint64">
+                    <td>uint64</td>
+                    <td>Uses variable-length encoding.</td>
+                    <td>uint64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>uint64</td>
+                    <td>ulong</td>
+                    <td>integer/string</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="sint32">
+                    <td>sint32</td>
+                    <td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>int</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="sint64">
+                    <td>sint64</td>
+                    <td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>integer/string</td>
+                    <td>Bignum</td>
+                  </tr>
+                <tr id="fixed32">
+                    <td>fixed32</td>
+                    <td>Always four bytes. More efficient than uint32 if values are often greater than 2^28.</td>
+                    <td>uint32</td>
+                    <td>int</td>
+                    <td>int</td>
+                    <td>uint32</td>
+                    <td>uint</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="fixed64">
+                    <td>fixed64</td>
+                    <td>Always eight bytes. More efficient than uint64 if values are often greater than 2^56.</td>
+                    <td>uint64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>uint64</td>
+                    <td>ulong</td>
+                    <td>integer/string</td>
+                    <td>Bignum</td>
+                  </tr>
+                <tr id="sfixed32">
+                    <td>sfixed32</td>
+                    <td>Always four bytes.</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>int</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="sfixed64">
+                    <td>sfixed64</td>
+                    <td>Always eight bytes.</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>integer/string</td>
+                    <td>Bignum</td>
+                  </tr>
+                <tr id="bool">
+                    <td>bool</td>
+                    <td></td>
+                    <td>bool</td>
+                    <td>boolean</td>
+                    <td>boolean</td>
+                    <td>bool</td>
+                    <td>bool</td>
+                    <td>boolean</td>
+                    <td>TrueClass/FalseClass</td>
+                  </tr>
+                <tr id="string">
+                    <td>string</td>
+                    <td>A string must always contain UTF-8 encoded or 7-bit ASCII text.</td>
+                    <td>string</td>
+                    <td>String</td>
+                    <td>str/unicode</td>
+                    <td>string</td>
+                    <td>string</td>
+                    <td>string</td>
+                    <td>String (UTF-8)</td>
+                  </tr>
+                <tr id="bytes">
+                    <td>bytes</td>
+                    <td>May contain any arbitrary sequence of bytes.</td>
+                    <td>string</td>
+                    <td>ByteString</td>
+                    <td>str</td>
+                    <td>[]byte</td>
+                    <td>ByteString</td>
+                    <td>string</td>
+                    <td>String (ASCII-8BIT)</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container has-text-centered is-fluid">
+          <p>Created by
+            <a class="has-text-link" href="https://www.linkedin.com/in/siva19susi" target="_blank">Siva Sivakumar</a> /
+            <a class="has-text-link" href="https://www.linkedin.com/in/rdodin" target="_blank">Roman Dodin</a> /
+            <a class="has-text-link" href="https://github.com/srl-labs" target="_blank"><i class="fab fa-github"></i>
+              srl-labs</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="../../assets/js/index.js"></script>
+  </body> 
+</html>

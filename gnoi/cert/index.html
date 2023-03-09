@@ -1,0 +1,1540 @@
+<html class="has-navbar-fixed-top">
+  <head>
+    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="author" content="Siva Sivakumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <aside class="menu box is-hidden p-5 is-sticky-left">
+      <p class="menu-label">Table of Contents</p>
+      <div class="control">
+        <input class="input" type="text" placeholder="Search" id="search" onkeyup="searchSideMenu()">
+      </div>
+      <div class="menu-container pt-2">
+        <ul class="menu-list">
+          <li>
+            <a href="#cert.proto" class="service has-text-weight-bold is-size-6">cert.proto</a>
+            <ul>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.CertificateManagement">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                      <div class="level-item">CertificateManagement</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.CSR">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">CSR</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.CSRParams">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">CSRParams</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.CanGenerateCSRRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">CanGenerateCSRRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.CanGenerateCSRResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">CanGenerateCSRResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.Certificate">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">Certificate</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.CertificateInfo">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">CertificateInfo</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.CertificateRevocationError">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">CertificateRevocationError</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.Endpoint">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">Endpoint</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.FinalizeRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">FinalizeRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.GenerateCSRRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">GenerateCSRRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.GenerateCSRResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">GenerateCSRResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.GetCertificatesRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">GetCertificatesRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.GetCertificatesResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">GetCertificatesResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.InstallCertificateRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">InstallCertificateRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.InstallCertificateResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">InstallCertificateResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.KeyPair">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">KeyPair</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.LoadCertificateAuthorityBundleRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">LoadCertificateAuthorityBundleRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.LoadCertificateAuthorityBundleResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">LoadCertificateAuthorityBundleResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.LoadCertificateRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">LoadCertificateRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.LoadCertificateResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">LoadCertificateResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.RevokeCertificatesRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">RevokeCertificatesRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.RevokeCertificatesResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">RevokeCertificatesResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.RotateCertificateRequest">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">RotateCertificateRequest</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.RotateCertificateResponse">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                      <div class="level-item">RotateCertificateResponse</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.CertificateType">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                      <div class="level-item">CertificateType</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.Endpoint.Type">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                      <div class="level-item">Endpoint.Type</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list-item" href="#gnoi.certificate.KeyType">
+                  <div class="level is-mobile">
+                    <div class="level-left">
+                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                      <div class="level-item">KeyType</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              </ul>
+          </li>
+          </ul>
+      </div>
+    </aside>
+    <nav class="navbar is-mobile is-fixed-top has-header-img">
+      <div class="navbar-brand">
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
+        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
+        <p class="navbar-item has-text-warning">gNOI Protobuf Documentation</p>
+        <a class="navbar-item has-text-white">v0.1.0</a>
+      </div>
+    </nav>
+    <div class="section">
+      <div class="container">
+        <div class="defintion-1">
+          <div class="p-1 mb-5 has-text-centered">
+            <p class="title is-5"><a class="has-text-black service" id="cert.proto" href="#cert.proto">cert.proto</a></p>
+            <!-- <p class="subtitle is-6 has-text-left">This file defines the gNOI API to be used for certificate installation and
+rotation.</p> -->
+            </div>
+          <hr/>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.CSR" href="#gnoi.certificate.CSR">CSR</a>
+          </p>
+          <p class="subtitle is-6">A Certificate Signing Request.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type</td>
+                  <td><a href="#gnoi.certificate.CertificateType">CertificateType</a></td>
+                  <td></td>
+                  <td><p>Type of certificate. </p></td>
+                </tr>
+                <tr>
+                  <td>csr</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p>Bytes representing the CSR.
+The exact encoding depends upon the type of certificate requested.
+for X509: This should be the PEM encoded CSR. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.CSRParams" href="#gnoi.certificate.CSRParams">CSRParams</a>
+          </p>
+          <p class="subtitle is-6">Parameters to be used when generating a Certificate Signing Request.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type</td>
+                  <td><a href="#gnoi.certificate.CertificateType">CertificateType</a></td>
+                  <td></td>
+                  <td><p>The type of certificate which will be associated for this CSR. </p></td>
+                </tr>
+                <tr>
+                  <td>min_key_size</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>Minimum size of the key to be used by the target when generating a
+public/private key pair. </p></td>
+                </tr>
+                <tr>
+                  <td>key_type</td>
+                  <td><a href="#gnoi.certificate.KeyType">KeyType</a></td>
+                  <td></td>
+                  <td><p>If provided, the target must use the provided key type. If the target
+cannot use the algorithm specified in the key_type, it should cancel the
+stream with an Unimplemented error. </p></td>
+                </tr>
+                <tr>
+                  <td>common_name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>--- common set of parameters applicable for any type of certificate --- //
+
+e.g "device.corp.google.com" </p></td>
+                </tr>
+                <tr>
+                  <td>country</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>e.g "US" </p></td>
+                </tr>
+                <tr>
+                  <td>state</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>e.g "CA" </p></td>
+                </tr>
+                <tr>
+                  <td>city</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>e.g "Mountain View" </p></td>
+                </tr>
+                <tr>
+                  <td>organization</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>e.g "Google" </p></td>
+                </tr>
+                <tr>
+                  <td>organizational_unit</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>e.g "Security" </p></td>
+                </tr>
+                <tr>
+                  <td>ip_address</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>email_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.CanGenerateCSRRequest" href="#gnoi.certificate.CanGenerateCSRRequest">CanGenerateCSRRequest</a>
+          </p>
+          <p class="subtitle is-6">A request to ask the target if it can generate key pairs.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>key_type</td>
+                  <td><a href="#gnoi.certificate.KeyType">KeyType</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>certificate_type</td>
+                  <td><a href="#gnoi.certificate.CertificateType">CertificateType</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>key_size</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.CanGenerateCSRResponse" href="#gnoi.certificate.CanGenerateCSRResponse">CanGenerateCSRResponse</a>
+          </p>
+          <p class="subtitle is-6">Response from the target about whether it can generate a CSR with the given
+parameters.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>can_generate</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.Certificate" href="#gnoi.certificate.Certificate">Certificate</a>
+          </p>
+          <p class="subtitle is-6">A certificate.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type</td>
+                  <td><a href="#gnoi.certificate.CertificateType">CertificateType</a></td>
+                  <td></td>
+                  <td><p>Type of certificate. </p></td>
+                </tr>
+                <tr>
+                  <td>certificate</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p>Actual certificate.
+The exact encoding depends upon the type of certificate.
+for X509, this should be a PEM encoded Certificate. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.CertificateInfo" href="#gnoi.certificate.CertificateInfo">CertificateInfo</a>
+          </p>
+          <p class="subtitle is-6"></p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>certificate_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>certificate</td>
+                  <td><a href="#gnoi.certificate.Certificate">Certificate</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>endpoints</td>
+                  <td><a href="#gnoi.certificate.Endpoint">Endpoint</a></td>
+                  <td>repeated</td>
+                  <td><p>List of endpoints using this certificate. </p></td>
+                </tr>
+                <tr>
+                  <td>modification_time</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>System modification time when the certificate was installed/rotated in
+nanoseconds since epoch. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.CertificateRevocationError" href="#gnoi.certificate.CertificateRevocationError">CertificateRevocationError</a>
+          </p>
+          <p class="subtitle is-6">An error message indicating why a certificate id could not be revoked.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>certificate_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>error_message</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.Endpoint" href="#gnoi.certificate.Endpoint">Endpoint</a>
+          </p>
+          <p class="subtitle is-6">An endpoint represents an entity on the target which can use a certificate.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type</td>
+                  <td><a href="#gnoi.certificate.Endpoint.Type">Endpoint.Type</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>endpoint</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Human readable identifier for an endpoint. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.FinalizeRequest" href="#gnoi.certificate.FinalizeRequest">FinalizeRequest</a>
+          </p>
+          <p class="subtitle is-6">A Finalize message is sent to the target to confirm the Rotation of
+the certificate and that the certificate should not be rolled back when
+the RPC concludes. The certificate must be rolled back if the target returns
+an error after receiving a Finalize message.</p>
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.GenerateCSRRequest" href="#gnoi.certificate.GenerateCSRRequest">GenerateCSRRequest</a>
+          </p>
+          <p class="subtitle is-6">Request to generate the CSR.
+When this request is made for rotating an existing certificate as part of the
+Rotate() RPC, then the target must ensure that the "certificate_id" is
+already created and exists on the target. If the Certificate Rotation
+proceeds to load the certificate, it must associate the new certificate with
+the previously created "certificate_id".
+
+When this request is made for installing a completely new certificate as part
+of the Install() RPC , then the target must ensure that the "certificate_id"
+is completely new and no entities on the target are should be bound to this
+certificate_id. If any existing certificate matches the certificate_id, then
+this request should fail.
+
+If there is another ongoing Rotate/Install RPC with the same certificate_id,
+the GenerateCSRRequest should fail.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>csr_params</td>
+                  <td><a href="#gnoi.certificate.CSRParams">CSRParams</a></td>
+                  <td></td>
+                  <td><p>Parameters for creating a CSR. </p></td>
+                </tr>
+                <tr>
+                  <td>certificate_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The certificate id with which this CSR will be associated. The target
+configuration should bind an entity which wants to use a certificate to
+the certificate_id it should use. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.GenerateCSRResponse" href="#gnoi.certificate.GenerateCSRResponse">GenerateCSRResponse</a>
+          </p>
+          <p class="subtitle is-6">GenerateCSRResponse contains the CSR associated with the Certificate ID
+supplied in the GenerateCSRRequest. When a Certificate is subsequently
+installed on the target in the same streaming RPC session, it must be
+associated to that Certificate ID.
+
+An Unimplemented error will be returned if the target cannot generate a CSR
+as per the request. In this case, the caller must generate its own key pair.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>csr</td>
+                  <td><a href="#gnoi.certificate.CSR">CSR</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.GetCertificatesRequest" href="#gnoi.certificate.GetCertificatesRequest">GetCertificatesRequest</a>
+          </p>
+          <p class="subtitle is-6">The request to query all the certificates on the target.</p>
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.GetCertificatesResponse" href="#gnoi.certificate.GetCertificatesResponse">GetCertificatesResponse</a>
+          </p>
+          <p class="subtitle is-6">Response from the target about the certificates that exist on the target what
+what is using them.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>certificate_info</td>
+                  <td><a href="#gnoi.certificate.CertificateInfo">CertificateInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.InstallCertificateRequest" href="#gnoi.certificate.InstallCertificateRequest">InstallCertificateRequest</a>
+          </p>
+          <p class="subtitle is-6">Request messages to install new certificates on the target.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>generate_csr</td>
+                  <td><a href="#gnoi.certificate.GenerateCSRRequest">GenerateCSRRequest</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>load_certificate</td>
+                  <td><a href="#gnoi.certificate.LoadCertificateRequest">LoadCertificateRequest</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.InstallCertificateResponse" href="#gnoi.certificate.InstallCertificateResponse">InstallCertificateResponse</a>
+          </p>
+          <p class="subtitle is-6">Response Messages from the target for the InstallCertificateRequest.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>generated_csr</td>
+                  <td><a href="#gnoi.certificate.GenerateCSRResponse">GenerateCSRResponse</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>load_certificate</td>
+                  <td><a href="#gnoi.certificate.LoadCertificateResponse">LoadCertificateResponse</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.KeyPair" href="#gnoi.certificate.KeyPair">KeyPair</a>
+          </p>
+          <p class="subtitle is-6">A message representing a pair of public/private keys.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>private_key</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>public_key</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.LoadCertificateAuthorityBundleRequest" href="#gnoi.certificate.LoadCertificateAuthorityBundleRequest">LoadCertificateAuthorityBundleRequest</a>
+          </p>
+          <p class="subtitle is-6">Bundle of CA certificates. Same as LoadCertificateRequest::ca_certificates.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ca_certificates</td>
+                  <td><a href="#gnoi.certificate.Certificate">Certificate</a></td>
+                  <td>repeated</td>
+                  <td><p>Squashes the existing certificate bundle.
+To improve performance in the Target, certificates can be ordered.
+Groups of chained certificates should be last, where within, the root
+certificate is the last one. E.g.:
+CertA, CertB, CertB-Root, CertC, CertC-Intermediate, CertC-Root </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.LoadCertificateAuthorityBundleResponse" href="#gnoi.certificate.LoadCertificateAuthorityBundleResponse">LoadCertificateAuthorityBundleResponse</a>
+          </p>
+          <p class="subtitle is-6">Response from target after Loading a certificate authority bundle.
+If the target could not load the certificates, it must end the RPC stream
+with a suitable RPC error about why the Certificate was not loaded.</p>
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.LoadCertificateRequest" href="#gnoi.certificate.LoadCertificateRequest">LoadCertificateRequest</a>
+          </p>
+          <p class="subtitle is-6">LoadCertificateRequest instructs the target to store the given certificate.
+
+Case 1: Target Generated CSR and Key Pair.
+If the target generated the CSR (and the public/private key pair) during the
+GenerateCSR request, then the target must associate the certificate with the
+certificate ID specified in the preceding GenerateCSR request.
+
+Case 2: Externally Generated Key Pair.
+If the target can not generate a CSR, then the public/private key pair is
+generated externally. In this case provide the target with the key pair,
+and the certificate_id to be associated with the new certificate.
+
+If there is another ongoing Rotate/Install RPC with the same certificate_id,
+the LoadCertificateRequest must fail.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>certificate</td>
+                  <td><a href="#gnoi.certificate.Certificate">Certificate</a></td>
+                  <td></td>
+                  <td><p>The certificate to be Loaded on the target. </p></td>
+                </tr>
+                <tr>
+                  <td>key_pair</td>
+                  <td><a href="#gnoi.certificate.KeyPair">KeyPair</a></td>
+                  <td></td>
+                  <td><p>The key pair to be used with the certificate. This is provided in the event
+that the target cannot generate a CSR (and the corresponding public/private
+keys). </p></td>
+                </tr>
+                <tr>
+                  <td>certificate_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Certificate Id of the above certificate. This is to be provided only when
+there is an externally generated key pair. </p></td>
+                </tr>
+                <tr>
+                  <td>ca_certificates</td>
+                  <td><a href="#gnoi.certificate.Certificate">Certificate</a></td>
+                  <td>repeated</td>
+                  <td><p>Optional bundle of CA certificates. When not empty, the provided
+certificates should squash the existing bundle. This field provides a
+simplified means to provision a CA bundle that can be used to validate
+other peer's certificates.
+To improve performance in the Target, certificates can be ordered.
+Groups of chained certificates should be last, where within, the root
+certificate is the last one. E.g.:
+CertA, CertB, CertB-Root, CertC, CertC-Intermediate, CertC-Root </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.LoadCertificateResponse" href="#gnoi.certificate.LoadCertificateResponse">LoadCertificateResponse</a>
+          </p>
+          <p class="subtitle is-6">Response from target after Loading a Certificate.
+If the target could not load the certificate, it must end the RPC stream with
+a suitable RPC error about why the Certificate was not loaded.</p>
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.RevokeCertificatesRequest" href="#gnoi.certificate.RevokeCertificatesRequest">RevokeCertificatesRequest</a>
+          </p>
+          <p class="subtitle is-6"></p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>certificate_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p>Certificates to revoke. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.RevokeCertificatesResponse" href="#gnoi.certificate.RevokeCertificatesResponse">RevokeCertificatesResponse</a>
+          </p>
+          <p class="subtitle is-6"></p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>revoked_certificate_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p>List of certificates successfully revoked. </p></td>
+                </tr>
+                <tr>
+                  <td>certificate_revocation_error</td>
+                  <td><a href="#gnoi.certificate.CertificateRevocationError">CertificateRevocationError</a></td>
+                  <td>repeated</td>
+                  <td><p>List of errors why certain certificates could not be revoked. </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.RotateCertificateRequest" href="#gnoi.certificate.RotateCertificateRequest">RotateCertificateRequest</a>
+          </p>
+          <p class="subtitle is-6">Request messages to rotate existing certificates on the target.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>generate_csr</td>
+                  <td><a href="#gnoi.certificate.GenerateCSRRequest">GenerateCSRRequest</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>load_certificate</td>
+                  <td><a href="#gnoi.certificate.LoadCertificateRequest">LoadCertificateRequest</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>finalize_rotation</td>
+                  <td><a href="#gnoi.certificate.FinalizeRequest">FinalizeRequest</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.RotateCertificateResponse" href="#gnoi.certificate.RotateCertificateResponse">RotateCertificateResponse</a>
+          </p>
+          <p class="subtitle is-6">Response Messages from the target.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>Field</td>
+                  <td>Type</td>
+                  <td>Label</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>generated_csr</td>
+                  <td><a href="#gnoi.certificate.GenerateCSRResponse">GenerateCSRResponse</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <td>load_certificate</td>
+                  <td><a href="#gnoi.certificate.LoadCertificateResponse">LoadCertificateResponse</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.CertificateType" href="#gnoi.certificate.CertificateType">CertificateType</a>
+          </p>
+          <p class="subtitle is-6">Types of certificates.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CT_UNKNOWN</td>
+                  <td>0</td>
+                  <td><p>1 - 500 for public use.
+501 onwards for private use.</p></td>
+                </tr>
+                <tr>
+                  <td>CT_X509</td>
+                  <td>1</td>
+                  <td><p></p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.Endpoint.Type" href="#gnoi.certificate.Endpoint.Type">Endpoint.Type</a>
+          </p>
+          <p class="subtitle is-6">Type of endpoint that can use a cert. This list is to be extended based on
+conversation with vendors.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>EP_UNSPECIFIED</td>
+                  <td>0</td>
+                  <td><p></p></td>
+                </tr>
+                <tr>
+                  <td>EP_IPSEC_TUNNEL</td>
+                  <td>1</td>
+                  <td><p></p></td>
+                </tr>
+                <tr>
+                  <td>EP_DAEMON</td>
+                  <td>2</td>
+                  <td><p></p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.KeyType" href="#gnoi.certificate.KeyType">KeyType</a>
+          </p>
+          <p class="subtitle is-6">Algorithm to be used for generation the key pair.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>KT_UNKNOWN</td>
+                  <td>0</td>
+                  <td><p>1 - 500, for known types.
+501 and onwards for private use.</p></td>
+                </tr>
+                <tr>
+                  <td>KT_RSA</td>
+                  <td>1</td>
+                  <td><p></p></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+          <p class="title is-6 has-text-weight-normal">
+            <a class="service-item" id="gnoi.certificate.CertificateManagement" href="#gnoi.certificate.CertificateManagement">CertificateManagement</a>
+          </p>
+          <p class="subtitle is-6">The Certificate Management Service exported by targets.
+
+The service primarily exports two main RPCs, Install & Rotate which are used
+for installation of a new certificate, and rotation of an existing
+certificate on a target, along with a few management related RPCs.
+
+In addition, the actions from the Install and Rotate RPCs are made available
+as separate RPCs. These use the same request/response protos.</p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>Rotate</td>
+                    <td><a href="#gnoi.certificate.RotateCertificateRequest">RotateCertificateRequest</a> stream</td>
+                    <td><a href="#gnoi.certificate.RotateCertificateResponse">RotateCertificateResponse</a> stream</td>
+                    <td><p>Rotate will replace an existing Certificate on the target by creating a
+new CSR request and placing the new Certificate based on the CSR on the
+target. If the stream is broken or any steps in the process fail the
+target must rollback to the original Certificate.
+
+The following describes the sequence of messages that must be exchanged
+in the Rotate() RPC.
+
+Sequence of expected messages:
+Case 1: When Target generates the CSR.
+
+  Step 1: Start the stream
+    Client <---- Rotate() RPC stream begin ------> Target
+
+  Step 2: CSR
+    Client -----> GenerateCSRRequest----> Target
+    Client <----- GenerateCSRResponse <--- Target
+
+  Step 3: Certificate Signing
+    Client gets the certificate signed by the CA.
+
+  Step 4: Send Certificate to Target.
+    Client --> LoadCertificateRequest ----> Target
+    Client <-- LoadCertificateResponse <--- Target
+
+  Step 5: Test/Validation by the client.
+    This step should be to create a new connection to the target using
+    The new certificate and validate that the certificate works.
+    Once verfied, the client will then proceed to finalize the rotation.
+    If the new connection cannot be completed the client will cancel the
+    RPC thereby forcing the target to rollback the certificate.
+
+  Step 6: Final commit.
+    Client ---> FinalizeRequest ----> Target
+
+
+Case 2: When Client generates the CSR.
+  Step 1: Start the stream
+    Client <---- Rotate() RPC stream begin ----> Target
+
+  Step 2: CSR
+    Client generates its own certificate.
+
+  Step 3: Certificate Signing
+    Client gets the certificate signed by the CA.
+
+  Step 4: Send Certificate to Target.
+    Client ---> LoadCertificateRequest ----> Target
+    Client <--- LoadCertificateResponse <--- Target
+
+  Step 5: Test/Validation by the client.
+
+  Step 6: Final commit.
+    Client ---> FinalizeRequest ----> Target</p></td>
+                  </tr>
+                <tr>
+                    <td>Install</td>
+                    <td><a href="#gnoi.certificate.InstallCertificateRequest">InstallCertificateRequest</a> stream</td>
+                    <td><a href="#gnoi.certificate.InstallCertificateResponse">InstallCertificateResponse</a> stream</td>
+                    <td><p>Install will put a new Certificate on the target by creating a new CSR
+request and placing the new Certificate based on the CSR on the target.The
+new Certificate will be associated with a new Certificate Id on the target.
+If the target has a pre existing Certificate with the given Certificate Id,
+the operation should fail.
+If the stream is broken or any steps in the process fail the target must
+revert any changes in state.
+
+The following describes the sequence of messages that must be exchanged
+in the Install() RPC.
+
+Sequence of expected messages:
+Case 1: When Target generates the CSR-------------------------:
+
+  Step 1: Start the stream
+    Client <---- Install() RPC stream begin ------> Target
+
+  Step 2: CSR
+    Client -----> GenerateCSRRequest() ----> Target
+    Client <---- GenerateCSRResponse() <---- Target
+
+  Step 3: Certificate Signing
+    Client gets the certificate signed by the CA.
+
+  Step 4: Send Certificate to Target.
+    Client -> LoadCertificateRequest() ----> Target
+    Client <- LoadCertificateResponse() <--- Target
+
+Case 2: When Client generates the CSR-------------------------:
+  Step 1: Start the stream
+    Client <---- Install() RPC stream begin ------> Target
+
+  Step 2: CSR
+    Client generates its own certificate.
+
+  Step 3: Certificate Signing
+    Client gets the certificate signed by the CA.
+
+  Step 4: Send Certificate to Target.
+    Client -> LoadCertificateRequest() ----> Target
+    Client <- LoadCertificateResponse() <--- Target</p></td>
+                  </tr>
+                <tr>
+                    <td>GenerateCSR</td>
+                    <td><a href="#gnoi.certificate.GenerateCSRRequest">GenerateCSRRequest</a></td>
+                    <td><a href="#gnoi.certificate.GenerateCSRResponse">GenerateCSRResponse</a></td>
+                    <td><p>When credentials are generated on the device, generates a keypair and
+returns the Certificate Signing Request (CSR). The CSR has the public key,
+which when signed by the CA, becomes the Certificate.</p></td>
+                  </tr>
+                <tr>
+                    <td>LoadCertificate</td>
+                    <td><a href="#gnoi.certificate.LoadCertificateRequest">LoadCertificateRequest</a></td>
+                    <td><a href="#gnoi.certificate.LoadCertificateResponse">LoadCertificateResponse</a></td>
+                    <td><p>Loads a certificate signed by a Certificate Authority (CA).</p></td>
+                  </tr>
+                <tr>
+                    <td>LoadCertificateAuthorityBundle</td>
+                    <td><a href="#gnoi.certificate.LoadCertificateAuthorityBundleRequest">LoadCertificateAuthorityBundleRequest</a></td>
+                    <td><a href="#gnoi.certificate.LoadCertificateAuthorityBundleResponse">LoadCertificateAuthorityBundleResponse</a></td>
+                    <td><p>Loads a bundle of CA certificates.</p></td>
+                  </tr>
+                <tr>
+                    <td>GetCertificates</td>
+                    <td><a href="#gnoi.certificate.GetCertificatesRequest">GetCertificatesRequest</a></td>
+                    <td><a href="#gnoi.certificate.GetCertificatesResponse">GetCertificatesResponse</a></td>
+                    <td><p>An RPC to get the certificates on the target.</p></td>
+                  </tr>
+                <tr>
+                    <td>RevokeCertificates</td>
+                    <td><a href="#gnoi.certificate.RevokeCertificatesRequest">RevokeCertificatesRequest</a></td>
+                    <td><a href="#gnoi.certificate.RevokeCertificatesResponse">RevokeCertificatesResponse</a></td>
+                    <td><p>An RPC to revoke specific certificates.
+If a certificate is not present on the target, the request should silently
+succeed. Revoking a certificate should render the existing certificate
+unusable by any endpoints.</p></td>
+                  </tr>
+                <tr>
+                    <td>CanGenerateCSR</td>
+                    <td><a href="#gnoi.certificate.CanGenerateCSRRequest">CanGenerateCSRRequest</a></td>
+                    <td><a href="#gnoi.certificate.CanGenerateCSRResponse">CanGenerateCSRResponse</a></td>
+                    <td><p>An RPC to ask a target if it can generate a Certificate.</p></td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          </div>
+        <div class="defintion-2">
+          <p class="title is-6 has-text-weight-normal mb-4">
+            <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
+          </p>
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <thead class="has-background-light has-text-weight-bold">
+                <tr>
+                  <td>.proto Type</td>
+                  <td>Notes</td>
+                  <td>C++</td>
+                  <td>Java</td>
+                  <td>Python</td>
+                  <td>Go</td>
+                  <td>C#</td>
+                  <td>PHP</td>
+                  <td>Ruby</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="double">
+                    <td>double</td>
+                    <td></td>
+                    <td>double</td>
+                    <td>double</td>
+                    <td>float</td>
+                    <td>float64</td>
+                    <td>double</td>
+                    <td>float</td>
+                    <td>Float</td>
+                  </tr>
+                <tr id="float">
+                    <td>float</td>
+                    <td></td>
+                    <td>float</td>
+                    <td>float</td>
+                    <td>float</td>
+                    <td>float32</td>
+                    <td>float</td>
+                    <td>float</td>
+                    <td>Float</td>
+                  </tr>
+                <tr id="int32">
+                    <td>int32</td>
+                    <td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>int</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="int64">
+                    <td>int64</td>
+                    <td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>integer/string</td>
+                    <td>Bignum</td>
+                  </tr>
+                <tr id="uint32">
+                    <td>uint32</td>
+                    <td>Uses variable-length encoding.</td>
+                    <td>uint32</td>
+                    <td>int</td>
+                    <td>int/long</td>
+                    <td>uint32</td>
+                    <td>uint</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="uint64">
+                    <td>uint64</td>
+                    <td>Uses variable-length encoding.</td>
+                    <td>uint64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>uint64</td>
+                    <td>ulong</td>
+                    <td>integer/string</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="sint32">
+                    <td>sint32</td>
+                    <td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>int</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="sint64">
+                    <td>sint64</td>
+                    <td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>integer/string</td>
+                    <td>Bignum</td>
+                  </tr>
+                <tr id="fixed32">
+                    <td>fixed32</td>
+                    <td>Always four bytes. More efficient than uint32 if values are often greater than 2^28.</td>
+                    <td>uint32</td>
+                    <td>int</td>
+                    <td>int</td>
+                    <td>uint32</td>
+                    <td>uint</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="fixed64">
+                    <td>fixed64</td>
+                    <td>Always eight bytes. More efficient than uint64 if values are often greater than 2^56.</td>
+                    <td>uint64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>uint64</td>
+                    <td>ulong</td>
+                    <td>integer/string</td>
+                    <td>Bignum</td>
+                  </tr>
+                <tr id="sfixed32">
+                    <td>sfixed32</td>
+                    <td>Always four bytes.</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>int</td>
+                    <td>int32</td>
+                    <td>int</td>
+                    <td>integer</td>
+                    <td>Bignum or Fixnum (as required)</td>
+                  </tr>
+                <tr id="sfixed64">
+                    <td>sfixed64</td>
+                    <td>Always eight bytes.</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>int/long</td>
+                    <td>int64</td>
+                    <td>long</td>
+                    <td>integer/string</td>
+                    <td>Bignum</td>
+                  </tr>
+                <tr id="bool">
+                    <td>bool</td>
+                    <td></td>
+                    <td>bool</td>
+                    <td>boolean</td>
+                    <td>boolean</td>
+                    <td>bool</td>
+                    <td>bool</td>
+                    <td>boolean</td>
+                    <td>TrueClass/FalseClass</td>
+                  </tr>
+                <tr id="string">
+                    <td>string</td>
+                    <td>A string must always contain UTF-8 encoded or 7-bit ASCII text.</td>
+                    <td>string</td>
+                    <td>String</td>
+                    <td>str/unicode</td>
+                    <td>string</td>
+                    <td>string</td>
+                    <td>string</td>
+                    <td>String (UTF-8)</td>
+                  </tr>
+                <tr id="bytes">
+                    <td>bytes</td>
+                    <td>May contain any arbitrary sequence of bytes.</td>
+                    <td>string</td>
+                    <td>ByteString</td>
+                    <td>str</td>
+                    <td>[]byte</td>
+                    <td>ByteString</td>
+                    <td>string</td>
+                    <td>String (ASCII-8BIT)</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container has-text-centered is-fluid">
+          <p>Created by
+            <a class="has-text-link" href="https://www.linkedin.com/in/siva19susi" target="_blank">Siva Sivakumar</a> /
+            <a class="has-text-link" href="https://www.linkedin.com/in/rdodin" target="_blank">Roman Dodin</a> /
+            <a class="has-text-link" href="https://github.com/srl-labs" target="_blank"><i class="fab fa-github"></i>
+              srl-labs</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="../../assets/js/index.js"></script>
+  </body> 
+</html>

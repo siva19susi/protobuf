@@ -48,3 +48,9 @@ td a {
   background: url(../images/random.jpg)center center;
   background-size: cover;
 }
+
+.dropdown-content {
+  width: fit-content;
+  max-height: 250px;
+  overflow: auto;
+}

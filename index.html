@@ -16,8 +16,50 @@
           <h3 class="title is-3 has-text-weight-light has-text-warning" id="title">gNXI Protobuf Documentation</h3>
           <div class="buttons is-centered">
             <a class="button is-light is-outlined" href="./gnmi/">gNMI</a>
-            <a class="button is-light is-outlined" href="./gnoi/">gNOI</a>
-            <a class="button is-light is-outlined" href="./gnsi/">gNSI</a>
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <button class="button is-light is-outlined" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span>gNOI</span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content has-text-left">
+                  <a href="gnoi/bgp/" class="dropdown-item">BGP</a>
+                  <a href="gnoi/cert/" class="dropdown-item">Cert</a>
+                  <a href="gnoi/common/" class="dropdown-item">Common</a>
+                  <a href="gnoi/diag/" class="dropdown-item">Diag</a>
+                  <a href="gnoi/factory_reset/" class="dropdown-item">Factory Reset</a>
+                  <a href="gnoi/file/" class="dropdown-item">File</a>
+                  <a href="gnoi/healthz/" class="dropdown-item">Healthz</a>
+                  <a href="gnoi/interface/" class="dropdown-item">Interface</a>
+                  <a href="gnoi/layer2/" class="dropdown-item">Layer2</a>
+                  <a href="gnoi/mpls/" class="dropdown-item">MPLS</a>
+                  <a href="gnoi/os/" class="dropdown-item">OS</a>
+                  <a href="gnoi/otdr/" class="dropdown-item">OTDR</a>
+                  <a href="gnoi/packet_link_qualification/" class="dropdown-item">Packet Link Qualification</a>
+                  <a href="gnoi/system/" class="dropdown-item">System</a>
+                  <a href="gnoi/types/" class="dropdown-item">Types</a>
+                  <a href="gnoi/wavelength_router/" class="dropdown-item">Wavelength Router</a>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <button class="button is-light is-outlined" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span>gNSI</span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content has-text-left">
+                  <a href="gnsi/acct/" class="dropdown-item">Acct</a>
+                  <a href="gnsi/authorization/" class="dropdown-item">Authorization</a>
+                  <a href="gnsi/authz/" class="dropdown-item">Authz</a>
+                  <a href="gnsi/certz/" class="dropdown-item">Certz</a>
+                  <a href="gnsi/credentialz/" class="dropdown-item">Credentialz</a>
+                  <a href="gnsi/pathz/" class="dropdown-item">Pathz</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

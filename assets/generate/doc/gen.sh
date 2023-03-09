@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 if [ $# != 3 ]; then
   echo "No NDK version provided. Usage: bash doc/gen.sh <gNMI-version> <gNOI-version> <gNSI-version>"
   exit 1
@@ -15,36 +13,43 @@ docker run --rm \
   pseudomuto/protoc-gen-doc \
   bash -c "protoc -I /protos --doc_out=/out /protos/*.proto --doc_opt=/out/doc.tmpl,index.html"
 
-# change the version accordingly
 mkdir -p ../../gnmi
 mv doc/index.html ../../gnmi/index.html
 sed -i '' "s|__KIND__|gNMI|g" ../../gnmi/index.html
 sed -i '' "s|__NDK_VER__|$1|g" ../../gnmi/index.html
 
-# generate gNOI proto docs
-docker run --rm \
-  -v $(pwd)/doc:/out \
-  -v $(pwd)/gnoi:/protos \
-  --entrypoint '' \
-  pseudomuto/protoc-gen-doc \
-  bash -c "protoc -I /protos --doc_out=/out /protos/*.proto --doc_opt=/out/doc.tmpl,index.html"
 
-# change the version accordingly
-mkdir -p ../../gnoi
-mv doc/index.html ../../gnoi/index.html
-sed -i '' "s|__KIND__|gNOI|g" ../../gnoi/index.html
-sed -i '' "s|__NDK_VER__|$2|g" ../../gnoi/index.html
+# generate gNOI & gNSI proto docs
+modelName=("gnoi" "gnsi")
 
-# generate gNSI proto docs
-docker run --rm \
-  -v $(pwd)/doc:/out \
-  -v $(pwd)/gnsi:/protos \
-  --entrypoint '' \
-  pseudomuto/protoc-gen-doc \
-  bash -c "protoc -I /protos --doc_out=/out /protos/*.proto --doc_opt=/out/doc.tmpl,index.html"
+for model in ${modelName[@]}; do
 
-# change the version accordingly
-mkdir -p ../../gnsi
-mv doc/index.html ../../gnsi/index.html
-sed -i '' "s|__KIND__|gNSI|g" ../../gnsi/index.html
-sed -i '' "s|__NDK_VER__|$3|g" ../../gnsi/index.html
+  for entry in $model/*.proto; do
+
+    protoFile=$(basename $entry)
+    protoName=${protoFile%.*}
+
+    docker run --rm \
+      -v $(pwd)/doc:/out \
+      -v $(pwd)/$model:/protos \
+      --entrypoint '' \
+      pseudomuto/protoc-gen-doc \
+      bash -c "protoc -I /protos --doc_out=/out /protos/$protoFile --doc_opt=/out/doc.tmpl,index.html"
+
+    mkdir -p ../../$model/$protoName
+    mv doc/index.html ../../$model/$protoName/index.html
+
+    if [[ "$model" == "gnoi" ]]; then
+      titleName="gNOI"
+    elif [[ "$model" == "gnsi" ]]; then
+      titleName="gNSI"
+    fi
+
+    sed -i '' "s|__KIND__|$titleName|g" ../../$model/$protoName/index.html
+    sed -i '' "s|__NDK_VER__|$2|g" ../../$model/$protoName/index.html
+    sed -i '' "s|../assets|../../assets|g" ../../$model/$protoName/index.html
+    sed -i '' "s|\"../\"|\"../../\"|g" ../../$model/$protoName/index.html
+
+  done
+
+done
