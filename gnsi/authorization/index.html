@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNSI Protobuf Documentation v0.1.0</title>
+    <title>gNSI authorization Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,87 +19,94 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#authorization.proto" class="service has-text-weight-bold is-size-6">authorization.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnsi.pathz.AuthorizationPolicy">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AuthorizationPolicy</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.pathz.AuthorizationRule">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AuthorizationRule</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.pathz.Group">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">Group</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.pathz.User">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">User</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.pathz.Action">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">Action</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.pathz.Mode">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">Mode</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#authorization.proto" class="service has-text-weight-bold is-size-6">authorization.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnsi.pathz.AuthorizationPolicy">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AuthorizationPolicy</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.pathz.AuthorizationRule">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AuthorizationRule</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.pathz.Group">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">Group</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.pathz.User">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">User</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.pathz.Action">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">Action</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.pathz.Mode">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">Mode</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNSI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNSI authorization Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="authorization.proto" href="#authorization.proto">authorization.proto</a></p>
-            <!-- <p class="subtitle is-6 has-text-left">Authorization for gnXi operations.
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="authorization.proto" href="#authorization.proto">authorization.proto</a></p>
+              <!-- <p class="subtitle is-6 has-text-left">Authorization for gnXi operations.
 
 Copyright 2022 Google LLC
 
@@ -135,217 +142,214 @@ Additionally, the policy maintains a timestamp of creation
 and version number from the underlying version control system.
 The version/timestamp are available to requestors to verify which version
 of policy is being applied at the time of the request.</p> -->
-            </div>
-          <hr/>
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.pathz.AuthorizationPolicy" href="#gnsi.pathz.AuthorizationPolicy">AuthorizationPolicy</a>
-          </p>
-          <p class="subtitle is-6">AuthorizationPolicy includes rules and user/group information.
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.pathz.AuthorizationPolicy" href="#gnsi.pathz.AuthorizationPolicy">AuthorizationPolicy</a>
+              </p>
+               <p class="subtitle is-6">AuthorizationPolicy includes rules and user/group information.
 The service which updates the policies will provide both a
   created_on - int64 - seconds since Jan 01 1970 00:00:00
-  version - string - unique among the implementation's policies deployed.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>rules</td>
-                  <td><a href="#gnsi.pathz.AuthorizationRule">AuthorizationRule</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>groups</td>
-                  <td><a href="#gnsi.pathz.Group">Group</a></td>
-                  <td>repeated</td>
-                  <td><p>Groups of usernames collected for simplicity of policy expression. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.pathz.AuthorizationRule" href="#gnsi.pathz.AuthorizationRule">AuthorizationRule</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Policy Identifier, a unique string per policy/rule, eg: uuid. </p></td>
-                </tr>
-                <tr>
-                  <td>user</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>group</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>path</td>
-                  <td><a href="#gnmi.Path">gnmi.Path</a></td>
-                  <td></td>
-                  <td><p>Path is the request path, longest prefix (by path elements from left
+  version - string - unique among the implementation's policies deployed.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>rules</td>
+                          <td><a href="#gnsi.pathz.AuthorizationRule">AuthorizationRule</a></td>
+                          <td>repeated</td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>groups</td>
+                          <td><a href="#gnsi.pathz.Group">Group</a></td>
+                          <td>repeated</td>
+                          <td><p>Groups of usernames collected for simplicity of policy expression. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.pathz.AuthorizationRule" href="#gnsi.pathz.AuthorizationRule">AuthorizationRule</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>id</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Policy Identifier, a unique string per policy/rule, eg: uuid. </p></td>
+                        </tr>
+                      <tr>
+                          <td>user</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>group</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>path</td>
+                          <td><a href="#gnmi.Path">gnmi.Path</a></td>
+                          <td></td>
+                          <td><p>Path is the request path, longest prefix (by path elements from left
 to right). </p></td>
-                </tr>
-                <tr>
-                  <td>action</td>
-                  <td><a href="#gnsi.pathz.Action">Action</a></td>
-                  <td></td>
-                  <td><p>Permit or deny the user/group access to the path specified. </p></td>
-                </tr>
-                <tr>
-                  <td>mode</td>
-                  <td><a href="#gnsi.pathz.Mode">Mode</a></td>
-                  <td></td>
-                  <td><p>Permit Read or Write access to the path specified. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.pathz.Group" href="#gnsi.pathz.Group">Group</a>
-          </p>
-          <p class="subtitle is-6">Group is a group of users, groups are a construct of the policy configuration
-as a method to collect many users with the same authorizations together.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>users</td>
-                  <td><a href="#gnsi.pathz.User">User</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.pathz.User" href="#gnsi.pathz.User">User</a>
-          </p>
-          <p class="subtitle is-6">User is a singular username used only in the matching criteria.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.pathz.Action" href="#gnsi.pathz.Action">Action</a>
-          </p>
-          <p class="subtitle is-6">Action is the defined action for an AuthorizationPolicy.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ACTION_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>ACTION_DENY</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>ACTION_PERMIT</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.pathz.Mode" href="#gnsi.pathz.Mode">Mode</a>
-          </p>
-          <p class="subtitle is-6">Mode is:
+                        </tr>
+                      <tr>
+                          <td>action</td>
+                          <td><a href="#gnsi.pathz.Action">Action</a></td>
+                          <td></td>
+                          <td><p>Permit or deny the user/group access to the path specified. </p></td>
+                        </tr>
+                      <tr>
+                          <td>mode</td>
+                          <td><a href="#gnsi.pathz.Mode">Mode</a></td>
+                          <td></td>
+                          <td><p>Permit Read or Write access to the path specified. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.pathz.Group" href="#gnsi.pathz.Group">Group</a>
+              </p>
+               <p class="subtitle is-6">Group is a group of users, groups are a construct of the policy configuration
+as a method to collect many users with the same authorizations together.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>users</td>
+                          <td><a href="#gnsi.pathz.User">User</a></td>
+                          <td>repeated</td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.pathz.User" href="#gnsi.pathz.User">User</a>
+              </p>
+               <p class="subtitle is-6">User is a singular username used only in the matching criteria.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.pathz.Action" href="#gnsi.pathz.Action">Action</a>
+              </p>
+               <p class="subtitle is-6">Action is the defined action for an AuthorizationPolicy.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>ACTION_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>ACTION_DENY</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>ACTION_PERMIT</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.pathz.Mode" href="#gnsi.pathz.Mode">Mode</a>
+              </p>
+               <p class="subtitle is-6">Mode is:
   READ: Ability to read/subscribe to data from the model.
-  WRITE: Ability to mutate/write updates to data in the model.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>MODE_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>MODE_READ</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>MODE_WRITE</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+  WRITE: Ability to mutate/write updates to data in the model.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>MODE_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>MODE_READ</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>MODE_WRITE</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">

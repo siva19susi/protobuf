@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <title>gNOI mpls Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,552 +19,556 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#mpls.proto" class="service has-text-weight-bold is-size-6">mpls.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.MPLS">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                      <div class="level-item">MPLS</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.ClearLSPCountersRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearLSPCountersRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.ClearLSPCountersResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearLSPCountersResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.ClearLSPRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearLSPRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.ClearLSPResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearLSPResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.MPLSPingPWEDestination">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">MPLSPingPWEDestination</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.MPLSPingRSVPTEDestination">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">MPLSPingRSVPTEDestination</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.MPLSPingRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">MPLSPingRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.MPLSPingResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">MPLSPingResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.ClearLSPRequest.Mode">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">ClearLSPRequest.Mode</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.MPLSPingRequest.ReplyMode">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">MPLSPingRequest.ReplyMode</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.mpls.MPLSPingResponse.EchoResponseCode">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">MPLSPingResponse.EchoResponseCode</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#mpls.proto" class="service has-text-weight-bold is-size-6">mpls.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.MPLS">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                          <div class="level-item">MPLS</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.ClearLSPCountersRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearLSPCountersRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.ClearLSPCountersResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearLSPCountersResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.ClearLSPRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearLSPRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.ClearLSPResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearLSPResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.MPLSPingPWEDestination">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">MPLSPingPWEDestination</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.MPLSPingRSVPTEDestination">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">MPLSPingRSVPTEDestination</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.MPLSPingRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">MPLSPingRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.MPLSPingResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">MPLSPingResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.ClearLSPRequest.Mode">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">ClearLSPRequest.Mode</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.MPLSPingRequest.ReplyMode">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">MPLSPingRequest.ReplyMode</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.mpls.MPLSPingResponse.EchoResponseCode">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">MPLSPingResponse.EchoResponseCode</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNOI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNOI mpls Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="mpls.proto" href="#mpls.proto">mpls.proto</a></p>
-            </div>
-          <hr/>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="mpls.proto" href="#mpls.proto">mpls.proto</a></p>
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.ClearLSPCountersRequest" href="#gnoi.mpls.ClearLSPCountersRequest">ClearLSPCountersRequest</a>
-          </p>
-          <p class="subtitle is-6">Request to clear a single tunnel counters on a target device.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Name of the tunnel to clear. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.ClearLSPCountersResponse" href="#gnoi.mpls.ClearLSPCountersResponse">ClearLSPCountersResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.ClearLSPRequest" href="#gnoi.mpls.ClearLSPRequest">ClearLSPRequest</a>
-          </p>
-          <p class="subtitle is-6">Request to clear a single tunnel on a target device.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Name of the tunnel to clear. </p></td>
-                </tr>
-                <tr>
-                  <td>mode</td>
-                  <td><a href="#gnoi.mpls.ClearLSPRequest.Mode">ClearLSPRequest.Mode</a></td>
-                  <td></td>
-                  <td><p>Tunnel clearing mode. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.ClearLSPResponse" href="#gnoi.mpls.ClearLSPResponse">ClearLSPResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.MPLSPingPWEDestination" href="#gnoi.mpls.MPLSPingPWEDestination">MPLSPingPWEDestination</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>eler</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The address of the egress LER that the MPLS ping should be sent on when
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.MPLS" href="#gnoi.mpls.MPLS">MPLS</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>ClearLSP</td>
+                        <td><a href="#gnoi.mpls.ClearLSPRequest">ClearLSPRequest</a></td>
+                        <td><a href="#gnoi.mpls.ClearLSPResponse">ClearLSPResponse</a></td>
+                        <td><p>ClearLSP clears a single tunnel (requests for it's route to be
+recalculated).</p></td>
+                      </tr>
+                    <tr>
+                        <td>ClearLSPCounters</td>
+                        <td><a href="#gnoi.mpls.ClearLSPCountersRequest">ClearLSPCountersRequest</a></td>
+                        <td><a href="#gnoi.mpls.ClearLSPCountersResponse">ClearLSPCountersResponse</a></td>
+                        <td><p>ClearLSPCounters will clear the MPLS counters for the provided LSP.</p></td>
+                      </tr>
+                    <tr>
+                        <td>MPLSPing</td>
+                        <td><a href="#gnoi.mpls.MPLSPingRequest">MPLSPingRequest</a></td>
+                        <td><a href="#gnoi.mpls.MPLSPingResponse">MPLSPingResponse</a> stream</td>
+                        <td><p>An MPLS ping, specified as per RFC4379.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.ClearLSPCountersRequest" href="#gnoi.mpls.ClearLSPCountersRequest">ClearLSPCountersRequest</a>
+              </p>
+               <p class="subtitle is-6">Request to clear a single tunnel counters on a target device.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Name of the tunnel to clear. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.ClearLSPCountersResponse" href="#gnoi.mpls.ClearLSPCountersResponse">ClearLSPCountersResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.ClearLSPRequest" href="#gnoi.mpls.ClearLSPRequest">ClearLSPRequest</a>
+              </p>
+               <p class="subtitle is-6">Request to clear a single tunnel on a target device.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Name of the tunnel to clear. </p></td>
+                        </tr>
+                      <tr>
+                          <td>mode</td>
+                          <td><a href="#gnoi.mpls.ClearLSPRequest.Mode">ClearLSPRequest.Mode</a></td>
+                          <td></td>
+                          <td><p>Tunnel clearing mode. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.ClearLSPResponse" href="#gnoi.mpls.ClearLSPResponse">ClearLSPResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.MPLSPingPWEDestination" href="#gnoi.mpls.MPLSPingPWEDestination">MPLSPingPWEDestination</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>eler</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The address of the egress LER that the MPLS ping should be sent on when
 destined to a PWE service. </p></td>
-                </tr>
-                <tr>
-                  <td>vcid</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>The virtual circuit ID for the PWE via which the ping should be sent. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.MPLSPingRSVPTEDestination" href="#gnoi.mpls.MPLSPingRSVPTEDestination">MPLSPingRSVPTEDestination</a>
-          </p>
-          <p class="subtitle is-6">MPLSPingRSVPTEDestination specifies the destination for an MPLS Ping in
+                        </tr>
+                      <tr>
+                          <td>vcid</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>The virtual circuit ID for the PWE via which the ping should be sent. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.MPLSPingRSVPTEDestination" href="#gnoi.mpls.MPLSPingRSVPTEDestination">MPLSPingRSVPTEDestination</a>
+              </p>
+               <p class="subtitle is-6">MPLSPingRSVPTEDestination specifies the destination for an MPLS Ping in
 terms of an absolute specification of an RSVP-TE LSP. It can be used to
-identify an individual RSVP-TE session via which a ping should be sent.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>src</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The IPv4 or IPv6 address used by the system initiating (acting as the
+identify an individual RSVP-TE session via which a ping should be sent.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>src</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The IPv4 or IPv6 address used by the system initiating (acting as the
 head-end) of the RSVP-TE LSP. </p></td>
-                </tr>
-                <tr>
-                  <td>dst</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The IPv4 or IPv6 address used by the system terminating (acting as the
+                        </tr>
+                      <tr>
+                          <td>dst</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The IPv4 or IPv6 address used by the system terminating (acting as the
 tail-end) of the RSVP-TE LSP. </p></td>
-                </tr>
-                <tr>
-                  <td>extended_tunnel_id</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>The extended tunnel ID of the RSVP-TE LSP, expressed as an unsigned, 32b
+                        </tr>
+                      <tr>
+                          <td>extended_tunnel_id</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>The extended tunnel ID of the RSVP-TE LSP, expressed as an unsigned, 32b
 integer. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.MPLSPingRequest" href="#gnoi.mpls.MPLSPingRequest">MPLSPingRequest</a>
-          </p>
-          <p class="subtitle is-6">MPLSPingRequest specifies the parameters that should be used as input from
-the client, to a system that is initiating an RFC4379 MPLS ping request.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ldp_fec</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The LDP forwarding equivalence class that the ping should be sent to
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.MPLSPingRequest" href="#gnoi.mpls.MPLSPingRequest">MPLSPingRequest</a>
+              </p>
+               <p class="subtitle is-6">MPLSPingRequest specifies the parameters that should be used as input from
+the client, to a system that is initiating an RFC4379 MPLS ping request.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>ldp_fec</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The LDP forwarding equivalence class that the ping should be sent to
 expressed as an IPv4 or IPv6 prefix. </p></td>
-                </tr>
-                <tr>
-                  <td>fec129_pwe</td>
-                  <td><a href="#gnoi.mpls.MPLSPingPWEDestination">MPLSPingPWEDestination</a></td>
-                  <td></td>
-                  <td><p>The FEC129 PWE to which the LSP ping should be sent. </p></td>
-                </tr>
-                <tr>
-                  <td>rsvpte_lsp_name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The name of an RSVP-TE LSP via which the ping should be sent. The system
+                        </tr>
+                      <tr>
+                          <td>fec129_pwe</td>
+                          <td><a href="#gnoi.mpls.MPLSPingPWEDestination">MPLSPingPWEDestination</a></td>
+                          <td></td>
+                          <td><p>The FEC129 PWE to which the LSP ping should be sent. </p></td>
+                        </tr>
+                      <tr>
+                          <td>rsvpte_lsp_name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The name of an RSVP-TE LSP via which the ping should be sent. The system
 should locally resolve the name to a particular RSVP-TE session. </p></td>
-                </tr>
-                <tr>
-                  <td>rsvpte_lsp</td>
-                  <td><a href="#gnoi.mpls.MPLSPingRSVPTEDestination">MPLSPingRSVPTEDestination</a></td>
-                  <td></td>
-                  <td><p>An exact specification of an RSVP-TE LSP to which the system should send
+                        </tr>
+                      <tr>
+                          <td>rsvpte_lsp</td>
+                          <td><a href="#gnoi.mpls.MPLSPingRSVPTEDestination">MPLSPingRSVPTEDestination</a></td>
+                          <td></td>
+                          <td><p>An exact specification of an RSVP-TE LSP to which the system should send
 an MPLS ping message.
 
 TODO(robjs): L3VPN, BGP-LU destination types. See RFC4379. </p></td>
-                </tr>
-                <tr>
-                  <td>reply_mode</td>
-                  <td><a href="#gnoi.mpls.MPLSPingRequest.ReplyMode">MPLSPingRequest.ReplyMode</a></td>
-                  <td></td>
-                  <td><p>How the target LER should respond to the LSP ping. </p></td>
-                </tr>
-                <tr>
-                  <td>count</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>The number of MPLS echo request packets to send.
+                        </tr>
+                      <tr>
+                          <td>reply_mode</td>
+                          <td><a href="#gnoi.mpls.MPLSPingRequest.ReplyMode">MPLSPingRequest.ReplyMode</a></td>
+                          <td></td>
+                          <td><p>How the target LER should respond to the LSP ping. </p></td>
+                        </tr>
+                      <tr>
+                          <td>count</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>The number of MPLS echo request packets to send.
 
 default=3 </p></td>
-                </tr>
-                <tr>
-                  <td>size</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>The size (in bytes) of each MPLS echo request packet.
+                        </tr>
+                      <tr>
+                          <td>size</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>The size (in bytes) of each MPLS echo request packet.
 
 default=64 </p></td>
-                </tr>
-                <tr>
-                  <td>source_address</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The source IPv4 address that should be used in the request packet. </p></td>
-                </tr>
-                <tr>
-                  <td>mpls_ttl</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>The MPLS TTL that should be set in the packets sent. </p></td>
-                </tr>
-                <tr>
-                  <td>traffic_class</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>The value of the traffic class (TC, formerly known as EXP) bits that
+                        </tr>
+                      <tr>
+                          <td>source_address</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The source IPv4 address that should be used in the request packet. </p></td>
+                        </tr>
+                      <tr>
+                          <td>mpls_ttl</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>The MPLS TTL that should be set in the packets sent. </p></td>
+                        </tr>
+                      <tr>
+                          <td>traffic_class</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>The value of the traffic class (TC, formerly known as EXP) bits that
 should be set in the MPLS ping packets. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.MPLSPingResponse" href="#gnoi.mpls.MPLSPingResponse">MPLSPingResponse</a>
-          </p>
-          <p class="subtitle is-6">MPLSPingResponse (MPLSPong?) is sent from the target to the client based on
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.MPLSPingResponse" href="#gnoi.mpls.MPLSPingResponse">MPLSPingResponse</a>
+              </p>
+               <p class="subtitle is-6">MPLSPingResponse (MPLSPong?) is sent from the target to the client based on
 each MPLS Echo Response packet it receives associated with an input MPLSPing
-RPC.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>seq</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>The sequence number of the MPLS Echo Reply. </p></td>
-                </tr>
-                <tr>
-                  <td>response</td>
-                  <td><a href="#gnoi.mpls.MPLSPingResponse.EchoResponseCode">MPLSPingResponse.EchoResponseCode</a></td>
-                  <td></td>
-                  <td><p>The response that was received from the egress LER. </p></td>
-                </tr>
-                <tr>
-                  <td>response_time</td>
-                  <td><a href="#uint64">uint64</a></td>
-                  <td></td>
-                  <td><p>The time (in nanoseconds) between transmission of the Echo Response,
+RPC.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>seq</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>The sequence number of the MPLS Echo Reply. </p></td>
+                        </tr>
+                      <tr>
+                          <td>response</td>
+                          <td><a href="#gnoi.mpls.MPLSPingResponse.EchoResponseCode">MPLSPingResponse.EchoResponseCode</a></td>
+                          <td></td>
+                          <td><p>The response that was received from the egress LER. </p></td>
+                        </tr>
+                      <tr>
+                          <td>response_time</td>
+                          <td><a href="#uint64">uint64</a></td>
+                          <td></td>
+                          <td><p>The time (in nanoseconds) between transmission of the Echo Response,
 and the echo reply. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.ClearLSPRequest.Mode" href="#gnoi.mpls.ClearLSPRequest.Mode">ClearLSPRequest.Mode</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DEFAULT</td>
-                  <td>0</td>
-                  <td><p>Same as NONAGGRESSIVE.</p></td>
-                </tr>
-                <tr>
-                  <td>NONAGGRESSIVE</td>
-                  <td>0</td>
-                  <td><p>Reoptimize the LSP using the current bandwidth.</p></td>
-                </tr>
-                <tr>
-                  <td>AGGRESSIVE</td>
-                  <td>1</td>
-                  <td><p>Reoptimize the LSP using the current bandwidth. Only use IGP metric in
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.ClearLSPRequest.Mode" href="#gnoi.mpls.ClearLSPRequest.Mode">ClearLSPRequest.Mode</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>DEFAULT</td>
+                        <td>0</td>
+                        <td><p>Same as NONAGGRESSIVE.</p></td>
+                      </tr>
+                    <tr>
+                        <td>NONAGGRESSIVE</td>
+                        <td>0</td>
+                        <td><p>Reoptimize the LSP using the current bandwidth.</p></td>
+                      </tr>
+                    <tr>
+                        <td>AGGRESSIVE</td>
+                        <td>1</td>
+                        <td><p>Reoptimize the LSP using the current bandwidth. Only use IGP metric in
 calcuation.</p></td>
-                </tr>
-                <tr>
-                  <td>RESET</td>
-                  <td>2</td>
-                  <td><p>Reset and restart all LSPs that originated from this routing device.</p></td>
-                </tr>
-                <tr>
-                  <td>AUTOBW_AGGRESSIVE</td>
-                  <td>3</td>
-                  <td><p>Apply the highest bandwidth collected on a tunnel without waiting for
+                      </tr>
+                    <tr>
+                        <td>RESET</td>
+                        <td>2</td>
+                        <td><p>Reset and restart all LSPs that originated from this routing device.</p></td>
+                      </tr>
+                    <tr>
+                        <td>AUTOBW_AGGRESSIVE</td>
+                        <td>3</td>
+                        <td><p>Apply the highest bandwidth collected on a tunnel without waiting for
 the current application period to end. Only use IGP metric in
 calcuation.</p></td>
-                </tr>
-                <tr>
-                  <td>AUTOBW_NONAGGRESSIVE</td>
-                  <td>4</td>
-                  <td><p>Apply the highest bandwidth collected on a tunnel without waiting for
+                      </tr>
+                    <tr>
+                        <td>AUTOBW_NONAGGRESSIVE</td>
+                        <td>4</td>
+                        <td><p>Apply the highest bandwidth collected on a tunnel without waiting for
 the current application period to end.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.MPLSPingRequest.ReplyMode" href="#gnoi.mpls.MPLSPingRequest.ReplyMode">MPLSPingRequest.ReplyMode</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>IPV4</td>
-                  <td>0</td>
-                  <td><p>Reply via an IPv4 packet to this system.</p></td>
-                </tr>
-                <tr>
-                  <td>ROUTER_ALERT</td>
-                  <td>1</td>
-                  <td><p>Reply with a labeled packet with the router alert bit set.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.MPLSPingResponse.EchoResponseCode" href="#gnoi.mpls.MPLSPingResponse.EchoResponseCode">MPLSPingResponse.EchoResponseCode</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>SUCCESS</td>
-                  <td>0</td>
-                  <td><p>A successful echo response was received.</p></td>
-                </tr>
-                <tr>
-                  <td>NOT_SENT</td>
-                  <td>1</td>
-                  <td><p>The MPLS ping packet was not sent, for an unknown reason.</p></td>
-                </tr>
-                <tr>
-                  <td>TIMEOUT</td>
-                  <td>2</td>
-                  <td><p>The local system timed out waiting for an LSP ping response.
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.MPLSPingRequest.ReplyMode" href="#gnoi.mpls.MPLSPingRequest.ReplyMode">MPLSPingRequest.ReplyMode</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>IPV4</td>
+                        <td>0</td>
+                        <td><p>Reply via an IPv4 packet to this system.</p></td>
+                      </tr>
+                    <tr>
+                        <td>ROUTER_ALERT</td>
+                        <td>1</td>
+                        <td><p>Reply with a labeled packet with the router alert bit set.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.mpls.MPLSPingResponse.EchoResponseCode" href="#gnoi.mpls.MPLSPingResponse.EchoResponseCode">MPLSPingResponse.EchoResponseCode</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>SUCCESS</td>
+                        <td>0</td>
+                        <td><p>A successful echo response was received.</p></td>
+                      </tr>
+                    <tr>
+                        <td>NOT_SENT</td>
+                        <td>1</td>
+                        <td><p>The MPLS ping packet was not sent, for an unknown reason.</p></td>
+                      </tr>
+                    <tr>
+                        <td>TIMEOUT</td>
+                        <td>2</td>
+                        <td><p>The local system timed out waiting for an LSP ping response.
 
 TODO(robjs): Add additional error codes.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.mpls.MPLS" href="#gnoi.mpls.MPLS">MPLS</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>ClearLSP</td>
-                    <td><a href="#gnoi.mpls.ClearLSPRequest">ClearLSPRequest</a></td>
-                    <td><a href="#gnoi.mpls.ClearLSPResponse">ClearLSPResponse</a></td>
-                    <td><p>ClearLSP clears a single tunnel (requests for it's route to be
-recalculated).</p></td>
-                  </tr>
-                <tr>
-                    <td>ClearLSPCounters</td>
-                    <td><a href="#gnoi.mpls.ClearLSPCountersRequest">ClearLSPCountersRequest</a></td>
-                    <td><a href="#gnoi.mpls.ClearLSPCountersResponse">ClearLSPCountersResponse</a></td>
-                    <td><p>ClearLSPCounters will clear the MPLS counters for the provided LSP.</p></td>
-                  </tr>
-                <tr>
-                    <td>MPLSPing</td>
-                    <td><a href="#gnoi.mpls.MPLSPingRequest">MPLSPingRequest</a></td>
-                    <td><a href="#gnoi.mpls.MPLSPingResponse">MPLSPingResponse</a> stream</td>
-                    <td><p>An MPLS ping, specified as per RFC4379.</p></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">

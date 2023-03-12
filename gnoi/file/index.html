@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <title>gNOI file Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,222 +19,288 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#file.proto" class="service has-text-weight-bold is-size-6">file.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnoi.file.File">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                      <div class="level-item">File</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.GetRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">GetRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.GetResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">GetResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.PutRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">PutRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.PutRequest.Details">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">PutRequest.Details</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.PutResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">PutResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.RemoveRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">RemoveRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.RemoveResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">RemoveResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.StatInfo">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">StatInfo</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.StatRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">StatRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.StatResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">StatResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.TransferToRemoteRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">TransferToRemoteRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.file.TransferToRemoteResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">TransferToRemoteResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#file.proto" class="service has-text-weight-bold is-size-6">file.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnoi.file.File">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                          <div class="level-item">File</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.GetRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">GetRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.GetResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">GetResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.PutRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">PutRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.PutRequest.Details">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">PutRequest.Details</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.PutResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">PutResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.RemoveRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">RemoveRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.RemoveResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">RemoveResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.StatInfo">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">StatInfo</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.StatRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">StatRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.StatResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">StatResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.TransferToRemoteRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">TransferToRemoteRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.file.TransferToRemoteResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">TransferToRemoteResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNOI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNOI file Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="file.proto" href="#file.proto">file.proto</a></p>
-            </div>
-          <hr/>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="file.proto" href="#file.proto">file.proto</a></p>
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.GetRequest" href="#gnoi.file.GetRequest">GetRequest</a>
-          </p>
-          <p class="subtitle is-6">A GetRequest specifies the remote_file to be streamed back
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.File" href="#gnoi.file.File">File</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>Get</td>
+                        <td><a href="#gnoi.file.GetRequest">GetRequest</a></td>
+                        <td><a href="#gnoi.file.GetResponse">GetResponse</a> stream</td>
+                        <td><p>Get reads and streams the contents of a file from the target.
+The file is streamed by sequential messages, each containing up to
+64KB of data. A final message is sent prior to closing the stream
+that contains the hash of the data sent. An error is returned
+if the file does not exist or there was an error reading the file.</p></td>
+                      </tr>
+                    <tr>
+                        <td>TransferToRemote</td>
+                        <td><a href="#gnoi.file.TransferToRemoteRequest">TransferToRemoteRequest</a></td>
+                        <td><a href="#gnoi.file.TransferToRemoteResponse">TransferToRemoteResponse</a></td>
+                        <td><p>TransferToRemote transfers the contents of a file from the target to a
+specified remote location. The response contains the hash of the data
+transferred. An error is returned if the file does not exist, the file
+transfer fails, or if there was an error reading the file. This is a
+blocking call until the file transfer is complete.</p></td>
+                      </tr>
+                    <tr>
+                        <td>Put</td>
+                        <td><a href="#gnoi.file.PutRequest">PutRequest</a> stream</td>
+                        <td><a href="#gnoi.file.PutResponse">PutResponse</a></td>
+                        <td><p>Put streams data into a file on the target. The file is sent in
+sequential messages, each message containing up to 64KB of data. A final
+message must be sent that includes the hash of the data sent. An
+error is returned if the location does not exist or there is an error
+writing the data. If no checksum is received, the target must assume the
+operation is incomplete and remove the partially transmitted file. The
+target should initially write the file to a temporary location so a failure
+does not destroy the original file.</p></td>
+                      </tr>
+                    <tr>
+                        <td>Stat</td>
+                        <td><a href="#gnoi.file.StatRequest">StatRequest</a></td>
+                        <td><a href="#gnoi.file.StatResponse">StatResponse</a></td>
+                        <td><p>Stat returns metadata about a file on the target. An error is returned
+if the file does not exist of there is an error in accessing the metadata.</p></td>
+                      </tr>
+                    <tr>
+                        <td>Remove</td>
+                        <td><a href="#gnoi.file.RemoveRequest">RemoveRequest</a></td>
+                        <td><a href="#gnoi.file.RemoveResponse">RemoveResponse</a></td>
+                        <td><p>Remove removes the specified file from the target. An error is
+returned if the file does not exist, is a directory, or the remove
+operation encounters an error (e.g., permission denied).</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.GetRequest" href="#gnoi.file.GetRequest">GetRequest</a>
+              </p>
+               <p class="subtitle is-6">A GetRequest specifies the remote_file to be streamed back
 to the caller. The remote_file must be an absolute path to an
-existing file.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>remote_file</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.GetResponse" href="#gnoi.file.GetResponse">GetResponse</a>
-          </p>
-          <p class="subtitle is-6">A GetResponse either contains the next set of bytes read from the
-file or, as the last message, the hash of the data.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>contents</td>
-                  <td><a href="#bytes">bytes</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>hash</td>
-                  <td><a href="#gnoi.types.HashType">gnoi.types.HashType</a></td>
-                  <td></td>
-                  <td><p>hash of the file. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.PutRequest" href="#gnoi.file.PutRequest">PutRequest</a>
-          </p>
-          <p class="subtitle is-6">A PutRequest is used to send data to be written on a file on the target.
+existing file.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>remote_file</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.GetResponse" href="#gnoi.file.GetResponse">GetResponse</a>
+              </p>
+               <p class="subtitle is-6">A GetResponse either contains the next set of bytes read from the
+file or, as the last message, the hash of the data.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>contents</td>
+                          <td><a href="#bytes">bytes</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>hash</td>
+                          <td><a href="#gnoi.types.HashType">gnoi.types.HashType</a></td>
+                          <td></td>
+                          <td><p>hash of the file. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.PutRequest" href="#gnoi.file.PutRequest">PutRequest</a>
+              </p>
+               <p class="subtitle is-6">A PutRequest is used to send data to be written on a file on the target.
 
 The initial message contains an Open message. The Open message contains
 information name of the file and the file's permisssions.
@@ -246,139 +312,138 @@ remote_file doesn't exist it will be created.
 The contents to be written are streamed through multiple messages using the
 contents field. Each message may contain up to 64KB of data.
 
-The final message of the RPC contains the hash of the file contents.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>open</td>
-                  <td><a href="#gnoi.file.PutRequest.Details">PutRequest.Details</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>contents</td>
-                  <td><a href="#bytes">bytes</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>hash</td>
-                  <td><a href="#gnoi.types.HashType">gnoi.types.HashType</a></td>
-                  <td></td>
-                  <td><p>hash of the file. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.PutRequest.Details" href="#gnoi.file.PutRequest.Details">PutRequest.Details</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>remote_file</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>permissions</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>Permissions are represented as the octal format of standard UNIX
+The final message of the RPC contains the hash of the file contents.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>open</td>
+                          <td><a href="#gnoi.file.PutRequest.Details">PutRequest.Details</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>contents</td>
+                          <td><a href="#bytes">bytes</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>hash</td>
+                          <td><a href="#gnoi.types.HashType">gnoi.types.HashType</a></td>
+                          <td></td>
+                          <td><p>hash of the file. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.PutRequest.Details" href="#gnoi.file.PutRequest.Details">PutRequest.Details</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>remote_file</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>permissions</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>Permissions are represented as the octal format of standard UNIX
 file permissions.
 ex. 775: user read/write/execute, group read/write/execute,
 global read/execute. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.PutResponse" href="#gnoi.file.PutResponse">PutResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.RemoveRequest" href="#gnoi.file.RemoveRequest">RemoveRequest</a>
-          </p>
-          <p class="subtitle is-6">A RemoveRequest specifies a file to be removed from the target.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>remote_file</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.RemoveResponse" href="#gnoi.file.RemoveResponse">RemoveResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.StatInfo" href="#gnoi.file.StatInfo">StatInfo</a>
-          </p>
-          <p class="subtitle is-6">StatInfo provides a file system information about a particular path.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>path</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>last_modified</td>
-                  <td><a href="#uint64">uint64</a></td>
-                  <td></td>
-                  <td><p>Nanoseconds since epoch. </p></td>
-                </tr>
-                <tr>
-                  <td>permissions</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>Permissions are represented as the octal format of standard UNIX
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.PutResponse" href="#gnoi.file.PutResponse">PutResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.RemoveRequest" href="#gnoi.file.RemoveRequest">RemoveRequest</a>
+              </p>
+               <p class="subtitle is-6">A RemoveRequest specifies a file to be removed from the target.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>remote_file</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.RemoveResponse" href="#gnoi.file.RemoveResponse">RemoveResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.StatInfo" href="#gnoi.file.StatInfo">StatInfo</a>
+              </p>
+               <p class="subtitle is-6">StatInfo provides a file system information about a particular path.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>path</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>last_modified</td>
+                          <td><a href="#uint64">uint64</a></td>
+                          <td></td>
+                          <td><p>Nanoseconds since epoch. </p></td>
+                        </tr>
+                      <tr>
+                          <td>permissions</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>Permissions are represented as the octal format of standard UNIX
 file permissions.
 ex. 775: user read/write/execute, group read/write/execute,
 global read/execute.
@@ -386,196 +451,131 @@ The value returned in this field should be the octal number. No base
 conversion should be required to read the value. For example, 0755
 should result in the permissions field holding the value 755, 4644
 results in the permissions field being 4644, and so on. </p></td>
-                </tr>
-                <tr>
-                  <td>size</td>
-                  <td><a href="#uint64">uint64</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>umask</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>Default file creation mask. Represented as the octal format of
+                        </tr>
+                      <tr>
+                          <td>size</td>
+                          <td><a href="#uint64">uint64</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>umask</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>Default file creation mask. Represented as the octal format of
 standard UNIX mask. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.StatRequest" href="#gnoi.file.StatRequest">StatRequest</a>
-          </p>
-          <p class="subtitle is-6">StatRequest will list files at the provided path.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>path</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.StatResponse" href="#gnoi.file.StatResponse">StatResponse</a>
-          </p>
-          <p class="subtitle is-6">StatResponse contains list of stat info of the provided path.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>stats</td>
-                  <td><a href="#gnoi.file.StatInfo">StatInfo</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.TransferToRemoteRequest" href="#gnoi.file.TransferToRemoteRequest">TransferToRemoteRequest</a>
-          </p>
-          <p class="subtitle is-6">A TransferToRemoteRequest specifies the local path to transfer to and the
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.StatRequest" href="#gnoi.file.StatRequest">StatRequest</a>
+              </p>
+               <p class="subtitle is-6">StatRequest will list files at the provided path.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>path</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.StatResponse" href="#gnoi.file.StatResponse">StatResponse</a>
+              </p>
+               <p class="subtitle is-6">StatResponse contains list of stat info of the provided path.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>stats</td>
+                          <td><a href="#gnoi.file.StatInfo">StatInfo</a></td>
+                          <td>repeated</td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.TransferToRemoteRequest" href="#gnoi.file.TransferToRemoteRequest">TransferToRemoteRequest</a>
+              </p>
+               <p class="subtitle is-6">A TransferToRemoteRequest specifies the local path to transfer to and the
 details on where to transfer the data from. The local_path must be an
-absolute path to the file.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>local_path</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>remote_download</td>
-                  <td><a href="#gnoi.common.RemoteDownload">gnoi.common.RemoteDownload</a></td>
-                  <td></td>
-                  <td><p>Details to download the remote_file being requested to a remote location. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.TransferToRemoteResponse" href="#gnoi.file.TransferToRemoteResponse">TransferToRemoteResponse</a>
-          </p>
-          <p class="subtitle is-6">A TransferToRemoteResponse contains the hash of the data transferred.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>hash</td>
-                  <td><a href="#gnoi.types.HashType">gnoi.types.HashType</a></td>
-                  <td></td>
-                  <td><p>hash of the file. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.file.File" href="#gnoi.file.File">File</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Get</td>
-                    <td><a href="#gnoi.file.GetRequest">GetRequest</a></td>
-                    <td><a href="#gnoi.file.GetResponse">GetResponse</a> stream</td>
-                    <td><p>Get reads and streams the contents of a file from the target.
-The file is streamed by sequential messages, each containing up to
-64KB of data. A final message is sent prior to closing the stream
-that contains the hash of the data sent. An error is returned
-if the file does not exist or there was an error reading the file.</p></td>
-                  </tr>
-                <tr>
-                    <td>TransferToRemote</td>
-                    <td><a href="#gnoi.file.TransferToRemoteRequest">TransferToRemoteRequest</a></td>
-                    <td><a href="#gnoi.file.TransferToRemoteResponse">TransferToRemoteResponse</a></td>
-                    <td><p>TransferToRemote transfers the contents of a file from the target to a
-specified remote location. The response contains the hash of the data
-transferred. An error is returned if the file does not exist, the file
-transfer fails, or if there was an error reading the file. This is a
-blocking call until the file transfer is complete.</p></td>
-                  </tr>
-                <tr>
-                    <td>Put</td>
-                    <td><a href="#gnoi.file.PutRequest">PutRequest</a> stream</td>
-                    <td><a href="#gnoi.file.PutResponse">PutResponse</a></td>
-                    <td><p>Put streams data into a file on the target. The file is sent in
-sequential messages, each message containing up to 64KB of data. A final
-message must be sent that includes the hash of the data sent. An
-error is returned if the location does not exist or there is an error
-writing the data. If no checksum is received, the target must assume the
-operation is incomplete and remove the partially transmitted file. The
-target should initially write the file to a temporary location so a failure
-does not destroy the original file.</p></td>
-                  </tr>
-                <tr>
-                    <td>Stat</td>
-                    <td><a href="#gnoi.file.StatRequest">StatRequest</a></td>
-                    <td><a href="#gnoi.file.StatResponse">StatResponse</a></td>
-                    <td><p>Stat returns metadata about a file on the target. An error is returned
-if the file does not exist of there is an error in accessing the metadata.</p></td>
-                  </tr>
-                <tr>
-                    <td>Remove</td>
-                    <td><a href="#gnoi.file.RemoveRequest">RemoveRequest</a></td>
-                    <td><a href="#gnoi.file.RemoveResponse">RemoveResponse</a></td>
-                    <td><p>Remove removes the specified file from the target. An error is
-returned if the file does not exist, is a directory, or the remove
-operation encounters an error (e.g., permission denied).</p></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+absolute path to the file.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>local_path</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>remote_download</td>
+                          <td><a href="#gnoi.common.RemoteDownload">gnoi.common.RemoteDownload</a></td>
+                          <td></td>
+                          <td><p>Details to download the remote_file being requested to a remote location. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.file.TransferToRemoteResponse" href="#gnoi.file.TransferToRemoteResponse">TransferToRemoteResponse</a>
+              </p>
+               <p class="subtitle is-6">A TransferToRemoteResponse contains the hash of the data transferred.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>hash</td>
+                          <td><a href="#gnoi.types.HashType">gnoi.types.HashType</a></td>
+                          <td></td>
+                          <td><p>hash of the file. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">

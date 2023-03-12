@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <title>gNOI layer2 Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,461 +19,467 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#layer2.proto" class="service has-text-weight-bold is-size-6">layer2.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.Layer2">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                      <div class="level-item">Layer2</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.ClearLLDPInterfaceRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearLLDPInterfaceRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.ClearLLDPInterfaceResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearLLDPInterfaceResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.ClearNeighborDiscoveryRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearNeighborDiscoveryRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.ClearNeighborDiscoveryResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearNeighborDiscoveryResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.ClearSpanningTreeRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearSpanningTreeRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.ClearSpanningTreeResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ClearSpanningTreeResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.PerformBERTRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">PerformBERTRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.PerformBERTResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">PerformBERTResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.SendWakeOnLANRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">SendWakeOnLANRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.SendWakeOnLANResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">SendWakeOnLANResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.layer2.PerformBERTResponse.BERTState">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">PerformBERTResponse.BERTState</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#layer2.proto" class="service has-text-weight-bold is-size-6">layer2.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.Layer2">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                          <div class="level-item">Layer2</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.ClearLLDPInterfaceRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearLLDPInterfaceRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.ClearLLDPInterfaceResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearLLDPInterfaceResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.ClearNeighborDiscoveryRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearNeighborDiscoveryRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.ClearNeighborDiscoveryResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearNeighborDiscoveryResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.ClearSpanningTreeRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearSpanningTreeRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.ClearSpanningTreeResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ClearSpanningTreeResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.PerformBERTRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">PerformBERTRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.PerformBERTResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">PerformBERTResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.SendWakeOnLANRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">SendWakeOnLANRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.SendWakeOnLANResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">SendWakeOnLANResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.layer2.PerformBERTResponse.BERTState">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">PerformBERTResponse.BERTState</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNOI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNOI layer2 Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="layer2.proto" href="#layer2.proto">layer2.proto</a></p>
-            </div>
-          <hr/>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="layer2.proto" href="#layer2.proto">layer2.proto</a></p>
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.ClearLLDPInterfaceRequest" href="#gnoi.layer2.ClearLLDPInterfaceRequest">ClearLLDPInterfaceRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>interface</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.ClearLLDPInterfaceResponse" href="#gnoi.layer2.ClearLLDPInterfaceResponse">ClearLLDPInterfaceResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.ClearNeighborDiscoveryRequest" href="#gnoi.layer2.ClearNeighborDiscoveryRequest">ClearNeighborDiscoveryRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>protocol</td>
-                  <td><a href="#gnoi.types.L3Protocol">gnoi.types.L3Protocol</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>address</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.ClearNeighborDiscoveryResponse" href="#gnoi.layer2.ClearNeighborDiscoveryResponse">ClearNeighborDiscoveryResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.ClearSpanningTreeRequest" href="#gnoi.layer2.ClearSpanningTreeRequest">ClearSpanningTreeRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>interface</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.ClearSpanningTreeResponse" href="#gnoi.layer2.ClearSpanningTreeResponse">ClearSpanningTreeResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.PerformBERTRequest" href="#gnoi.layer2.PerformBERTRequest">PerformBERTRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>ID for retrieving a previous BERT run data - optional. </p></td>
-                </tr>
-                <tr>
-                  <td>interface</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.PerformBERTResponse" href="#gnoi.layer2.PerformBERTResponse">PerformBERTResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>state</td>
-                  <td><a href="#gnoi.layer2.PerformBERTResponse.BERTState">PerformBERTResponse.BERTState</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>elapsed_period</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>BERT test length in nanoseconds. </p></td>
-                </tr>
-                <tr>
-                  <td>pattern</td>
-                  <td><a href="#bytes">bytes</a></td>
-                  <td></td>
-                  <td><p>Pattern used for the BERT test. </p></td>
-                </tr>
-                <tr>
-                  <td>errors</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Number of errors experienced since the start of the BERT test. </p></td>
-                </tr>
-                <tr>
-                  <td>received_bits</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Number of bits received since the start of the BERT test. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.SendWakeOnLANRequest" href="#gnoi.layer2.SendWakeOnLANRequest">SendWakeOnLANRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>interface</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>address</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>IP address of the WOL target. </p></td>
-                </tr>
-                <tr>
-                  <td>mac_address</td>
-                  <td><a href="#bytes">bytes</a></td>
-                  <td></td>
-                  <td><p>MAC address of the target. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.SendWakeOnLANResponse" href="#gnoi.layer2.SendWakeOnLANResponse">SendWakeOnLANResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.PerformBERTResponse.BERTState" href="#gnoi.layer2.PerformBERTResponse.BERTState">PerformBERTResponse.BERTState</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>UNKNOWN</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>DISABLED</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>RUNNING</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>COMPLETE</td>
-                  <td>3</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>ERROR</td>
-                  <td>4</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.layer2.Layer2" href="#gnoi.layer2.Layer2">Layer2</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>ClearNeighborDiscovery</td>
-                    <td><a href="#gnoi.layer2.ClearNeighborDiscoveryRequest">ClearNeighborDiscoveryRequest</a></td>
-                    <td><a href="#gnoi.layer2.ClearNeighborDiscoveryResponse">ClearNeighborDiscoveryResponse</a></td>
-                    <td><p>ClearNeighborDiscovery will clear either a specific neighbor entry or
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.Layer2" href="#gnoi.layer2.Layer2">Layer2</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>ClearNeighborDiscovery</td>
+                        <td><a href="#gnoi.layer2.ClearNeighborDiscoveryRequest">ClearNeighborDiscoveryRequest</a></td>
+                        <td><a href="#gnoi.layer2.ClearNeighborDiscoveryResponse">ClearNeighborDiscoveryResponse</a></td>
+                        <td><p>ClearNeighborDiscovery will clear either a specific neighbor entry or
 clear the entire table based on parameters provided.
 TODO: This method is subject to deprecation once OpenConfig models this
 state.</p></td>
-                  </tr>
-                <tr>
-                    <td>ClearSpanningTree</td>
-                    <td><a href="#gnoi.layer2.ClearSpanningTreeRequest">ClearSpanningTreeRequest</a></td>
-                    <td><a href="#gnoi.layer2.ClearSpanningTreeResponse">ClearSpanningTreeResponse</a></td>
-                    <td><p>ClearSpanningTree will reset a blocked spanning tree interface.
+                      </tr>
+                    <tr>
+                        <td>ClearSpanningTree</td>
+                        <td><a href="#gnoi.layer2.ClearSpanningTreeRequest">ClearSpanningTreeRequest</a></td>
+                        <td><a href="#gnoi.layer2.ClearSpanningTreeResponse">ClearSpanningTreeResponse</a></td>
+                        <td><p>ClearSpanningTree will reset a blocked spanning tree interface.
 TODO: This method is subject to deprecation once OpenConfig models this
 state.</p></td>
-                  </tr>
-                <tr>
-                    <td>PerformBERT</td>
-                    <td><a href="#gnoi.layer2.PerformBERTRequest">PerformBERTRequest</a></td>
-                    <td><a href="#gnoi.layer2.PerformBERTResponse">PerformBERTResponse</a> stream</td>
-                    <td><p>PerformBERT will perform a BERT operation on a port. The stream will
+                      </tr>
+                    <tr>
+                        <td>PerformBERT</td>
+                        <td><a href="#gnoi.layer2.PerformBERTRequest">PerformBERTRequest</a></td>
+                        <td><a href="#gnoi.layer2.PerformBERTResponse">PerformBERTResponse</a> stream</td>
+                        <td><p>PerformBERT will perform a BERT operation on a port. The stream will
 return the current state of the operation as well as the ID for the
 operation.</p></td>
-                  </tr>
-                <tr>
-                    <td>ClearLLDPInterface</td>
-                    <td><a href="#gnoi.layer2.ClearLLDPInterfaceRequest">ClearLLDPInterfaceRequest</a></td>
-                    <td><a href="#gnoi.layer2.ClearLLDPInterfaceResponse">ClearLLDPInterfaceResponse</a></td>
-                    <td><p>ClearLLDPInterface will clear all LLDP adjacencies on the provided
+                      </tr>
+                    <tr>
+                        <td>ClearLLDPInterface</td>
+                        <td><a href="#gnoi.layer2.ClearLLDPInterfaceRequest">ClearLLDPInterfaceRequest</a></td>
+                        <td><a href="#gnoi.layer2.ClearLLDPInterfaceResponse">ClearLLDPInterfaceResponse</a></td>
+                        <td><p>ClearLLDPInterface will clear all LLDP adjacencies on the provided
 interface.</p></td>
-                  </tr>
-                <tr>
-                    <td>SendWakeOnLAN</td>
-                    <td><a href="#gnoi.layer2.SendWakeOnLANRequest">SendWakeOnLANRequest</a></td>
-                    <td><a href="#gnoi.layer2.SendWakeOnLANResponse">SendWakeOnLANResponse</a></td>
-                    <td><p>SendWakeOnLAN will send a WOL event on the requested interface.</p></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+                      </tr>
+                    <tr>
+                        <td>SendWakeOnLAN</td>
+                        <td><a href="#gnoi.layer2.SendWakeOnLANRequest">SendWakeOnLANRequest</a></td>
+                        <td><a href="#gnoi.layer2.SendWakeOnLANResponse">SendWakeOnLANResponse</a></td>
+                        <td><p>SendWakeOnLAN will send a WOL event on the requested interface.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.ClearLLDPInterfaceRequest" href="#gnoi.layer2.ClearLLDPInterfaceRequest">ClearLLDPInterfaceRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>interface</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.ClearLLDPInterfaceResponse" href="#gnoi.layer2.ClearLLDPInterfaceResponse">ClearLLDPInterfaceResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.ClearNeighborDiscoveryRequest" href="#gnoi.layer2.ClearNeighborDiscoveryRequest">ClearNeighborDiscoveryRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>protocol</td>
+                          <td><a href="#gnoi.types.L3Protocol">gnoi.types.L3Protocol</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>address</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.ClearNeighborDiscoveryResponse" href="#gnoi.layer2.ClearNeighborDiscoveryResponse">ClearNeighborDiscoveryResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.ClearSpanningTreeRequest" href="#gnoi.layer2.ClearSpanningTreeRequest">ClearSpanningTreeRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>interface</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.ClearSpanningTreeResponse" href="#gnoi.layer2.ClearSpanningTreeResponse">ClearSpanningTreeResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.PerformBERTRequest" href="#gnoi.layer2.PerformBERTRequest">PerformBERTRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>id</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>ID for retrieving a previous BERT run data - optional. </p></td>
+                        </tr>
+                      <tr>
+                          <td>interface</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.PerformBERTResponse" href="#gnoi.layer2.PerformBERTResponse">PerformBERTResponse</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>id</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>state</td>
+                          <td><a href="#gnoi.layer2.PerformBERTResponse.BERTState">PerformBERTResponse.BERTState</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>elapsed_period</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>BERT test length in nanoseconds. </p></td>
+                        </tr>
+                      <tr>
+                          <td>pattern</td>
+                          <td><a href="#bytes">bytes</a></td>
+                          <td></td>
+                          <td><p>Pattern used for the BERT test. </p></td>
+                        </tr>
+                      <tr>
+                          <td>errors</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Number of errors experienced since the start of the BERT test. </p></td>
+                        </tr>
+                      <tr>
+                          <td>received_bits</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Number of bits received since the start of the BERT test. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.SendWakeOnLANRequest" href="#gnoi.layer2.SendWakeOnLANRequest">SendWakeOnLANRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>interface</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>address</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>IP address of the WOL target. </p></td>
+                        </tr>
+                      <tr>
+                          <td>mac_address</td>
+                          <td><a href="#bytes">bytes</a></td>
+                          <td></td>
+                          <td><p>MAC address of the target. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.SendWakeOnLANResponse" href="#gnoi.layer2.SendWakeOnLANResponse">SendWakeOnLANResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.layer2.PerformBERTResponse.BERTState" href="#gnoi.layer2.PerformBERTResponse.BERTState">PerformBERTResponse.BERTState</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>UNKNOWN</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>DISABLED</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>RUNNING</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>COMPLETE</td>
+                        <td>3</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>ERROR</td>
+                        <td>4</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">

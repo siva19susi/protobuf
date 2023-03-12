@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <title>gNOI system Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,413 +19,511 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#system.proto" class="service has-text-weight-bold is-size-6">system.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnoi.system.System">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                      <div class="level-item">System</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.CancelRebootRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CancelRebootRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.CancelRebootResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CancelRebootResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.KillProcessRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">KillProcessRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.KillProcessResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">KillProcessResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.Package">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">Package</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.PingRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">PingRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.PingResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">PingResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.RebootRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">RebootRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.RebootResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">RebootResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.RebootStatusRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">RebootStatusRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.RebootStatusResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">RebootStatusResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.SetPackageRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">SetPackageRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.SetPackageResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">SetPackageResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.SwitchControlProcessorRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">SwitchControlProcessorRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.SwitchControlProcessorResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">SwitchControlProcessorResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.TimeRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">TimeRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.TimeResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">TimeResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.TracerouteRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">TracerouteRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.TracerouteResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">TracerouteResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.TracerouteResponse.MplsEntry">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">TracerouteResponse.MplsEntry</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.KillProcessRequest.Signal">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">KillProcessRequest.Signal</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.RebootMethod">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">RebootMethod</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.TracerouteRequest.L4Protocol">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">TracerouteRequest.L4Protocol</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.system.TracerouteResponse.State">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">TracerouteResponse.State</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#system.proto" class="service has-text-weight-bold is-size-6">system.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnoi.system.System">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                          <div class="level-item">System</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.CancelRebootRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CancelRebootRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.CancelRebootResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CancelRebootResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.KillProcessRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">KillProcessRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.KillProcessResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">KillProcessResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.Package">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">Package</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.PingRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">PingRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.PingResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">PingResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.RebootRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">RebootRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.RebootResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">RebootResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.RebootStatusRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">RebootStatusRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.RebootStatusResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">RebootStatusResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.SetPackageRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">SetPackageRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.SetPackageResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">SetPackageResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.SwitchControlProcessorRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">SwitchControlProcessorRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.SwitchControlProcessorResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">SwitchControlProcessorResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.TimeRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">TimeRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.TimeResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">TimeResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.TracerouteRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">TracerouteRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.TracerouteResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">TracerouteResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.TracerouteResponse.MplsEntry">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">TracerouteResponse.MplsEntry</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.KillProcessRequest.Signal">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">KillProcessRequest.Signal</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.RebootMethod">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">RebootMethod</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.TracerouteRequest.L4Protocol">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">TracerouteRequest.L4Protocol</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.system.TracerouteResponse.State">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">TracerouteResponse.State</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNOI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNOI system Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="system.proto" href="#system.proto">system.proto</a></p>
-            </div>
-          <hr/>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="system.proto" href="#system.proto">system.proto</a></p>
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.CancelRebootRequest" href="#gnoi.system.CancelRebootRequest">CancelRebootRequest</a>
-          </p>
-          <p class="subtitle is-6">A CancelRebootRequest requests the cancelation of any outstanding reboot
-request.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>message</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>informational reason for the cancel </p></td>
-                </tr>
-                <tr>
-                  <td>subcomponents</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td>repeated</td>
-                  <td><p>optional sub-components. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.CancelRebootResponse" href="#gnoi.system.CancelRebootResponse">CancelRebootResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.KillProcessRequest" href="#gnoi.system.KillProcessRequest">KillProcessRequest</a>
-          </p>
-          <p class="subtitle is-6">KillProcessRequest describes the process kill operation. Either a pid or
-process name must be specified, and a termination signal must be specified.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>pid</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>Process ID of the process to be killed. </p></td>
-                </tr>
-                <tr>
-                  <td>name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Name of the process to be killed. </p></td>
-                </tr>
-                <tr>
-                  <td>signal</td>
-                  <td><a href="#gnoi.system.KillProcessRequest.Signal">KillProcessRequest.Signal</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>restart</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Whether the process should be restarted after termination.
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.System" href="#gnoi.system.System">System</a>
+              </p>
+               <p class="subtitle is-6">The gNOI service is a collection of operational RPC's that allow for the
+management of a target outside of the configuration and telemetry pipeline.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>Ping</td>
+                        <td><a href="#gnoi.system.PingRequest">PingRequest</a></td>
+                        <td><a href="#gnoi.system.PingResponse">PingResponse</a> stream</td>
+                        <td><p>Ping executes the ping command on the target and streams back
+the results.  Some targets may not stream any results until all
+results are in.  The stream should provide single ping packet responses
+and must provide summary statistics.</p></td>
+                      </tr>
+                    <tr>
+                        <td>Traceroute</td>
+                        <td><a href="#gnoi.system.TracerouteRequest">TracerouteRequest</a></td>
+                        <td><a href="#gnoi.system.TracerouteResponse">TracerouteResponse</a> stream</td>
+                        <td><p>Traceroute executes the traceroute command on the target and streams back
+the results.  Some targets may not stream any results until all
+results are in.  If a hop count is not explicitly provided,
+30 is used.</p></td>
+                      </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td><a href="#gnoi.system.TimeRequest">TimeRequest</a></td>
+                        <td><a href="#gnoi.system.TimeResponse">TimeResponse</a></td>
+                        <td><p>Time returns the current time on the target.  Time is typically used to
+test if a target is actually responding.</p></td>
+                      </tr>
+                    <tr>
+                        <td>SetPackage</td>
+                        <td><a href="#gnoi.system.SetPackageRequest">SetPackageRequest</a> stream</td>
+                        <td><a href="#gnoi.system.SetPackageResponse">SetPackageResponse</a></td>
+                        <td><p>SetPackage places a software package (possibly including bootable images)
+on the target. The file is sent in sequential messages, each message
+up to 64KB of data. A final message must be sent that includes the hash
+of the data sent. An error is returned if the location does not exist or
+there is an error writing the data. If no checksum is received, the target
+must assume the operation is incomplete and remove the partially
+transmitted file. The target should initially write the file to a temporary
+location so a failure does not destroy the original file.</p></td>
+                      </tr>
+                    <tr>
+                        <td>SwitchControlProcessor</td>
+                        <td><a href="#gnoi.system.SwitchControlProcessorRequest">SwitchControlProcessorRequest</a></td>
+                        <td><a href="#gnoi.system.SwitchControlProcessorResponse">SwitchControlProcessorResponse</a></td>
+                        <td><p>SwitchControlProcessor will switch from the current route processor to the
+provided route processor. If the current route processor is the same as the
+one provided it is a NOOP. If the target does not exist an error is
+returned.</p></td>
+                      </tr>
+                    <tr>
+                        <td>Reboot</td>
+                        <td><a href="#gnoi.system.RebootRequest">RebootRequest</a></td>
+                        <td><a href="#gnoi.system.RebootResponse">RebootResponse</a></td>
+                        <td><p>Reboot causes the target to reboot, possibly at some point in the future.
+If the method of reboot is not supported then the Reboot RPC will fail.
+If the reboot is immediate the command will block until the subcomponents
+have restarted.
+If a reboot on the active control processor is pending the service must
+reject all other reboot requests.
+If a reboot request for active control processor is initiated with other
+pending reboot requests it must be rejected.</p></td>
+                      </tr>
+                    <tr>
+                        <td>RebootStatus</td>
+                        <td><a href="#gnoi.system.RebootStatusRequest">RebootStatusRequest</a></td>
+                        <td><a href="#gnoi.system.RebootStatusResponse">RebootStatusResponse</a></td>
+                        <td><p>RebootStatus returns the status of reboot for the target.</p></td>
+                      </tr>
+                    <tr>
+                        <td>CancelReboot</td>
+                        <td><a href="#gnoi.system.CancelRebootRequest">CancelRebootRequest</a></td>
+                        <td><a href="#gnoi.system.CancelRebootResponse">CancelRebootResponse</a></td>
+                        <td><p>CancelReboot cancels any pending reboot request.</p></td>
+                      </tr>
+                    <tr>
+                        <td>KillProcess</td>
+                        <td><a href="#gnoi.system.KillProcessRequest">KillProcessRequest</a></td>
+                        <td><a href="#gnoi.system.KillProcessResponse">KillProcessResponse</a></td>
+                        <td><p>KillProcess kills an OS process and optionally restarts it.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.CancelRebootRequest" href="#gnoi.system.CancelRebootRequest">CancelRebootRequest</a>
+              </p>
+               <p class="subtitle is-6">A CancelRebootRequest requests the cancelation of any outstanding reboot
+request.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>message</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>informational reason for the cancel </p></td>
+                        </tr>
+                      <tr>
+                          <td>subcomponents</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td>repeated</td>
+                          <td><p>optional sub-components. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.CancelRebootResponse" href="#gnoi.system.CancelRebootResponse">CancelRebootResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.KillProcessRequest" href="#gnoi.system.KillProcessRequest">KillProcessRequest</a>
+              </p>
+               <p class="subtitle is-6">KillProcessRequest describes the process kill operation. Either a pid or
+process name must be specified, and a termination signal must be specified.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>pid</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>Process ID of the process to be killed. </p></td>
+                        </tr>
+                      <tr>
+                          <td>name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Name of the process to be killed. </p></td>
+                        </tr>
+                      <tr>
+                          <td>signal</td>
+                          <td><a href="#gnoi.system.KillProcessRequest.Signal">KillProcessRequest.Signal</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>restart</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Whether the process should be restarted after termination.
 This value is ignored when the termination signal is SIGHUP. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.KillProcessResponse" href="#gnoi.system.KillProcessResponse">KillProcessResponse</a>
-          </p>
-          <p class="subtitle is-6">KillProcessResponse describes the result of the process kill operation.</p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.Package" href="#gnoi.system.Package">Package</a>
-          </p>
-          <p class="subtitle is-6">Package defines a single package file to be placed on the target.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>filename</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Destination path and filename of the package. </p></td>
-                </tr>
-                <tr>
-                  <td>version</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Version of the package. (vendor internal name) </p></td>
-                </tr>
-                <tr>
-                  <td>activate</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Indicates that the package should be made active after receipt on
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.KillProcessResponse" href="#gnoi.system.KillProcessResponse">KillProcessResponse</a>
+              </p>
+               <p class="subtitle is-6">KillProcessResponse describes the result of the process kill operation.</p> 
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.Package" href="#gnoi.system.Package">Package</a>
+              </p>
+               <p class="subtitle is-6">Package defines a single package file to be placed on the target.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>filename</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Destination path and filename of the package. </p></td>
+                        </tr>
+                      <tr>
+                          <td>version</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Version of the package. (vendor internal name) </p></td>
+                        </tr>
+                      <tr>
+                          <td>activate</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Indicates that the package should be made active after receipt on
 the device. For system image packages, the new image is expected to
 be active after a reboot. </p></td>
-                </tr>
-                <tr>
-                  <td>remote_download</td>
-                  <td><a href="#gnoi.common.RemoteDownload">gnoi.common.RemoteDownload</a></td>
-                  <td></td>
-                  <td><p>Details for the device to download the package from a remote location. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.PingRequest" href="#gnoi.system.PingRequest">PingRequest</a>
-          </p>
-          <p class="subtitle is-6">A PingRequest describes the ping operation to perform.  Only the destination
+                        </tr>
+                      <tr>
+                          <td>remote_download</td>
+                          <td><a href="#gnoi.common.RemoteDownload">gnoi.common.RemoteDownload</a></td>
+                          <td></td>
+                          <td><p>Details for the device to download the package from a remote location. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.PingRequest" href="#gnoi.system.PingRequest">PingRequest</a>
+              </p>
+               <p class="subtitle is-6">A PingRequest describes the ping operation to perform.  Only the destination
 fields is required.  Any field not specified is set to a reasonable server
 specified value.  Not all fields are supported by all vendors.
 
@@ -434,520 +532,513 @@ A count of 0 defaults to a vendor specified value, typically 5.  A count of
 
 If the interval is -1 then a flood ping is issued.
 
-If the size is 0, the vendor default size will be used (typically 56 bytes).</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>destination</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Destination address to ping. required. </p></td>
-                </tr>
-                <tr>
-                  <td>source</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Source address to ping from. </p></td>
-                </tr>
-                <tr>
-                  <td>count</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Number of packets. </p></td>
-                </tr>
-                <tr>
-                  <td>interval</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Nanoseconds between requests. </p></td>
-                </tr>
-                <tr>
-                  <td>wait</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Nanoseconds to wait for a response. </p></td>
-                </tr>
-                <tr>
-                  <td>size</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Size of request packet. (excluding ICMP header) </p></td>
-                </tr>
-                <tr>
-                  <td>do_not_fragment</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Set the do not fragment bit. (IPv4 destinations) </p></td>
-                </tr>
-                <tr>
-                  <td>do_not_resolve</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Do not try resolve the address returned. </p></td>
-                </tr>
-                <tr>
-                  <td>l3protocol</td>
-                  <td><a href="#gnoi.types.L3Protocol">gnoi.types.L3Protocol</a></td>
-                  <td></td>
-                  <td><p>Layer3 protocol requested for the ping. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.PingResponse" href="#gnoi.system.PingResponse">PingResponse</a>
-          </p>
-          <p class="subtitle is-6">A PingResponse represents either the reponse to a single ping packet
+If the size is 0, the vendor default size will be used (typically 56 bytes).</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>destination</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Destination address to ping. required. </p></td>
+                        </tr>
+                      <tr>
+                          <td>source</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Source address to ping from. </p></td>
+                        </tr>
+                      <tr>
+                          <td>count</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>Number of packets. </p></td>
+                        </tr>
+                      <tr>
+                          <td>interval</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Nanoseconds between requests. </p></td>
+                        </tr>
+                      <tr>
+                          <td>wait</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Nanoseconds to wait for a response. </p></td>
+                        </tr>
+                      <tr>
+                          <td>size</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>Size of request packet. (excluding ICMP header) </p></td>
+                        </tr>
+                      <tr>
+                          <td>do_not_fragment</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Set the do not fragment bit. (IPv4 destinations) </p></td>
+                        </tr>
+                      <tr>
+                          <td>do_not_resolve</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Do not try resolve the address returned. </p></td>
+                        </tr>
+                      <tr>
+                          <td>l3protocol</td>
+                          <td><a href="#gnoi.types.L3Protocol">gnoi.types.L3Protocol</a></td>
+                          <td></td>
+                          <td><p>Layer3 protocol requested for the ping. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.PingResponse" href="#gnoi.system.PingResponse">PingResponse</a>
+              </p>
+               <p class="subtitle is-6">A PingResponse represents either the reponse to a single ping packet
 (the bytes field is non-zero) or the summary statistics (sent is non-zero).
 
 For a single ping packet, time is the round trip time, in nanoseconds.  For
 summary statistics, it is the time spent by the ping operation.  The time is
 not always present in summary statistics.  The std_dev is not always present
-in summary statistics.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>source</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Source of received bytes. </p></td>
-                </tr>
-                <tr>
-                  <td>time</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>sent</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Total packets sent. </p></td>
-                </tr>
-                <tr>
-                  <td>received</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Total packets received. </p></td>
-                </tr>
-                <tr>
-                  <td>min_time</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Minimum round trip time in nanoseconds. </p></td>
-                </tr>
-                <tr>
-                  <td>avg_time</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Average round trip time in nanoseconds. </p></td>
-                </tr>
-                <tr>
-                  <td>max_time</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Maximum round trip time in nanoseconds. </p></td>
-                </tr>
-                <tr>
-                  <td>std_dev</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Standard deviation in round trip time. </p></td>
-                </tr>
-                <tr>
-                  <td>bytes</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Bytes received. </p></td>
-                </tr>
-                <tr>
-                  <td>sequence</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Sequence number of received packet. </p></td>
-                </tr>
-                <tr>
-                  <td>ttl</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Remaining time to live value. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.RebootRequest" href="#gnoi.system.RebootRequest">RebootRequest</a>
-          </p>
-          <p class="subtitle is-6">A RebootRequest requests the specified target be rebooted using the specified
+in summary statistics.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>source</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Source of received bytes. </p></td>
+                        </tr>
+                      <tr>
+                          <td>time</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>sent</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>Total packets sent. </p></td>
+                        </tr>
+                      <tr>
+                          <td>received</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>Total packets received. </p></td>
+                        </tr>
+                      <tr>
+                          <td>min_time</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Minimum round trip time in nanoseconds. </p></td>
+                        </tr>
+                      <tr>
+                          <td>avg_time</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Average round trip time in nanoseconds. </p></td>
+                        </tr>
+                      <tr>
+                          <td>max_time</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Maximum round trip time in nanoseconds. </p></td>
+                        </tr>
+                      <tr>
+                          <td>std_dev</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Standard deviation in round trip time. </p></td>
+                        </tr>
+                      <tr>
+                          <td>bytes</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>Bytes received. </p></td>
+                        </tr>
+                      <tr>
+                          <td>sequence</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>Sequence number of received packet. </p></td>
+                        </tr>
+                      <tr>
+                          <td>ttl</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>Remaining time to live value. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.RebootRequest" href="#gnoi.system.RebootRequest">RebootRequest</a>
+              </p>
+               <p class="subtitle is-6">A RebootRequest requests the specified target be rebooted using the specified
 method after the specified delay.  Only the DEFAULT method with a delay of 0
-is guaranteed to be accepted for all target types.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>method</td>
-                  <td><a href="#gnoi.system.RebootMethod">RebootMethod</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>delay</td>
-                  <td><a href="#uint64">uint64</a></td>
-                  <td></td>
-                  <td><p>Delay in nanoseconds before issuing reboot. </p></td>
-                </tr>
-                <tr>
-                  <td>message</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Informational reason for the reboot. </p></td>
-                </tr>
-                <tr>
-                  <td>subcomponents</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td>repeated</td>
-                  <td><p>Optional sub-components to reboot. </p></td>
-                </tr>
-                <tr>
-                  <td>force</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Force reboot if sanity checks fail. (ex. uncommited configuration) </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.RebootResponse" href="#gnoi.system.RebootResponse">RebootResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.RebootStatusRequest" href="#gnoi.system.RebootStatusRequest">RebootStatusRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>subcomponents</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td>repeated</td>
-                  <td><p>optional sub-component. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.RebootStatusResponse" href="#gnoi.system.RebootStatusResponse">RebootStatusResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>active</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>If reboot is active. </p></td>
-                </tr>
-                <tr>
-                  <td>wait</td>
-                  <td><a href="#uint64">uint64</a></td>
-                  <td></td>
-                  <td><p>Time left until reboot. </p></td>
-                </tr>
-                <tr>
-                  <td>when</td>
-                  <td><a href="#uint64">uint64</a></td>
-                  <td></td>
-                  <td><p>Time to reboot in nanoseconds since the epoch. </p></td>
-                </tr>
-                <tr>
-                  <td>reason</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Reason for reboot. </p></td>
-                </tr>
-                <tr>
-                  <td>count</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>Number of reboots since active. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.SetPackageRequest" href="#gnoi.system.SetPackageRequest">SetPackageRequest</a>
-          </p>
-          <p class="subtitle is-6">SetPackageRequest will place the package onto the target and optionally mark
+is guaranteed to be accepted for all target types.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>method</td>
+                          <td><a href="#gnoi.system.RebootMethod">RebootMethod</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>delay</td>
+                          <td><a href="#uint64">uint64</a></td>
+                          <td></td>
+                          <td><p>Delay in nanoseconds before issuing reboot. </p></td>
+                        </tr>
+                      <tr>
+                          <td>message</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Informational reason for the reboot. </p></td>
+                        </tr>
+                      <tr>
+                          <td>subcomponents</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td>repeated</td>
+                          <td><p>Optional sub-components to reboot. </p></td>
+                        </tr>
+                      <tr>
+                          <td>force</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Force reboot if sanity checks fail. (ex. uncommited configuration) </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.RebootResponse" href="#gnoi.system.RebootResponse">RebootResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.RebootStatusRequest" href="#gnoi.system.RebootStatusRequest">RebootStatusRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>subcomponents</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td>repeated</td>
+                          <td><p>optional sub-component. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.RebootStatusResponse" href="#gnoi.system.RebootStatusResponse">RebootStatusResponse</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>active</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>If reboot is active. </p></td>
+                        </tr>
+                      <tr>
+                          <td>wait</td>
+                          <td><a href="#uint64">uint64</a></td>
+                          <td></td>
+                          <td><p>Time left until reboot. </p></td>
+                        </tr>
+                      <tr>
+                          <td>when</td>
+                          <td><a href="#uint64">uint64</a></td>
+                          <td></td>
+                          <td><p>Time to reboot in nanoseconds since the epoch. </p></td>
+                        </tr>
+                      <tr>
+                          <td>reason</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Reason for reboot. </p></td>
+                        </tr>
+                      <tr>
+                          <td>count</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>Number of reboots since active. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.SetPackageRequest" href="#gnoi.system.SetPackageRequest">SetPackageRequest</a>
+              </p>
+               <p class="subtitle is-6">SetPackageRequest will place the package onto the target and optionally mark
 it as the next bootable image. The initial message must be a package
 message containing the filename and information about the file. Following the
 initial message the contents are then streamed in maximum 64k chunks. The
-final message must be a hash message contains the hash of the file contents.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>package</td>
-                  <td><a href="#gnoi.system.Package">Package</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>contents</td>
-                  <td><a href="#bytes">bytes</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>hash</td>
-                  <td><a href="#gnoi.types.HashType">gnoi.types.HashType</a></td>
-                  <td></td>
-                  <td><p>Verification hash of data. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.SetPackageResponse" href="#gnoi.system.SetPackageResponse">SetPackageResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.SwitchControlProcessorRequest" href="#gnoi.system.SwitchControlProcessorRequest">SwitchControlProcessorRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>control_processor</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.SwitchControlProcessorResponse" href="#gnoi.system.SwitchControlProcessorResponse">SwitchControlProcessorResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>control_processor</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>version</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Current software version. </p></td>
-                </tr>
-                <tr>
-                  <td>uptime</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Uptime in nanoseconds since epoch. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.TimeRequest" href="#gnoi.system.TimeRequest">TimeRequest</a>
-          </p>
-          <p class="subtitle is-6">A TimeRequest requests the current time accodring to the target.</p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.TimeResponse" href="#gnoi.system.TimeResponse">TimeResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>time</td>
-                  <td><a href="#uint64">uint64</a></td>
-                  <td></td>
-                  <td><p>Current time in nanoseconds since epoch. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.TracerouteRequest" href="#gnoi.system.TracerouteRequest">TracerouteRequest</a>
-          </p>
-          <p class="subtitle is-6">A TracerouteRequest describes the traceroute operation to perform.  Only the
+final message must be a hash message contains the hash of the file contents.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>package</td>
+                          <td><a href="#gnoi.system.Package">Package</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>contents</td>
+                          <td><a href="#bytes">bytes</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>hash</td>
+                          <td><a href="#gnoi.types.HashType">gnoi.types.HashType</a></td>
+                          <td></td>
+                          <td><p>Verification hash of data. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.SetPackageResponse" href="#gnoi.system.SetPackageResponse">SetPackageResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.SwitchControlProcessorRequest" href="#gnoi.system.SwitchControlProcessorRequest">SwitchControlProcessorRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>control_processor</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.SwitchControlProcessorResponse" href="#gnoi.system.SwitchControlProcessorResponse">SwitchControlProcessorResponse</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>control_processor</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>version</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Current software version. </p></td>
+                        </tr>
+                      <tr>
+                          <td>uptime</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Uptime in nanoseconds since epoch. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.TimeRequest" href="#gnoi.system.TimeRequest">TimeRequest</a>
+              </p>
+               <p class="subtitle is-6">A TimeRequest requests the current time accodring to the target.</p> 
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.TimeResponse" href="#gnoi.system.TimeResponse">TimeResponse</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>time</td>
+                          <td><a href="#uint64">uint64</a></td>
+                          <td></td>
+                          <td><p>Current time in nanoseconds since epoch. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.TracerouteRequest" href="#gnoi.system.TracerouteRequest">TracerouteRequest</a>
+              </p>
+               <p class="subtitle is-6">A TracerouteRequest describes the traceroute operation to perform.  Only the
 destination field is required.  Any field not specified is set to a
 reasonable server specified value.  Not all fields are supported by all
 vendors.
 
-If the hop_count is -1 the traceroute will continue forever.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>source</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Source address to ping from. </p></td>
-                </tr>
-                <tr>
-                  <td>destination</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Destination address to ping. </p></td>
-                </tr>
-                <tr>
-                  <td>initial_ttl</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>Initial TTL. (default=1) </p></td>
-                </tr>
-                <tr>
-                  <td>max_ttl</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Maximum number of hops. (default=30) </p></td>
-                </tr>
-                <tr>
-                  <td>wait</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Nanoseconds to wait for a response. </p></td>
-                </tr>
-                <tr>
-                  <td>do_not_fragment</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Set the do not fragment bit. (IPv4 destinations) </p></td>
-                </tr>
-                <tr>
-                  <td>do_not_resolve</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Do not try resolve the address returned. </p></td>
-                </tr>
-                <tr>
-                  <td>l3protocol</td>
-                  <td><a href="#gnoi.types.L3Protocol">gnoi.types.L3Protocol</a></td>
-                  <td></td>
-                  <td><p>Layer-3 protocol requested for the ping. </p></td>
-                </tr>
-                <tr>
-                  <td>l4protocol</td>
-                  <td><a href="#gnoi.system.TracerouteRequest.L4Protocol">TracerouteRequest.L4Protocol</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>do_not_lookup_asn</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Do not try to lookup ASN </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.TracerouteResponse" href="#gnoi.system.TracerouteResponse">TracerouteResponse</a>
-          </p>
-          <p class="subtitle is-6">A TraceRouteResponse contains the result of a single traceoute packet.
+If the hop_count is -1 the traceroute will continue forever.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>source</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Source address to ping from. </p></td>
+                        </tr>
+                      <tr>
+                          <td>destination</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Destination address to ping. </p></td>
+                        </tr>
+                      <tr>
+                          <td>initial_ttl</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>Initial TTL. (default=1) </p></td>
+                        </tr>
+                      <tr>
+                          <td>max_ttl</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>Maximum number of hops. (default=30) </p></td>
+                        </tr>
+                      <tr>
+                          <td>wait</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Nanoseconds to wait for a response. </p></td>
+                        </tr>
+                      <tr>
+                          <td>do_not_fragment</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Set the do not fragment bit. (IPv4 destinations) </p></td>
+                        </tr>
+                      <tr>
+                          <td>do_not_resolve</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Do not try resolve the address returned. </p></td>
+                        </tr>
+                      <tr>
+                          <td>l3protocol</td>
+                          <td><a href="#gnoi.types.L3Protocol">gnoi.types.L3Protocol</a></td>
+                          <td></td>
+                          <td><p>Layer-3 protocol requested for the ping. </p></td>
+                        </tr>
+                      <tr>
+                          <td>l4protocol</td>
+                          <td><a href="#gnoi.system.TracerouteRequest.L4Protocol">TracerouteRequest.L4Protocol</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>do_not_lookup_asn</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Do not try to lookup ASN </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.TracerouteResponse" href="#gnoi.system.TracerouteResponse">TracerouteResponse</a>
+              </p>
+               <p class="subtitle is-6">A TraceRouteResponse contains the result of a single traceoute packet.
 
 There may be an optional initial response that provides information about the
 traceroute request itself and contains at least one of the fields in the the
@@ -960,416 +1051,323 @@ received.
 The mpls field maps names to values.  Example names include "Label", "CoS",
 "TTL", "S", and "MRU".
 [Perhaps we should list the canonical names that must be used when
-applicable].</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>destination_name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The following fields are only filled in for the first message.
+applicable].</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>destination_name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The following fields are only filled in for the first message.
 If any of these fields are specified, all fields following this
 block are left unspecified. </p></td>
-                </tr>
-                <tr>
-                  <td>destination_address</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>hops</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>packet_size</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>hop</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>The following fields provide the disposition of a single traceroute
+                        </tr>
+                      <tr>
+                          <td>destination_address</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>hops</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>packet_size</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>hop</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>The following fields provide the disposition of a single traceroute
 packet.
 
 Hop number. required. </p></td>
-                </tr>
-                <tr>
-                  <td>address</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Address of responding hop. required. </p></td>
-                </tr>
-                <tr>
-                  <td>name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Name of responding hop. </p></td>
-                </tr>
-                <tr>
-                  <td>rtt</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p>Round trip time in nanoseconds. </p></td>
-                </tr>
-                <tr>
-                  <td>state</td>
-                  <td><a href="#gnoi.system.TracerouteResponse.State">TracerouteResponse.State</a></td>
-                  <td></td>
-                  <td><p>State of this hop. </p></td>
-                </tr>
-                <tr>
-                  <td>icmp_code</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Code terminating hop. </p></td>
-                </tr>
-                <tr>
-                  <td>mpls</td>
-                  <td><a href="#gnoi.system.TracerouteResponse.MplsEntry">TracerouteResponse.MplsEntry</a></td>
-                  <td>repeated</td>
-                  <td><p>MPLS key/value pairs. </p></td>
-                </tr>
-                <tr>
-                  <td>as_path</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td>repeated</td>
-                  <td><p>AS path. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.TracerouteResponse.MplsEntry" href="#gnoi.system.TracerouteResponse.MplsEntry">TracerouteResponse.MplsEntry</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>key</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>value</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.KillProcessRequest.Signal" href="#gnoi.system.KillProcessRequest.Signal">KillProcessRequest.Signal</a>
-          </p>
-          <p class="subtitle is-6">Termination signal sent to the process.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>SIGNAL_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p>Invalid default.</p></td>
-                </tr>
-                <tr>
-                  <td>SIGNAL_TERM</td>
-                  <td>1</td>
-                  <td><p>Terminate the process gracefully.</p></td>
-                </tr>
-                <tr>
-                  <td>SIGNAL_KILL</td>
-                  <td>2</td>
-                  <td><p>Terminate the process immediately.</p></td>
-                </tr>
-                <tr>
-                  <td>SIGNAL_HUP</td>
-                  <td>3</td>
-                  <td><p>Reload the process configuration.</p></td>
-                </tr>
-                <tr>
-                  <td>SIGNAL_ABRT</td>
-                  <td>4</td>
-                  <td><p>Terminate the process immediately and dump a core file.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.RebootMethod" href="#gnoi.system.RebootMethod">RebootMethod</a>
-          </p>
-          <p class="subtitle is-6">A RebootMethod determines what should be done with a target when a Reboot is
+                        </tr>
+                      <tr>
+                          <td>address</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Address of responding hop. required. </p></td>
+                        </tr>
+                      <tr>
+                          <td>name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Name of responding hop. </p></td>
+                        </tr>
+                      <tr>
+                          <td>rtt</td>
+                          <td><a href="#int64">int64</a></td>
+                          <td></td>
+                          <td><p>Round trip time in nanoseconds. </p></td>
+                        </tr>
+                      <tr>
+                          <td>state</td>
+                          <td><a href="#gnoi.system.TracerouteResponse.State">TracerouteResponse.State</a></td>
+                          <td></td>
+                          <td><p>State of this hop. </p></td>
+                        </tr>
+                      <tr>
+                          <td>icmp_code</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td></td>
+                          <td><p>Code terminating hop. </p></td>
+                        </tr>
+                      <tr>
+                          <td>mpls</td>
+                          <td><a href="#gnoi.system.TracerouteResponse.MplsEntry">TracerouteResponse.MplsEntry</a></td>
+                          <td>repeated</td>
+                          <td><p>MPLS key/value pairs. </p></td>
+                        </tr>
+                      <tr>
+                          <td>as_path</td>
+                          <td><a href="#int32">int32</a></td>
+                          <td>repeated</td>
+                          <td><p>AS path. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.TracerouteResponse.MplsEntry" href="#gnoi.system.TracerouteResponse.MplsEntry">TracerouteResponse.MplsEntry</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>key</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>value</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.KillProcessRequest.Signal" href="#gnoi.system.KillProcessRequest.Signal">KillProcessRequest.Signal</a>
+              </p>
+               <p class="subtitle is-6">Termination signal sent to the process.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>SIGNAL_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p>Invalid default.</p></td>
+                      </tr>
+                    <tr>
+                        <td>SIGNAL_TERM</td>
+                        <td>1</td>
+                        <td><p>Terminate the process gracefully.</p></td>
+                      </tr>
+                    <tr>
+                        <td>SIGNAL_KILL</td>
+                        <td>2</td>
+                        <td><p>Terminate the process immediately.</p></td>
+                      </tr>
+                    <tr>
+                        <td>SIGNAL_HUP</td>
+                        <td>3</td>
+                        <td><p>Reload the process configuration.</p></td>
+                      </tr>
+                    <tr>
+                        <td>SIGNAL_ABRT</td>
+                        <td>4</td>
+                        <td><p>Terminate the process immediately and dump a core file.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.RebootMethod" href="#gnoi.system.RebootMethod">RebootMethod</a>
+              </p>
+               <p class="subtitle is-6">A RebootMethod determines what should be done with a target when a Reboot is
 requested.  Only the COLD method is required to be supported by all
 targets.  Methods the target does not support should result in failure.
 
-It is vendor defined if a WARM reboot is the same as an NSF reboot.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>UNKNOWN</td>
-                  <td>0</td>
-                  <td><p>Invalid default method.</p></td>
-                </tr>
-                <tr>
-                  <td>COLD</td>
-                  <td>1</td>
-                  <td><p>Shutdown and restart OS and all hardware.</p></td>
-                </tr>
-                <tr>
-                  <td>POWERDOWN</td>
-                  <td>2</td>
-                  <td><p>Halt and power down, if possible.</p></td>
-                </tr>
-                <tr>
-                  <td>HALT</td>
-                  <td>3</td>
-                  <td><p>Halt, if possible.</p></td>
-                </tr>
-                <tr>
-                  <td>WARM</td>
-                  <td>4</td>
-                  <td><p>Reload configuration but not underlying hardware.</p></td>
-                </tr>
-                <tr>
-                  <td>NSF</td>
-                  <td>5</td>
-                  <td><p>Non-stop-forwarding reboot, if possible.</p></td>
-                </tr>
-                <tr>
-                  <td>POWERUP</td>
-                  <td>7</td>
-                  <td><p>Apply power, no-op if power is already on.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.TracerouteRequest.L4Protocol" href="#gnoi.system.TracerouteRequest.L4Protocol">TracerouteRequest.L4Protocol</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ICMP</td>
-                  <td>0</td>
-                  <td><p>Use ICMP ECHO for probes.</p></td>
-                </tr>
-                <tr>
-                  <td>TCP</td>
-                  <td>1</td>
-                  <td><p>Use TCP SYN for probes.</p></td>
-                </tr>
-                <tr>
-                  <td>UDP</td>
-                  <td>2</td>
-                  <td><p>Use UDP for probes.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.TracerouteResponse.State" href="#gnoi.system.TracerouteResponse.State">TracerouteResponse.State</a>
-          </p>
-          <p class="subtitle is-6">State is the resulting state of a single traceoroute packet.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DEFAULT</td>
-                  <td>0</td>
-                  <td><p>Normal hop response.</p></td>
-                </tr>
-                <tr>
-                  <td>NONE</td>
-                  <td>1</td>
-                  <td><p>No response.</p></td>
-                </tr>
-                <tr>
-                  <td>UNKNOWN</td>
-                  <td>2</td>
-                  <td><p>Unknown response state.</p></td>
-                </tr>
-                <tr>
-                  <td>ICMP</td>
-                  <td>3</td>
-                  <td><p>See icmp_code field.</p></td>
-                </tr>
-                <tr>
-                  <td>HOST_UNREACHABLE</td>
-                  <td>4</td>
-                  <td><p>Host unreachable.</p></td>
-                </tr>
-                <tr>
-                  <td>NETWORK_UNREACHABLE</td>
-                  <td>5</td>
-                  <td><p>Network unreachable.</p></td>
-                </tr>
-                <tr>
-                  <td>PROTOCOL_UNREACHABLE</td>
-                  <td>6</td>
-                  <td><p>Protocol unreachable.</p></td>
-                </tr>
-                <tr>
-                  <td>SOURCE_ROUTE_FAILED</td>
-                  <td>7</td>
-                  <td><p>Source route failed.</p></td>
-                </tr>
-                <tr>
-                  <td>FRAGMENTATION_NEEDED</td>
-                  <td>8</td>
-                  <td><p>Fragmentation needed.</p></td>
-                </tr>
-                <tr>
-                  <td>PROHIBITED</td>
-                  <td>9</td>
-                  <td><p>Communication administratively prohibited.</p></td>
-                </tr>
-                <tr>
-                  <td>PRECEDENCE_VIOLATION</td>
-                  <td>10</td>
-                  <td><p>Host precedence violation.</p></td>
-                </tr>
-                <tr>
-                  <td>PRECEDENCE_CUTOFF</td>
-                  <td>11</td>
-                  <td><p>Precedence cutoff in  effect.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.system.System" href="#gnoi.system.System">System</a>
-          </p>
-          <p class="subtitle is-6">The gNOI service is a collection of operational RPC's that allow for the
-management of a target outside of the configuration and telemetry pipeline.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Ping</td>
-                    <td><a href="#gnoi.system.PingRequest">PingRequest</a></td>
-                    <td><a href="#gnoi.system.PingResponse">PingResponse</a> stream</td>
-                    <td><p>Ping executes the ping command on the target and streams back
-the results.  Some targets may not stream any results until all
-results are in.  The stream should provide single ping packet responses
-and must provide summary statistics.</p></td>
-                  </tr>
-                <tr>
-                    <td>Traceroute</td>
-                    <td><a href="#gnoi.system.TracerouteRequest">TracerouteRequest</a></td>
-                    <td><a href="#gnoi.system.TracerouteResponse">TracerouteResponse</a> stream</td>
-                    <td><p>Traceroute executes the traceroute command on the target and streams back
-the results.  Some targets may not stream any results until all
-results are in.  If a hop count is not explicitly provided,
-30 is used.</p></td>
-                  </tr>
-                <tr>
-                    <td>Time</td>
-                    <td><a href="#gnoi.system.TimeRequest">TimeRequest</a></td>
-                    <td><a href="#gnoi.system.TimeResponse">TimeResponse</a></td>
-                    <td><p>Time returns the current time on the target.  Time is typically used to
-test if a target is actually responding.</p></td>
-                  </tr>
-                <tr>
-                    <td>SetPackage</td>
-                    <td><a href="#gnoi.system.SetPackageRequest">SetPackageRequest</a> stream</td>
-                    <td><a href="#gnoi.system.SetPackageResponse">SetPackageResponse</a></td>
-                    <td><p>SetPackage places a software package (possibly including bootable images)
-on the target. The file is sent in sequential messages, each message
-up to 64KB of data. A final message must be sent that includes the hash
-of the data sent. An error is returned if the location does not exist or
-there is an error writing the data. If no checksum is received, the target
-must assume the operation is incomplete and remove the partially
-transmitted file. The target should initially write the file to a temporary
-location so a failure does not destroy the original file.</p></td>
-                  </tr>
-                <tr>
-                    <td>SwitchControlProcessor</td>
-                    <td><a href="#gnoi.system.SwitchControlProcessorRequest">SwitchControlProcessorRequest</a></td>
-                    <td><a href="#gnoi.system.SwitchControlProcessorResponse">SwitchControlProcessorResponse</a></td>
-                    <td><p>SwitchControlProcessor will switch from the current route processor to the
-provided route processor. If the current route processor is the same as the
-one provided it is a NOOP. If the target does not exist an error is
-returned.</p></td>
-                  </tr>
-                <tr>
-                    <td>Reboot</td>
-                    <td><a href="#gnoi.system.RebootRequest">RebootRequest</a></td>
-                    <td><a href="#gnoi.system.RebootResponse">RebootResponse</a></td>
-                    <td><p>Reboot causes the target to reboot, possibly at some point in the future.
-If the method of reboot is not supported then the Reboot RPC will fail.
-If the reboot is immediate the command will block until the subcomponents
-have restarted.
-If a reboot on the active control processor is pending the service must
-reject all other reboot requests.
-If a reboot request for active control processor is initiated with other
-pending reboot requests it must be rejected.</p></td>
-                  </tr>
-                <tr>
-                    <td>RebootStatus</td>
-                    <td><a href="#gnoi.system.RebootStatusRequest">RebootStatusRequest</a></td>
-                    <td><a href="#gnoi.system.RebootStatusResponse">RebootStatusResponse</a></td>
-                    <td><p>RebootStatus returns the status of reboot for the target.</p></td>
-                  </tr>
-                <tr>
-                    <td>CancelReboot</td>
-                    <td><a href="#gnoi.system.CancelRebootRequest">CancelRebootRequest</a></td>
-                    <td><a href="#gnoi.system.CancelRebootResponse">CancelRebootResponse</a></td>
-                    <td><p>CancelReboot cancels any pending reboot request.</p></td>
-                  </tr>
-                <tr>
-                    <td>KillProcess</td>
-                    <td><a href="#gnoi.system.KillProcessRequest">KillProcessRequest</a></td>
-                    <td><a href="#gnoi.system.KillProcessResponse">KillProcessResponse</a></td>
-                    <td><p>KillProcess kills an OS process and optionally restarts it.</p></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+It is vendor defined if a WARM reboot is the same as an NSF reboot.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>UNKNOWN</td>
+                        <td>0</td>
+                        <td><p>Invalid default method.</p></td>
+                      </tr>
+                    <tr>
+                        <td>COLD</td>
+                        <td>1</td>
+                        <td><p>Shutdown and restart OS and all hardware.</p></td>
+                      </tr>
+                    <tr>
+                        <td>POWERDOWN</td>
+                        <td>2</td>
+                        <td><p>Halt and power down, if possible.</p></td>
+                      </tr>
+                    <tr>
+                        <td>HALT</td>
+                        <td>3</td>
+                        <td><p>Halt, if possible.</p></td>
+                      </tr>
+                    <tr>
+                        <td>WARM</td>
+                        <td>4</td>
+                        <td><p>Reload configuration but not underlying hardware.</p></td>
+                      </tr>
+                    <tr>
+                        <td>NSF</td>
+                        <td>5</td>
+                        <td><p>Non-stop-forwarding reboot, if possible.</p></td>
+                      </tr>
+                    <tr>
+                        <td>POWERUP</td>
+                        <td>7</td>
+                        <td><p>Apply power, no-op if power is already on.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.TracerouteRequest.L4Protocol" href="#gnoi.system.TracerouteRequest.L4Protocol">TracerouteRequest.L4Protocol</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>ICMP</td>
+                        <td>0</td>
+                        <td><p>Use ICMP ECHO for probes.</p></td>
+                      </tr>
+                    <tr>
+                        <td>TCP</td>
+                        <td>1</td>
+                        <td><p>Use TCP SYN for probes.</p></td>
+                      </tr>
+                    <tr>
+                        <td>UDP</td>
+                        <td>2</td>
+                        <td><p>Use UDP for probes.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.system.TracerouteResponse.State" href="#gnoi.system.TracerouteResponse.State">TracerouteResponse.State</a>
+              </p>
+               <p class="subtitle is-6">State is the resulting state of a single traceoroute packet.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>DEFAULT</td>
+                        <td>0</td>
+                        <td><p>Normal hop response.</p></td>
+                      </tr>
+                    <tr>
+                        <td>NONE</td>
+                        <td>1</td>
+                        <td><p>No response.</p></td>
+                      </tr>
+                    <tr>
+                        <td>UNKNOWN</td>
+                        <td>2</td>
+                        <td><p>Unknown response state.</p></td>
+                      </tr>
+                    <tr>
+                        <td>ICMP</td>
+                        <td>3</td>
+                        <td><p>See icmp_code field.</p></td>
+                      </tr>
+                    <tr>
+                        <td>HOST_UNREACHABLE</td>
+                        <td>4</td>
+                        <td><p>Host unreachable.</p></td>
+                      </tr>
+                    <tr>
+                        <td>NETWORK_UNREACHABLE</td>
+                        <td>5</td>
+                        <td><p>Network unreachable.</p></td>
+                      </tr>
+                    <tr>
+                        <td>PROTOCOL_UNREACHABLE</td>
+                        <td>6</td>
+                        <td><p>Protocol unreachable.</p></td>
+                      </tr>
+                    <tr>
+                        <td>SOURCE_ROUTE_FAILED</td>
+                        <td>7</td>
+                        <td><p>Source route failed.</p></td>
+                      </tr>
+                    <tr>
+                        <td>FRAGMENTATION_NEEDED</td>
+                        <td>8</td>
+                        <td><p>Fragmentation needed.</p></td>
+                      </tr>
+                    <tr>
+                        <td>PROHIBITED</td>
+                        <td>9</td>
+                        <td><p>Communication administratively prohibited.</p></td>
+                      </tr>
+                    <tr>
+                        <td>PRECEDENCE_VIOLATION</td>
+                        <td>10</td>
+                        <td><p>Host precedence violation.</p></td>
+                      </tr>
+                    <tr>
+                        <td>PRECEDENCE_CUTOFF</td>
+                        <td>11</td>
+                        <td><p>Precedence cutoff in  effect.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">

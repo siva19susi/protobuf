@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNSI Protobuf Documentation v0.1.0</title>
+    <title>gNSI acct Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,504 +19,507 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#acct.proto" class="service has-text-weight-bold is-size-6">acct.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnsi.accounting.AuthDetail">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AuthDetail</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.accounting.CommandService">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CommandService</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.accounting.GrpcService">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">GrpcService</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.accounting.Record">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">Record</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.accounting.SessionInfo">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">SessionInfo</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.accounting.AuthDetail.AuthenStatus">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">AuthDetail.AuthenStatus</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.accounting.CommandService.CmdServiceType">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">CommandService.CmdServiceType</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.accounting.GrpcService.GrpcServiceType">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">GrpcService.GrpcServiceType</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.accounting.Record.ServiceStatus">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">Record.ServiceStatus</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#acct.proto" class="service has-text-weight-bold is-size-6">acct.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnsi.accounting.AuthDetail">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AuthDetail</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.accounting.CommandService">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CommandService</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.accounting.GrpcService">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">GrpcService</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.accounting.Record">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">Record</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.accounting.SessionInfo">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">SessionInfo</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.accounting.AuthDetail.AuthenStatus">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">AuthDetail.AuthenStatus</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.accounting.CommandService.CmdServiceType">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">CommandService.CmdServiceType</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.accounting.GrpcService.GrpcServiceType">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">GrpcService.GrpcServiceType</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.accounting.Record.ServiceStatus">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">Record.ServiceStatus</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNSI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNSI acct Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="acct.proto" href="#acct.proto">acct.proto</a></p>
-            </div>
-          <hr/>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="acct.proto" href="#acct.proto">acct.proto</a></p>
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.accounting.AuthDetail" href="#gnsi.accounting.AuthDetail">AuthDetail</a>
-          </p>
-          <p class="subtitle is-6">Details of authentication - for gRPC or shell/vendor-CLI.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>identity</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Identity string is used to identify the user that executed the
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.accounting.AuthDetail" href="#gnsi.accounting.AuthDetail">AuthDetail</a>
+              </p>
+               <p class="subtitle is-6">Details of authentication - for gRPC or shell/vendor-CLI.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>identity</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Identity string is used to identify the user that executed the
 command. For instance, it could be spiffe-id in the case of gRPC or
 unix-style user-name in the case of shell/vendor-CLI. </p></td>
-                </tr>
-                <tr>
-                  <td>privilege_level</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>Privilege level configured on the system. </p></td>
-                </tr>
-                <tr>
-                  <td>status</td>
-                  <td><a href="#gnsi.accounting.AuthDetail.AuthenStatus">AuthDetail.AuthenStatus</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>deny_cause</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>In case of STATUS_DENY, cause for the deny </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.accounting.CommandService" href="#gnsi.accounting.CommandService">CommandService</a>
-          </p>
-          <p class="subtitle is-6">Command details for shell/vendor-CLI</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>service_type</td>
-                  <td><a href="#gnsi.accounting.CommandService.CmdServiceType">CommandService.CmdServiceType</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>cmd</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The command that was executed. </p></td>
-                </tr>
-                <tr>
-                  <td>cmd_args</td>
-                  <td><a href="#string">string</a></td>
-                  <td>repeated</td>
-                  <td><p>Arguments to a command above. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.accounting.GrpcService" href="#gnsi.accounting.GrpcService">GrpcService</a>
-          </p>
-          <p class="subtitle is-6">Command details for openconfig gNxI commands.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>service_type</td>
-                  <td><a href="#gnsi.accounting.GrpcService.GrpcServiceType">GrpcService.GrpcServiceType</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>rpc_name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>rpc_name is the rpc to which the request was sent, examples:
+                        </tr>
+                      <tr>
+                          <td>privilege_level</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>Privilege level configured on the system. </p></td>
+                        </tr>
+                      <tr>
+                          <td>status</td>
+                          <td><a href="#gnsi.accounting.AuthDetail.AuthenStatus">AuthDetail.AuthenStatus</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>deny_cause</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>In case of STATUS_DENY, cause for the deny </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.accounting.CommandService" href="#gnsi.accounting.CommandService">CommandService</a>
+              </p>
+               <p class="subtitle is-6">Command details for shell/vendor-CLI</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>service_type</td>
+                          <td><a href="#gnsi.accounting.CommandService.CmdServiceType">CommandService.CmdServiceType</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>cmd</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The command that was executed. </p></td>
+                        </tr>
+                      <tr>
+                          <td>cmd_args</td>
+                          <td><a href="#string">string</a></td>
+                          <td>repeated</td>
+                          <td><p>Arguments to a command above. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.accounting.GrpcService" href="#gnsi.accounting.GrpcService">GrpcService</a>
+              </p>
+               <p class="subtitle is-6">Command details for openconfig gNxI commands.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>service_type</td>
+                          <td><a href="#gnsi.accounting.GrpcService.GrpcServiceType">GrpcService.GrpcServiceType</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>rpc_name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>rpc_name is the rpc to which the request was sent, examples:
   gnmi.Set()
   gnoi.os.Install()
   gnsi.cert.Rotate() </p></td>
-                </tr>
-                <tr>
-                  <td>payloads</td>
-                  <td><a href="#google.protobuf.Any">google.protobuf.Any</a></td>
-                  <td>repeated</td>
-                  <td><p>A string of bytes that are gRPC encoded. Best to decode using PROTO_ANY. </p></td>
-                </tr>
-                <tr>
-                  <td>config_metadata</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>config_metadata can be used to track all set requests that were to be
+                        </tr>
+                      <tr>
+                          <td>payloads</td>
+                          <td><a href="#google.protobuf.Any">google.protobuf.Any</a></td>
+                          <td>repeated</td>
+                          <td><p>A string of bytes that are gRPC encoded. Best to decode using PROTO_ANY. </p></td>
+                        </tr>
+                      <tr>
+                          <td>config_metadata</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>config_metadata can be used to track all set requests that were to be
 applied atomically. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.accounting.Record" href="#gnsi.accounting.Record">Record</a>
-          </p>
-          <p class="subtitle is-6">An accounting record message is generated everytime the user types a
-shell/vendorCLI command or sends a gNxI setRequest.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>session_info</td>
-                  <td><a href="#gnsi.accounting.SessionInfo">SessionInfo</a></td>
-                  <td></td>
-                  <td><p>Session information </p></td>
-                </tr>
-                <tr>
-                  <td>timestamp</td>
-                  <td><a href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></td>
-                  <td></td>
-                  <td><p>The time when the system recorded this event. Recorded as nanoseconds
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.accounting.Record" href="#gnsi.accounting.Record">Record</a>
+              </p>
+               <p class="subtitle is-6">An accounting record message is generated everytime the user types a
+shell/vendorCLI command or sends a gNxI setRequest.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>session_info</td>
+                          <td><a href="#gnsi.accounting.SessionInfo">SessionInfo</a></td>
+                          <td></td>
+                          <td><p>Session information </p></td>
+                        </tr>
+                      <tr>
+                          <td>timestamp</td>
+                          <td><a href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></td>
+                          <td></td>
+                          <td><p>The time when the system recorded this event. Recorded as nanoseconds
 since epoch. </p></td>
-                </tr>
-                <tr>
-                  <td>cmd_service</td>
-                  <td><a href="#gnsi.accounting.CommandService">CommandService</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>grpc_service</td>
-                  <td><a href="#gnsi.accounting.GrpcService">GrpcService</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>status</td>
-                  <td><a href="#gnsi.accounting.Record.ServiceStatus">Record.ServiceStatus</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>failure_cause</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>In case of STATUS_FAILURE, cause for the failure </p></td>
-                </tr>
-                <tr>
-                  <td>authen</td>
-                  <td><a href="#gnsi.accounting.AuthDetail">AuthDetail</a></td>
-                  <td></td>
-                  <td><p>Authentication related details </p></td>
-                </tr>
-                <tr>
-                  <td>task_ids</td>
-                  <td><a href="#string">string</a></td>
-                  <td>repeated</td>
-                  <td><p>Optional repeated task_id that represent tasks that were used to
+                        </tr>
+                      <tr>
+                          <td>cmd_service</td>
+                          <td><a href="#gnsi.accounting.CommandService">CommandService</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>grpc_service</td>
+                          <td><a href="#gnsi.accounting.GrpcService">GrpcService</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>status</td>
+                          <td><a href="#gnsi.accounting.Record.ServiceStatus">Record.ServiceStatus</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>failure_cause</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>In case of STATUS_FAILURE, cause for the failure </p></td>
+                        </tr>
+                      <tr>
+                          <td>authen</td>
+                          <td><a href="#gnsi.accounting.AuthDetail">AuthDetail</a></td>
+                          <td></td>
+                          <td><p>Authentication related details </p></td>
+                        </tr>
+                      <tr>
+                          <td>task_ids</td>
+                          <td><a href="#string">string</a></td>
+                          <td>repeated</td>
+                          <td><p>Optional repeated task_id that represent tasks that were used to
 accomplish the request on the system. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.accounting.SessionInfo" href="#gnsi.accounting.SessionInfo">SessionInfo</a>
-          </p>
-          <p class="subtitle is-6">Session identifier that identifies the context in which service
-was executed.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>system_address</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>address of the system sending the event, in most cases this address
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.accounting.SessionInfo" href="#gnsi.accounting.SessionInfo">SessionInfo</a>
+              </p>
+               <p class="subtitle is-6">Session identifier that identifies the context in which service
+was executed.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>system_address</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>address of the system sending the event, in most cases this address
 is the Loopback or Loopback equivalent on system which is sending
 the messages to the collector. </p></td>
-                </tr>
-                <tr>
-                  <td>layer4_proto</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>rest of the information for 5 tuple of the connection </p></td>
-                </tr>
-                <tr>
-                  <td>local_port</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>remote_address</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>remote_port</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>channel_id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>For multiplexing multiple channels over single 5 tuple
+                        </tr>
+                      <tr>
+                          <td>layer4_proto</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>rest of the information for 5 tuple of the connection </p></td>
+                        </tr>
+                      <tr>
+                          <td>local_port</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>remote_address</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>remote_port</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>channel_id</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>For multiplexing multiple channels over single 5 tuple
 - multiple CLI connections over single SSH </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.accounting.AuthDetail.AuthenStatus" href="#gnsi.accounting.AuthDetail.AuthenStatus">AuthDetail.AuthenStatus</a>
-          </p>
-          <p class="subtitle is-6">authentication status</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>AUTHEN_STATUS_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>AUTHEN_STATUS_PERMIT</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>AUTHEN_STATUS_DENY</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.accounting.CommandService.CmdServiceType" href="#gnsi.accounting.CommandService.CmdServiceType">CommandService.CmdServiceType</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>CMD_SERVICE_TYPE_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CMD_SERVICE_TYPE_SHELL</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CMD_SERVICE_TYPE_CLI</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.accounting.GrpcService.GrpcServiceType" href="#gnsi.accounting.GrpcService.GrpcServiceType">GrpcService.GrpcServiceType</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>GRPC_SERVICE_TYPE_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>GRPC_SERVICE_TYPE_GNMI</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>GRPC_SERVICE_TYPE_GNOI</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>GRPC_SERVICE_TYPE_GNSI</td>
-                  <td>3</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>GRPC_SERVICE_TYPE_GRIBI</td>
-                  <td>4</td>
-                  <td><p>GRIBI records could be very verbose.
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.accounting.AuthDetail.AuthenStatus" href="#gnsi.accounting.AuthDetail.AuthenStatus">AuthDetail.AuthenStatus</a>
+              </p>
+               <p class="subtitle is-6">authentication status</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>AUTHEN_STATUS_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>AUTHEN_STATUS_PERMIT</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>AUTHEN_STATUS_DENY</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.accounting.CommandService.CmdServiceType" href="#gnsi.accounting.CommandService.CmdServiceType">CommandService.CmdServiceType</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>CMD_SERVICE_TYPE_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CMD_SERVICE_TYPE_SHELL</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CMD_SERVICE_TYPE_CLI</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.accounting.GrpcService.GrpcServiceType" href="#gnsi.accounting.GrpcService.GrpcServiceType">GrpcService.GrpcServiceType</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>GRPC_SERVICE_TYPE_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>GRPC_SERVICE_TYPE_GNMI</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>GRPC_SERVICE_TYPE_GNOI</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>GRPC_SERVICE_TYPE_GNSI</td>
+                        <td>3</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>GRPC_SERVICE_TYPE_GRIBI</td>
+                        <td>4</td>
+                        <td><p>GRIBI records could be very verbose.
 By default, the logging authorization
 should keep GRIBI logging off.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.accounting.Record.ServiceStatus" href="#gnsi.accounting.Record.ServiceStatus">Record.ServiceStatus</a>
-          </p>
-          <p class="subtitle is-6">Service processing status at the time of event reporting.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>SERVICE_STATUS_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>SERVICE_STATUS_SUCCESS</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>SERVICE_STATUS_FAILURE</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.accounting.Record.ServiceStatus" href="#gnsi.accounting.Record.ServiceStatus">Record.ServiceStatus</a>
+              </p>
+               <p class="subtitle is-6">Service processing status at the time of event reporting.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>SERVICE_STATUS_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>SERVICE_STATUS_SUCCESS</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>SERVICE_STATUS_FAILURE</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">

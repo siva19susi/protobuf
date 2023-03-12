@@ -16,6 +16,7 @@ docker run --rm \
 mkdir -p ../../gnmi
 mv doc/index.html ../../gnmi/index.html
 sed -i '' "s|__KIND__|gNMI|g" ../../gnmi/index.html
+sed -i '' "s|__NAME__ ||g" ../../gnmi/index.html
 sed -i '' "s|__NDK_VER__|$1|g" ../../gnmi/index.html
 
 
@@ -46,6 +47,7 @@ for model in ${modelName[@]}; do
     fi
 
     sed -i '' "s|__KIND__|$titleName|g" ../../$model/$protoName/index.html
+    sed -i '' "s|__NAME__|$protoName|g" ../../$model/$protoName/index.html
     sed -i '' "s|__NDK_VER__|$2|g" ../../$model/$protoName/index.html
     sed -i '' "s|../assets|../../assets|g" ../../$model/$protoName/index.html
     sed -i '' "s|\"../\"|\"../../\"|g" ../../$model/$protoName/index.html

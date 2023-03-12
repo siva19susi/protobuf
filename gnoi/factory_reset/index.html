@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <title>gNOI factory_reset Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,205 +19,102 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#factory_reset.proto" class="service has-text-weight-bold is-size-6">factory_reset.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnoi.factory_reset.FactoryReset">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                      <div class="level-item">FactoryReset</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.factory_reset.ResetError">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ResetError</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.factory_reset.ResetSuccess">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">ResetSuccess</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.factory_reset.StartRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">StartRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.factory_reset.StartResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">StartResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#factory_reset.proto" class="service has-text-weight-bold is-size-6">factory_reset.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnoi.factory_reset.FactoryReset">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                          <div class="level-item">FactoryReset</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.factory_reset.ResetError">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ResetError</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.factory_reset.ResetSuccess">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">ResetSuccess</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.factory_reset.StartRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">StartRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.factory_reset.StartResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">StartResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNOI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNOI factory_reset Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="factory_reset.proto" href="#factory_reset.proto">factory_reset.proto</a></p>
-            <!-- <p class="subtitle is-6 has-text-left">This file defines a gNOI API used for factory reseting a Target.</p> -->
-            </div>
-          <hr/>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="factory_reset.proto" href="#factory_reset.proto">factory_reset.proto</a></p>
+              <!-- <p class="subtitle is-6 has-text-left">This file defines a gNOI API used for factory reseting a Target.</p> -->
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.factory_reset.ResetError" href="#gnoi.factory_reset.ResetError">ResetError</a>
-          </p>
-          <p class="subtitle is-6">Message also used in gRPC status.details field.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>factory_os_unsupported</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Factory OS reset is not supported. </p></td>
-                </tr>
-                <tr>
-                  <td>zero_fill_unsupported</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Zero fill is not supported. </p></td>
-                </tr>
-                <tr>
-                  <td>other</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Unspecified error, must provide detail message. </p></td>
-                </tr>
-                <tr>
-                  <td>detail</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.factory_reset.ResetSuccess" href="#gnoi.factory_reset.ResetSuccess">ResetSuccess</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.factory_reset.StartRequest" href="#gnoi.factory_reset.StartRequest">StartRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>factory_os</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Instructs the Target to rollback the OS to the same version as it shipped
-from factory. </p></td>
-                </tr>
-                <tr>
-                  <td>zero_fill</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>Instructs the Target to zero fill persistent storage state data. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.factory_reset.StartResponse" href="#gnoi.factory_reset.StartResponse">StartResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>reset_success</td>
-                  <td><a href="#gnoi.factory_reset.ResetSuccess">ResetSuccess</a></td>
-                  <td></td>
-                  <td><p>Reset will be executed. </p></td>
-                </tr>
-                <tr>
-                  <td>reset_error</td>
-                  <td><a href="#gnoi.factory_reset.ResetError">ResetError</a></td>
-                  <td></td>
-                  <td><p>Reset will not be executed. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.factory_reset.FactoryReset" href="#gnoi.factory_reset.FactoryReset">FactoryReset</a>
-          </p>
-          <p class="subtitle is-6">The FactoryReset service exported by Targets.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Start</td>
-                    <td><a href="#gnoi.factory_reset.StartRequest">StartRequest</a></td>
-                    <td><a href="#gnoi.factory_reset.StartResponse">StartResponse</a></td>
-                    <td><p>The Start RPC allows the Client to instruct the Target to immediately
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.factory_reset.FactoryReset" href="#gnoi.factory_reset.FactoryReset">FactoryReset</a>
+              </p>
+               <p class="subtitle is-6">The FactoryReset service exported by Targets.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>Start</td>
+                        <td><a href="#gnoi.factory_reset.StartRequest">StartRequest</a></td>
+                        <td><a href="#gnoi.factory_reset.StartResponse">StartResponse</a></td>
+                        <td><p>The Start RPC allows the Client to instruct the Target to immediately
 clean all existing state and boot the Target in the same condition as it is
 shipped from factory. State includes storage, configuration, logs,
 certificates and licenses.
@@ -231,13 +128,122 @@ data is stored.
 If any of the optional flags is set but not supported, a gRPC Status with
 code INVALID_ARGUMENT must be returned with the details value set to a
 properly populated ResetError message.</p></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.factory_reset.ResetError" href="#gnoi.factory_reset.ResetError">ResetError</a>
+              </p>
+               <p class="subtitle is-6">Message also used in gRPC status.details field.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>factory_os_unsupported</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Factory OS reset is not supported. </p></td>
+                        </tr>
+                      <tr>
+                          <td>zero_fill_unsupported</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Zero fill is not supported. </p></td>
+                        </tr>
+                      <tr>
+                          <td>other</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Unspecified error, must provide detail message. </p></td>
+                        </tr>
+                      <tr>
+                          <td>detail</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.factory_reset.ResetSuccess" href="#gnoi.factory_reset.ResetSuccess">ResetSuccess</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.factory_reset.StartRequest" href="#gnoi.factory_reset.StartRequest">StartRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>factory_os</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Instructs the Target to rollback the OS to the same version as it shipped
+from factory. </p></td>
+                        </tr>
+                      <tr>
+                          <td>zero_fill</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>Instructs the Target to zero fill persistent storage state data. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.factory_reset.StartResponse" href="#gnoi.factory_reset.StartResponse">StartResponse</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>reset_success</td>
+                          <td><a href="#gnoi.factory_reset.ResetSuccess">ResetSuccess</a></td>
+                          <td></td>
+                          <td><p>Reset will be executed. </p></td>
+                        </tr>
+                      <tr>
+                          <td>reset_error</td>
+                          <td><a href="#gnoi.factory_reset.ResetError">ResetError</a></td>
+                          <td></td>
+                          <td><p>Reset will not be executed. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">

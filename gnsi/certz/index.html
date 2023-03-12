@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNSI Protobuf Documentation v0.1.0</title>
+    <title>gNSI certz Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,1196 +19,322 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#certz.proto" class="service has-text-weight-bold is-size-6">certz.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnsi.certz.Certz">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                      <div class="level-item">Certz</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.AddProfileRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AddProfileRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.AddProfileResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AddProfileResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CSRParams">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CSRParams</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CanGenerateCSRRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CanGenerateCSRRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CanGenerateCSRResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CanGenerateCSRResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.Certificate">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">Certificate</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CertificateChain">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CertificateChain</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CertificateRevocationList">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CertificateRevocationList</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CertificateRevocationListBundle">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CertificateRevocationListBundle</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CertificateSigningRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CertificateSigningRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.DeleteProfileRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">DeleteProfileRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.DeleteProfileResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">DeleteProfileResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.Entity">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">Entity</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.FinalizeRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">FinalizeRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.GenerateCSRRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">GenerateCSRRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.GenerateCSRResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">GenerateCSRResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.GetProfileListRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">GetProfileListRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.GetProfileListResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">GetProfileListResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.RotateCertificateRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">RotateCertificateRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.RotateCertificateResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">RotateCertificateResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.UploadRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">UploadRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.UploadResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">UploadResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.V3ExtensionSAN">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">V3ExtensionSAN</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CSRSuite">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">CSRSuite</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CertificateEncoding">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">CertificateEncoding</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnsi.certz.CertificateType">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">CertificateType</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#certz.proto" class="service has-text-weight-bold is-size-6">certz.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.Certz">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                          <div class="level-item">Certz</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.AddProfileRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AddProfileRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.AddProfileResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AddProfileResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CSRParams">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CSRParams</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CanGenerateCSRRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CanGenerateCSRRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CanGenerateCSRResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CanGenerateCSRResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.Certificate">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">Certificate</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CertificateChain">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CertificateChain</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CertificateRevocationList">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CertificateRevocationList</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CertificateRevocationListBundle">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CertificateRevocationListBundle</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CertificateSigningRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CertificateSigningRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.DeleteProfileRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">DeleteProfileRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.DeleteProfileResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">DeleteProfileResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.Entity">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">Entity</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.FinalizeRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">FinalizeRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.GenerateCSRRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">GenerateCSRRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.GenerateCSRResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">GenerateCSRResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.GetProfileListRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">GetProfileListRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.GetProfileListResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">GetProfileListResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.RotateCertificateRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">RotateCertificateRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.RotateCertificateResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">RotateCertificateResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.UploadRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">UploadRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.UploadResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">UploadResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.V3ExtensionSAN">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">V3ExtensionSAN</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CSRSuite">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">CSRSuite</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CertificateEncoding">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">CertificateEncoding</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnsi.certz.CertificateType">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">CertificateType</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNSI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNSI certz Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="certz.proto" href="#certz.proto">certz.proto</a></p>
-            <!-- <p class="subtitle is-6 has-text-left">This file defines the gNSI API to be used for certificate rotation.</p> -->
-            </div>
-          <hr/>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="certz.proto" href="#certz.proto">certz.proto</a></p>
+              <!-- <p class="subtitle is-6 has-text-left">This file defines the gNSI API to be used for certificate rotation.</p> -->
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.AddProfileRequest" href="#gnsi.certz.AddProfileRequest">AddProfileRequest</a>
-          </p>
-          <p class="subtitle is-6">A request to add a new SSL profile.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ssl_profile_id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The ID of the SSL profile to be created. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.AddProfileResponse" href="#gnsi.certz.AddProfileResponse">AddProfileResponse</a>
-          </p>
-          <p class="subtitle is-6">A response to a request to add a new SSL profile.</p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CSRParams" href="#gnsi.certz.CSRParams">CSRParams</a>
-          </p>
-          <p class="subtitle is-6">A set of parameters a Certificate Signing Request.
-Used to specify what type of CSR the client expects from the target.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>csr_suite</td>
-                  <td><a href="#gnsi.certz.CSRSuite">CSRSuite</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>common_name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Required field for any type of certificate
-
-e.g "device.corp.google.com" </p></td>
-                </tr>
-                <tr>
-                  <td>country</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Optional fields for any type of certificate
-
-e.g "US" </p></td>
-                </tr>
-                <tr>
-                  <td>state</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>e.g "CA" </p></td>
-                </tr>
-                <tr>
-                  <td>city</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>e.g "Mountain View" </p></td>
-                </tr>
-                <tr>
-                  <td>organization</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>e.g "Google" </p></td>
-                </tr>
-                <tr>
-                  <td>organizational_unit</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>e.g "Security" </p></td>
-                </tr>
-                <tr>
-                  <td>ip_address</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>email_id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>san</td>
-                  <td><a href="#gnsi.certz.V3ExtensionSAN">V3ExtensionSAN</a></td>
-                  <td></td>
-                  <td><p>Subject Alternative Name </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CanGenerateCSRRequest" href="#gnsi.certz.CanGenerateCSRRequest">CanGenerateCSRRequest</a>
-          </p>
-          <p class="subtitle is-6">A request to ask the target if it can generate key pairs.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>params</td>
-                  <td><a href="#gnsi.certz.CSRParams">CSRParams</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CanGenerateCSRResponse" href="#gnsi.certz.CanGenerateCSRResponse">CanGenerateCSRResponse</a>
-          </p>
-          <p class="subtitle is-6">Response from the target about whether it can generate a CSR with the given
-parameters.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>can_generate</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.Certificate" href="#gnsi.certz.Certificate">Certificate</a>
-          </p>
-          <p class="subtitle is-6">A certificate.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>type</td>
-                  <td><a href="#gnsi.certz.CertificateType">CertificateType</a></td>
-                  <td></td>
-                  <td><p>Type of certificate. </p></td>
-                </tr>
-                <tr>
-                  <td>encoding</td>
-                  <td><a href="#gnsi.certz.CertificateEncoding">CertificateEncoding</a></td>
-                  <td></td>
-                  <td><p>Certificate encoding type. </p></td>
-                </tr>
-                <tr>
-                  <td>certificate</td>
-                  <td><a href="#bytes">bytes</a></td>
-                  <td></td>
-                  <td><p>Actual certificate.
-The exact encoding depends upon the type of certificate.
-for X509, this should be a PEM encoded Certificate. </p></td>
-                </tr>
-                <tr>
-                  <td>private_key</td>
-                  <td><a href="#bytes">bytes</a></td>
-                  <td></td>
-                  <td><p>Optional.
-Not needed if the device knows the private key or does not have to know it. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CertificateChain" href="#gnsi.certz.CertificateChain">CertificateChain</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>certificate</td>
-                  <td><a href="#gnsi.certz.Certificate">Certificate</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>parent</td>
-                  <td><a href="#gnsi.certz.CertificateChain">CertificateChain</a></td>
-                  <td></td>
-                  <td><p>parent is the certificate which was used to sign the current certificate.
-It is nil in the case of the root cert. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CertificateRevocationList" href="#gnsi.certz.CertificateRevocationList">CertificateRevocationList</a>
-          </p>
-          <p class="subtitle is-6">A certificate revocation list (CRL)</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>type</td>
-                  <td><a href="#gnsi.certz.CertificateType">CertificateType</a></td>
-                  <td></td>
-                  <td><p>Type of the CRL. </p></td>
-                </tr>
-                <tr>
-                  <td>encoding</td>
-                  <td><a href="#gnsi.certz.CertificateEncoding">CertificateEncoding</a></td>
-                  <td></td>
-                  <td><p>CRL encoding type. </p></td>
-                </tr>
-                <tr>
-                  <td>certificate_revocation_list</td>
-                  <td><a href="#bytes">bytes</a></td>
-                  <td></td>
-                  <td><p>Actual CRL.
-The exact encoding depends upon the type of CRL.
-for X509, this should be a PEM encoded CRL. </p></td>
-                </tr>
-                <tr>
-                  <td>id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>ID of this CRL, which is the CRL file hash. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CertificateRevocationListBundle" href="#gnsi.certz.CertificateRevocationListBundle">CertificateRevocationListBundle</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>certificate_revocation_lists</td>
-                  <td><a href="#gnsi.certz.CertificateRevocationList">CertificateRevocationList</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CertificateSigningRequest" href="#gnsi.certz.CertificateSigningRequest">CertificateSigningRequest</a>
-          </p>
-          <p class="subtitle is-6">A certificate signing request (CSR)</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>type</td>
-                  <td><a href="#gnsi.certz.CertificateType">CertificateType</a></td>
-                  <td></td>
-                  <td><p>Type of the CSR. </p></td>
-                </tr>
-                <tr>
-                  <td>encoding</td>
-                  <td><a href="#gnsi.certz.CertificateEncoding">CertificateEncoding</a></td>
-                  <td></td>
-                  <td><p>CSR encoding type. </p></td>
-                </tr>
-                <tr>
-                  <td>certificate_signing_request</td>
-                  <td><a href="#bytes">bytes</a></td>
-                  <td></td>
-                  <td><p>Actual CSR.
-The exact encoding depends upon the type of CSR.
-for X509, this should be a PEM encoded CSR. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.DeleteProfileRequest" href="#gnsi.certz.DeleteProfileRequest">DeleteProfileRequest</a>
-          </p>
-          <p class="subtitle is-6">A request to remove an existing SSL profile.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ssl_profile_id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The ID of the SSL profile to be removed. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.DeleteProfileResponse" href="#gnsi.certz.DeleteProfileResponse">DeleteProfileResponse</a>
-          </p>
-          <p class="subtitle is-6">A response to a request to remove an existing SSL profile.</p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.Entity" href="#gnsi.certz.Entity">Entity</a>
-          </p>
-          <p class="subtitle is-6">An entity.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>version</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>`version` contains versioning information that is controlled by
-the credential manager and reported as-is by the telemetry reporting system
-(ie, transparent to the device credential service).  Credential managers
-should choose version strings as discrete as possible to ease alert
-generation (eg, for credentials sourced from a bundle, the timestamp of
-the bundle should be used but not the time when the credential is pushed to
-a particular switch).  Also, such version strings should be persisted by
-the devices onto non-volatile memory for preservation across system
-reboots. </p></td>
-                </tr>
-                <tr>
-                  <td>created_on</td>
-                  <td><a href="#uint64">uint64</a></td>
-                  <td></td>
-                  <td><p>`created_on` contains information when the credentials were created.
-This information is controlled by the credential manager and reported as-is
-by the telemetry reporting system (ie, transparent to the device credential
-service).  Credential managers should use the timestamp of the moment when
-credential was created, not the time when the credential is pushed to
-a particular switch).
-Also, this timestamp should be persisted by the devices onto non-volatile
-memory for preservation across system reboots.
-`created_on` is a timestamp: the number of seconds since
-January 1st, 1970 00:00:00 GMT. </p></td>
-                </tr>
-                <tr>
-                  <td>certificate_chain</td>
-                  <td><a href="#gnsi.certz.CertificateChain">CertificateChain</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>trust_bundle</td>
-                  <td><a href="#gnsi.certz.CertificateChain">CertificateChain</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>certificate_revocation_list_bundle</td>
-                  <td><a href="#gnsi.certz.CertificateRevocationListBundle">CertificateRevocationListBundle</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.FinalizeRequest" href="#gnsi.certz.FinalizeRequest">FinalizeRequest</a>
-          </p>
-          <p class="subtitle is-6">A Finalize message is sent to the target to confirm the Rotation of
-the certificate and that the certificate should not be rolled back when
-the RPC concludes. The certificate must be rolled back if the target returns
-an error after receiving a Finalize message.</p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.GenerateCSRRequest" href="#gnsi.certz.GenerateCSRRequest">GenerateCSRRequest</a>
-          </p>
-          <p class="subtitle is-6">A message sent by a client requesting the target to generate a CSR with
-the specified parameters.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>params</td>
-                  <td><a href="#gnsi.certz.CSRParams">CSRParams</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.GenerateCSRResponse" href="#gnsi.certz.GenerateCSRResponse">GenerateCSRResponse</a>
-          </p>
-          <p class="subtitle is-6">A message sent by the target as response to the GenerateCSRRequest.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>certificate_signing_request</td>
-                  <td><a href="#gnsi.certz.CertificateSigningRequest">CertificateSigningRequest</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.GetProfileListRequest" href="#gnsi.certz.GetProfileListRequest">GetProfileListRequest</a>
-          </p>
-          <p class="subtitle is-6">A request for a list of all SSL profiles present on the target.</p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.GetProfileListResponse" href="#gnsi.certz.GetProfileListResponse">GetProfileListResponse</a>
-          </p>
-          <p class="subtitle is-6">A response with the list of all SSL profiles present on the target.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ssl_profile_ids</td>
-                  <td><a href="#string">string</a></td>
-                  <td>repeated</td>
-                  <td><p>A list of IDs of SSL profiles that exist on the target. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.RotateCertificateRequest" href="#gnsi.certz.RotateCertificateRequest">RotateCertificateRequest</a>
-          </p>
-          <p class="subtitle is-6">Request messages to rotate existing certificates on the target.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>force_overwrite</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>If set to `true` the requested operation will succeed even if the
-`version` is already in use (is not unique).
-If set to `false` the requested operation will fail and the streaming RPC
-will be closed with the `AlreadyExists` error if the `version` is already
-in use (is not unique).
-It is a no-op for the `finalize_rotation` request. </p></td>
-                </tr>
-                <tr>
-                  <td>ssl_profile_id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>An identifier for the specific SSL profile (collection of
-certs/bundles/CRLs) which is being rotated through this stream.
-Leaving this field blank means that this stream will rotate the SSL profile
-which is currently being used by the gNSI service. </p></td>
-                </tr>
-                <tr>
-                  <td>generate_csr</td>
-                  <td><a href="#gnsi.certz.GenerateCSRRequest">GenerateCSRRequest</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>certificates</td>
-                  <td><a href="#gnsi.certz.UploadRequest">UploadRequest</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>finalize_rotation</td>
-                  <td><a href="#gnsi.certz.FinalizeRequest">FinalizeRequest</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.RotateCertificateResponse" href="#gnsi.certz.RotateCertificateResponse">RotateCertificateResponse</a>
-          </p>
-          <p class="subtitle is-6">Response Messages from the target.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>generated_csr</td>
-                  <td><a href="#gnsi.certz.GenerateCSRResponse">GenerateCSRResponse</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>certificates</td>
-                  <td><a href="#gnsi.certz.UploadResponse">UploadResponse</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.UploadRequest" href="#gnsi.certz.UploadRequest">UploadRequest</a>
-          </p>
-          <p class="subtitle is-6">UploadRequest instructs the target to store the given entities (certificate,
-and/or trust bundle and certificate revocation list bundle).
-
-As the target does not generate the CSR, the public/private key pair is
-generated externally and the target is provided with the private/public key
-pair.
-
-The trust bundle (a chain of Certificate Authority certificates) can be
-used to validate client's certificates.
-To improve performance in the Target, certificates can be ordered.
-Groups of chained certificates should be last, where within, the root
-certificate is the last one. E.g.:
-CertA, CertB, CertB-Root, CertC, CertC-Intermediate, CertC-Root</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>entities</td>
-                  <td><a href="#gnsi.certz.Entity">Entity</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.UploadResponse" href="#gnsi.certz.UploadResponse">UploadResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.V3ExtensionSAN" href="#gnsi.certz.V3ExtensionSAN">V3ExtensionSAN</a>
-          </p>
-          <p class="subtitle is-6">A message type specifying the Subject Alternative Name for
-use as an x509 certificate extension</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>dns</td>
-                  <td><a href="#string">string</a></td>
-                  <td>repeated</td>
-                  <td><p>DNS names for use in SAN </p></td>
-                </tr>
-                <tr>
-                  <td>emails</td>
-                  <td><a href="#string">string</a></td>
-                  <td>repeated</td>
-                  <td><p>Email addresses for use in SAN </p></td>
-                </tr>
-                <tr>
-                  <td>ips</td>
-                  <td><a href="#string">string</a></td>
-                  <td>repeated</td>
-                  <td><p>IP addresses for use in SAN </p></td>
-                </tr>
-                <tr>
-                  <td>uris</td>
-                  <td><a href="#string">string</a></td>
-                  <td>repeated</td>
-                  <td><p>protolint:disable:next REPEATED_FIELD_NAMES_PLURALIZED
-
-URIs for use in SAN </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CSRSuite" href="#gnsi.certz.CSRSuite">CSRSuite</a>
-          </p>
-          <p class="subtitle is-6">CSRSuite specifies the valid types of keys and digests that can be used
-to generate CSRs</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>CSRSUITE_CIPHER_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_RSA_2048_SIGNATURE_ALGORITHM_SHA_2_256</td>
-                  <td>1</td>
-                  <td><p>format:
-<certificate type>_<key type>_<signature algorithm></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_RSA_2048_SIGNATURE_ALGORITHM_SHA_2_384</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_RSA_2048_SIGNATURE_ALGORITHM_SHA_2_512</td>
-                  <td>3</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_RSA_3072_SIGNATURE_ALGORITHM_SHA_2_256</td>
-                  <td>4</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_RSA_3072_SIGNATURE_ALGORITHM_SHA_2_384</td>
-                  <td>5</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_RSA_3072_SIGNATURE_ALGORITHM_SHA_2_512</td>
-                  <td>6</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_RSA_4096_SIGNATURE_ALGORITHM_SHA_2_256</td>
-                  <td>7</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_RSA_4096_SIGNATURE_ALGORITHM_SHA_2_384</td>
-                  <td>8</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_RSA_4096_SIGNATURE_ALGORITHM_SHA_2_512</td>
-                  <td>9</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_ECDSA_PRIME256V1_SIGNATURE_ALGORITHM_SHA_2_256</td>
-                  <td>10</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_ECDSA_PRIME256V1_SIGNATURE_ALGORITHM_SHA_2_384</td>
-                  <td>11</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_ECDSA_PRIME256V1_SIGNATURE_ALGORITHM_SHA_2_512</td>
-                  <td>12</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP384R1_SIGNATURE_ALGORITHM_SHA_2_256</td>
-                  <td>13</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP384R1_SIGNATURE_ALGORITHM_SHA_2_384</td>
-                  <td>14</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP384R1_SIGNATURE_ALGORITHM_SHA_2_512</td>
-                  <td>15</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP521R1_SIGNATURE_ALGORITHM_SHA_2_256</td>
-                  <td>16</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP521R1_SIGNATURE_ALGORITHM_SHA_2_384</td>
-                  <td>17</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP521R1_SIGNATURE_ALGORITHM_SHA_2_512</td>
-                  <td>18</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CSRSUITE_X509_KEY_TYPE_EDDSA_ED25519</td>
-                  <td>19</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CertificateEncoding" href="#gnsi.certz.CertificateEncoding">CertificateEncoding</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>CERTIFICATE_ENCODING_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p>1 - 500 for public use.
-501 onwards for private use.</p></td>
-                </tr>
-                <tr>
-                  <td>CERTIFICATE_ENCODING_PEM</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CERTIFICATE_ENCODING_DER</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>CERTIFICATE_ENCODING_CRT</td>
-                  <td>3</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.CertificateType" href="#gnsi.certz.CertificateType">CertificateType</a>
-          </p>
-          <p class="subtitle is-6">Types of certificates.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>CERTIFICATE_TYPE_UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p>1 - 500 for public use.
-501 onwards for private use.</p></td>
-                </tr>
-                <tr>
-                  <td>CERTIFICATE_TYPE_X509</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnsi.certz.Certz" href="#gnsi.certz.Certz">Certz</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Rotate</td>
-                    <td><a href="#gnsi.certz.RotateCertificateRequest">RotateCertificateRequest</a> stream</td>
-                    <td><a href="#gnsi.certz.RotateCertificateResponse">RotateCertificateResponse</a> stream</td>
-                    <td><p>Rotate will replace an existing device certificate and/or CA certificates
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.Certz" href="#gnsi.certz.Certz">Certz</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>Rotate</td>
+                        <td><a href="#gnsi.certz.RotateCertificateRequest">RotateCertificateRequest</a> stream</td>
+                        <td><a href="#gnsi.certz.RotateCertificateResponse">RotateCertificateResponse</a> stream</td>
+                        <td><p>Rotate will replace an existing device certificate and/or CA certificates
 (trust bundle) or/and a certificate revocation list bundle on the target.
 The new device certificate can be created from a target-generated or
 client-generated CSR. In the latter case the client has to provide
@@ -1333,12 +459,12 @@ Case 4: Client provides certificate revocation list bundle to the Target.
 
   Step 4: Final commit.
     Client ---> FinalizeRequest ----> Target</p></td>
-                  </tr>
-                <tr>
-                    <td>AddProfile</td>
-                    <td><a href="#gnsi.certz.AddProfileRequest">AddProfileRequest</a></td>
-                    <td><a href="#gnsi.certz.AddProfileResponse">AddProfileResponse</a></td>
-                    <td><p>AddProfile is part of SSL profile management and allows for adding new
+                      </tr>
+                    <tr>
+                        <td>AddProfile</td>
+                        <td><a href="#gnsi.certz.AddProfileRequest">AddProfileRequest</a></td>
+                        <td><a href="#gnsi.certz.AddProfileResponse">AddProfileResponse</a></td>
+                        <td><p>AddProfile is part of SSL profile management and allows for adding new
 SSL profile.
 When a SSL profile is added all its elements, i.e. certificate, CA trust
 bundle and a set of certificate revocation lists are created and they are
@@ -1346,37 +472,906 @@ empty, so before they can be used they have to be 'rotated' using
 the `Rotate()` RPC.
 Note that an attempt to add an already existing profile will be rejected
 with an error.</p></td>
-                  </tr>
-                <tr>
-                    <td>DeleteProfile</td>
-                    <td><a href="#gnsi.certz.DeleteProfileRequest">DeleteProfileRequest</a></td>
-                    <td><a href="#gnsi.certz.DeleteProfileResponse">DeleteProfileResponse</a></td>
-                    <td><p>DeleteProfile is part of SSL profile management and allows for removing
+                      </tr>
+                    <tr>
+                        <td>DeleteProfile</td>
+                        <td><a href="#gnsi.certz.DeleteProfileRequest">DeleteProfileRequest</a></td>
+                        <td><a href="#gnsi.certz.DeleteProfileResponse">DeleteProfileResponse</a></td>
+                        <td><p>DeleteProfile is part of SSL profile management and allows for removing
 an existing SSL profile.
 Note that an attempt to remove a not existing profile will result
 in an error.
 Not also that the profile used by the gNxI server cannot be deleted and an
 attempt to remove it will rejected with an error.</p></td>
-                  </tr>
-                <tr>
-                    <td>GetProfileList</td>
-                    <td><a href="#gnsi.certz.GetProfileListRequest">GetProfileListRequest</a></td>
-                    <td><a href="#gnsi.certz.GetProfileListResponse">GetProfileListResponse</a></td>
-                    <td><p>GetProfileList is part of SSL profile management and allows for
+                      </tr>
+                    <tr>
+                        <td>GetProfileList</td>
+                        <td><a href="#gnsi.certz.GetProfileListRequest">GetProfileListRequest</a></td>
+                        <td><a href="#gnsi.certz.GetProfileListResponse">GetProfileListResponse</a></td>
+                        <td><p>GetProfileList is part of SSL profile management and allows for
 retrieving a list of IDs of SSL profiles present on the target.</p></td>
-                  </tr>
-                <tr>
-                    <td>CanGenerateCSR</td>
-                    <td><a href="#gnsi.certz.CanGenerateCSRRequest">CanGenerateCSRRequest</a></td>
-                    <td><a href="#gnsi.certz.CanGenerateCSRResponse">CanGenerateCSRResponse</a></td>
-                    <td><p>An RPC to ask a target if it can generate a Certificate Signing Request.</p></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+                      </tr>
+                    <tr>
+                        <td>CanGenerateCSR</td>
+                        <td><a href="#gnsi.certz.CanGenerateCSRRequest">CanGenerateCSRRequest</a></td>
+                        <td><a href="#gnsi.certz.CanGenerateCSRResponse">CanGenerateCSRResponse</a></td>
+                        <td><p>An RPC to ask a target if it can generate a Certificate Signing Request.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.AddProfileRequest" href="#gnsi.certz.AddProfileRequest">AddProfileRequest</a>
+              </p>
+               <p class="subtitle is-6">A request to add a new SSL profile.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>ssl_profile_id</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The ID of the SSL profile to be created. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.AddProfileResponse" href="#gnsi.certz.AddProfileResponse">AddProfileResponse</a>
+              </p>
+               <p class="subtitle is-6">A response to a request to add a new SSL profile.</p> 
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CSRParams" href="#gnsi.certz.CSRParams">CSRParams</a>
+              </p>
+               <p class="subtitle is-6">A set of parameters a Certificate Signing Request.
+Used to specify what type of CSR the client expects from the target.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>csr_suite</td>
+                          <td><a href="#gnsi.certz.CSRSuite">CSRSuite</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>common_name</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Required field for any type of certificate
+
+e.g "device.corp.google.com" </p></td>
+                        </tr>
+                      <tr>
+                          <td>country</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>Optional fields for any type of certificate
+
+e.g "US" </p></td>
+                        </tr>
+                      <tr>
+                          <td>state</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>e.g "CA" </p></td>
+                        </tr>
+                      <tr>
+                          <td>city</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>e.g "Mountain View" </p></td>
+                        </tr>
+                      <tr>
+                          <td>organization</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>e.g "Google" </p></td>
+                        </tr>
+                      <tr>
+                          <td>organizational_unit</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>e.g "Security" </p></td>
+                        </tr>
+                      <tr>
+                          <td>ip_address</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>email_id</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>san</td>
+                          <td><a href="#gnsi.certz.V3ExtensionSAN">V3ExtensionSAN</a></td>
+                          <td></td>
+                          <td><p>Subject Alternative Name </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CanGenerateCSRRequest" href="#gnsi.certz.CanGenerateCSRRequest">CanGenerateCSRRequest</a>
+              </p>
+               <p class="subtitle is-6">A request to ask the target if it can generate key pairs.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>params</td>
+                          <td><a href="#gnsi.certz.CSRParams">CSRParams</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CanGenerateCSRResponse" href="#gnsi.certz.CanGenerateCSRResponse">CanGenerateCSRResponse</a>
+              </p>
+               <p class="subtitle is-6">Response from the target about whether it can generate a CSR with the given
+parameters.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>can_generate</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.Certificate" href="#gnsi.certz.Certificate">Certificate</a>
+              </p>
+               <p class="subtitle is-6">A certificate.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>type</td>
+                          <td><a href="#gnsi.certz.CertificateType">CertificateType</a></td>
+                          <td></td>
+                          <td><p>Type of certificate. </p></td>
+                        </tr>
+                      <tr>
+                          <td>encoding</td>
+                          <td><a href="#gnsi.certz.CertificateEncoding">CertificateEncoding</a></td>
+                          <td></td>
+                          <td><p>Certificate encoding type. </p></td>
+                        </tr>
+                      <tr>
+                          <td>certificate</td>
+                          <td><a href="#bytes">bytes</a></td>
+                          <td></td>
+                          <td><p>Actual certificate.
+The exact encoding depends upon the type of certificate.
+for X509, this should be a PEM encoded Certificate. </p></td>
+                        </tr>
+                      <tr>
+                          <td>private_key</td>
+                          <td><a href="#bytes">bytes</a></td>
+                          <td></td>
+                          <td><p>Optional.
+Not needed if the device knows the private key or does not have to know it. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CertificateChain" href="#gnsi.certz.CertificateChain">CertificateChain</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>certificate</td>
+                          <td><a href="#gnsi.certz.Certificate">Certificate</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>parent</td>
+                          <td><a href="#gnsi.certz.CertificateChain">CertificateChain</a></td>
+                          <td></td>
+                          <td><p>parent is the certificate which was used to sign the current certificate.
+It is nil in the case of the root cert. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CertificateRevocationList" href="#gnsi.certz.CertificateRevocationList">CertificateRevocationList</a>
+              </p>
+               <p class="subtitle is-6">A certificate revocation list (CRL)</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>type</td>
+                          <td><a href="#gnsi.certz.CertificateType">CertificateType</a></td>
+                          <td></td>
+                          <td><p>Type of the CRL. </p></td>
+                        </tr>
+                      <tr>
+                          <td>encoding</td>
+                          <td><a href="#gnsi.certz.CertificateEncoding">CertificateEncoding</a></td>
+                          <td></td>
+                          <td><p>CRL encoding type. </p></td>
+                        </tr>
+                      <tr>
+                          <td>certificate_revocation_list</td>
+                          <td><a href="#bytes">bytes</a></td>
+                          <td></td>
+                          <td><p>Actual CRL.
+The exact encoding depends upon the type of CRL.
+for X509, this should be a PEM encoded CRL. </p></td>
+                        </tr>
+                      <tr>
+                          <td>id</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>ID of this CRL, which is the CRL file hash. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CertificateRevocationListBundle" href="#gnsi.certz.CertificateRevocationListBundle">CertificateRevocationListBundle</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>certificate_revocation_lists</td>
+                          <td><a href="#gnsi.certz.CertificateRevocationList">CertificateRevocationList</a></td>
+                          <td>repeated</td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CertificateSigningRequest" href="#gnsi.certz.CertificateSigningRequest">CertificateSigningRequest</a>
+              </p>
+               <p class="subtitle is-6">A certificate signing request (CSR)</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>type</td>
+                          <td><a href="#gnsi.certz.CertificateType">CertificateType</a></td>
+                          <td></td>
+                          <td><p>Type of the CSR. </p></td>
+                        </tr>
+                      <tr>
+                          <td>encoding</td>
+                          <td><a href="#gnsi.certz.CertificateEncoding">CertificateEncoding</a></td>
+                          <td></td>
+                          <td><p>CSR encoding type. </p></td>
+                        </tr>
+                      <tr>
+                          <td>certificate_signing_request</td>
+                          <td><a href="#bytes">bytes</a></td>
+                          <td></td>
+                          <td><p>Actual CSR.
+The exact encoding depends upon the type of CSR.
+for X509, this should be a PEM encoded CSR. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.DeleteProfileRequest" href="#gnsi.certz.DeleteProfileRequest">DeleteProfileRequest</a>
+              </p>
+               <p class="subtitle is-6">A request to remove an existing SSL profile.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>ssl_profile_id</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The ID of the SSL profile to be removed. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.DeleteProfileResponse" href="#gnsi.certz.DeleteProfileResponse">DeleteProfileResponse</a>
+              </p>
+               <p class="subtitle is-6">A response to a request to remove an existing SSL profile.</p> 
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.Entity" href="#gnsi.certz.Entity">Entity</a>
+              </p>
+               <p class="subtitle is-6">An entity.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>version</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>`version` contains versioning information that is controlled by
+the credential manager and reported as-is by the telemetry reporting system
+(ie, transparent to the device credential service).  Credential managers
+should choose version strings as discrete as possible to ease alert
+generation (eg, for credentials sourced from a bundle, the timestamp of
+the bundle should be used but not the time when the credential is pushed to
+a particular switch).  Also, such version strings should be persisted by
+the devices onto non-volatile memory for preservation across system
+reboots. </p></td>
+                        </tr>
+                      <tr>
+                          <td>created_on</td>
+                          <td><a href="#uint64">uint64</a></td>
+                          <td></td>
+                          <td><p>`created_on` contains information when the credentials were created.
+This information is controlled by the credential manager and reported as-is
+by the telemetry reporting system (ie, transparent to the device credential
+service).  Credential managers should use the timestamp of the moment when
+credential was created, not the time when the credential is pushed to
+a particular switch).
+Also, this timestamp should be persisted by the devices onto non-volatile
+memory for preservation across system reboots.
+`created_on` is a timestamp: the number of seconds since
+January 1st, 1970 00:00:00 GMT. </p></td>
+                        </tr>
+                      <tr>
+                          <td>certificate_chain</td>
+                          <td><a href="#gnsi.certz.CertificateChain">CertificateChain</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>trust_bundle</td>
+                          <td><a href="#gnsi.certz.CertificateChain">CertificateChain</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>certificate_revocation_list_bundle</td>
+                          <td><a href="#gnsi.certz.CertificateRevocationListBundle">CertificateRevocationListBundle</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.FinalizeRequest" href="#gnsi.certz.FinalizeRequest">FinalizeRequest</a>
+              </p>
+               <p class="subtitle is-6">A Finalize message is sent to the target to confirm the Rotation of
+the certificate and that the certificate should not be rolled back when
+the RPC concludes. The certificate must be rolled back if the target returns
+an error after receiving a Finalize message.</p> 
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.GenerateCSRRequest" href="#gnsi.certz.GenerateCSRRequest">GenerateCSRRequest</a>
+              </p>
+               <p class="subtitle is-6">A message sent by a client requesting the target to generate a CSR with
+the specified parameters.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>params</td>
+                          <td><a href="#gnsi.certz.CSRParams">CSRParams</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.GenerateCSRResponse" href="#gnsi.certz.GenerateCSRResponse">GenerateCSRResponse</a>
+              </p>
+               <p class="subtitle is-6">A message sent by the target as response to the GenerateCSRRequest.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>certificate_signing_request</td>
+                          <td><a href="#gnsi.certz.CertificateSigningRequest">CertificateSigningRequest</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.GetProfileListRequest" href="#gnsi.certz.GetProfileListRequest">GetProfileListRequest</a>
+              </p>
+               <p class="subtitle is-6">A request for a list of all SSL profiles present on the target.</p> 
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.GetProfileListResponse" href="#gnsi.certz.GetProfileListResponse">GetProfileListResponse</a>
+              </p>
+               <p class="subtitle is-6">A response with the list of all SSL profiles present on the target.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>ssl_profile_ids</td>
+                          <td><a href="#string">string</a></td>
+                          <td>repeated</td>
+                          <td><p>A list of IDs of SSL profiles that exist on the target. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.RotateCertificateRequest" href="#gnsi.certz.RotateCertificateRequest">RotateCertificateRequest</a>
+              </p>
+               <p class="subtitle is-6">Request messages to rotate existing certificates on the target.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>force_overwrite</td>
+                          <td><a href="#bool">bool</a></td>
+                          <td></td>
+                          <td><p>If set to `true` the requested operation will succeed even if the
+`version` is already in use (is not unique).
+If set to `false` the requested operation will fail and the streaming RPC
+will be closed with the `AlreadyExists` error if the `version` is already
+in use (is not unique).
+It is a no-op for the `finalize_rotation` request. </p></td>
+                        </tr>
+                      <tr>
+                          <td>ssl_profile_id</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>An identifier for the specific SSL profile (collection of
+certs/bundles/CRLs) which is being rotated through this stream.
+Leaving this field blank means that this stream will rotate the SSL profile
+which is currently being used by the gNSI service. </p></td>
+                        </tr>
+                      <tr>
+                          <td>generate_csr</td>
+                          <td><a href="#gnsi.certz.GenerateCSRRequest">GenerateCSRRequest</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>certificates</td>
+                          <td><a href="#gnsi.certz.UploadRequest">UploadRequest</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>finalize_rotation</td>
+                          <td><a href="#gnsi.certz.FinalizeRequest">FinalizeRequest</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.RotateCertificateResponse" href="#gnsi.certz.RotateCertificateResponse">RotateCertificateResponse</a>
+              </p>
+               <p class="subtitle is-6">Response Messages from the target.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>generated_csr</td>
+                          <td><a href="#gnsi.certz.GenerateCSRResponse">GenerateCSRResponse</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>certificates</td>
+                          <td><a href="#gnsi.certz.UploadResponse">UploadResponse</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.UploadRequest" href="#gnsi.certz.UploadRequest">UploadRequest</a>
+              </p>
+               <p class="subtitle is-6">UploadRequest instructs the target to store the given entities (certificate,
+and/or trust bundle and certificate revocation list bundle).
+
+As the target does not generate the CSR, the public/private key pair is
+generated externally and the target is provided with the private/public key
+pair.
+
+The trust bundle (a chain of Certificate Authority certificates) can be
+used to validate client's certificates.
+To improve performance in the Target, certificates can be ordered.
+Groups of chained certificates should be last, where within, the root
+certificate is the last one. E.g.:
+CertA, CertB, CertB-Root, CertC, CertC-Intermediate, CertC-Root</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>entities</td>
+                          <td><a href="#gnsi.certz.Entity">Entity</a></td>
+                          <td>repeated</td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.UploadResponse" href="#gnsi.certz.UploadResponse">UploadResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.V3ExtensionSAN" href="#gnsi.certz.V3ExtensionSAN">V3ExtensionSAN</a>
+              </p>
+               <p class="subtitle is-6">A message type specifying the Subject Alternative Name for
+use as an x509 certificate extension</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>dns</td>
+                          <td><a href="#string">string</a></td>
+                          <td>repeated</td>
+                          <td><p>DNS names for use in SAN </p></td>
+                        </tr>
+                      <tr>
+                          <td>emails</td>
+                          <td><a href="#string">string</a></td>
+                          <td>repeated</td>
+                          <td><p>Email addresses for use in SAN </p></td>
+                        </tr>
+                      <tr>
+                          <td>ips</td>
+                          <td><a href="#string">string</a></td>
+                          <td>repeated</td>
+                          <td><p>IP addresses for use in SAN </p></td>
+                        </tr>
+                      <tr>
+                          <td>uris</td>
+                          <td><a href="#string">string</a></td>
+                          <td>repeated</td>
+                          <td><p>protolint:disable:next REPEATED_FIELD_NAMES_PLURALIZED
+
+URIs for use in SAN </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CSRSuite" href="#gnsi.certz.CSRSuite">CSRSuite</a>
+              </p>
+               <p class="subtitle is-6">CSRSuite specifies the valid types of keys and digests that can be used
+to generate CSRs</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>CSRSUITE_CIPHER_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_RSA_2048_SIGNATURE_ALGORITHM_SHA_2_256</td>
+                        <td>1</td>
+                        <td><p>format:
+<certificate type>_<key type>_<signature algorithm></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_RSA_2048_SIGNATURE_ALGORITHM_SHA_2_384</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_RSA_2048_SIGNATURE_ALGORITHM_SHA_2_512</td>
+                        <td>3</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_RSA_3072_SIGNATURE_ALGORITHM_SHA_2_256</td>
+                        <td>4</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_RSA_3072_SIGNATURE_ALGORITHM_SHA_2_384</td>
+                        <td>5</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_RSA_3072_SIGNATURE_ALGORITHM_SHA_2_512</td>
+                        <td>6</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_RSA_4096_SIGNATURE_ALGORITHM_SHA_2_256</td>
+                        <td>7</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_RSA_4096_SIGNATURE_ALGORITHM_SHA_2_384</td>
+                        <td>8</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_RSA_4096_SIGNATURE_ALGORITHM_SHA_2_512</td>
+                        <td>9</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_ECDSA_PRIME256V1_SIGNATURE_ALGORITHM_SHA_2_256</td>
+                        <td>10</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_ECDSA_PRIME256V1_SIGNATURE_ALGORITHM_SHA_2_384</td>
+                        <td>11</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_ECDSA_PRIME256V1_SIGNATURE_ALGORITHM_SHA_2_512</td>
+                        <td>12</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP384R1_SIGNATURE_ALGORITHM_SHA_2_256</td>
+                        <td>13</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP384R1_SIGNATURE_ALGORITHM_SHA_2_384</td>
+                        <td>14</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP384R1_SIGNATURE_ALGORITHM_SHA_2_512</td>
+                        <td>15</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP521R1_SIGNATURE_ALGORITHM_SHA_2_256</td>
+                        <td>16</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP521R1_SIGNATURE_ALGORITHM_SHA_2_384</td>
+                        <td>17</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_ECDSA_SECP521R1_SIGNATURE_ALGORITHM_SHA_2_512</td>
+                        <td>18</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CSRSUITE_X509_KEY_TYPE_EDDSA_ED25519</td>
+                        <td>19</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CertificateEncoding" href="#gnsi.certz.CertificateEncoding">CertificateEncoding</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>CERTIFICATE_ENCODING_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p>1 - 500 for public use.
+501 onwards for private use.</p></td>
+                      </tr>
+                    <tr>
+                        <td>CERTIFICATE_ENCODING_PEM</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CERTIFICATE_ENCODING_DER</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>CERTIFICATE_ENCODING_CRT</td>
+                        <td>3</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnsi.certz.CertificateType" href="#gnsi.certz.CertificateType">CertificateType</a>
+              </p>
+               <p class="subtitle is-6">Types of certificates.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>CERTIFICATE_TYPE_UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p>1 - 500 for public use.
+501 onwards for private use.</p></td>
+                      </tr>
+                    <tr>
+                        <td>CERTIFICATE_TYPE_X509</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">

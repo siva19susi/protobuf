@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <title>gNOI otdr Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,654 +19,181 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#otdr.proto" class="service has-text-weight-bold is-size-6">otdr.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnoi.optical.OTDR">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                      <div class="level-item">OTDR</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.Event">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">Event</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.InitiateError">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">InitiateError</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.InitiateProgress">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">InitiateProgress</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.InitiateRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">InitiateRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.InitiateResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">InitiateResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.InitiateResults">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">InitiateResults</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.OTDRConfiguration">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">OTDRConfiguration</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.OTDRTrace">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">OTDRTrace</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.FiberTypeProfile">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">FiberTypeProfile</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.InitiateError.Type">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">InitiateError.Type</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.InitiateProgress.State">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">InitiateProgress.State</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.InitiateRequest.ResultsMethod">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">InitiateRequest.ResultsMethod</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#otdr.proto" class="service has-text-weight-bold is-size-6">otdr.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.OTDR">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                          <div class="level-item">OTDR</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.Event">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">Event</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.InitiateError">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">InitiateError</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.InitiateProgress">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">InitiateProgress</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.InitiateRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">InitiateRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.InitiateResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">InitiateResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.InitiateResults">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">InitiateResults</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.OTDRConfiguration">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">OTDRConfiguration</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.OTDRTrace">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">OTDRTrace</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.FiberTypeProfile">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">FiberTypeProfile</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.InitiateError.Type">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">InitiateError.Type</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.InitiateProgress.State">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">InitiateProgress.State</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.InitiateRequest.ResultsMethod">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">InitiateRequest.ResultsMethod</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNOI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNOI otdr Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="otdr.proto" href="#otdr.proto">otdr.proto</a></p>
-            </div>
-          <hr/>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="otdr.proto" href="#otdr.proto">otdr.proto</a></p>
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.Event" href="#gnoi.optical.Event">Event</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>distance_m</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>Distance at which the event occurred in meters. </p></td>
-                </tr>
-                <tr>
-                  <td>loss_db</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>The fiber loss that occurred at the event in dB. </p></td>
-                </tr>
-                <tr>
-                  <td>reflection_db</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>The reflection that occurred at the event in dB. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.InitiateError" href="#gnoi.optical.InitiateError">InitiateError</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>type</td>
-                  <td><a href="#gnoi.optical.InitiateError.Type">InitiateError.Type</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>detail</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.InitiateProgress" href="#gnoi.optical.InitiateProgress">InitiateProgress</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>state</td>
-                  <td><a href="#gnoi.optical.InitiateProgress.State">InitiateProgress.State</a></td>
-                  <td></td>
-                  <td><p>The state of the OTDR trace requested. Note that this does not include
-error states as these should be returned as a gRPC error. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.InitiateRequest" href="#gnoi.optical.InitiateRequest">InitiateRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>component</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td></td>
-                  <td><p>Absolute path to the /components/component list member in the OpenConfig
-model corresponding to the port to perform the OTDR trace from.
-(e.g., /components/component[name=otdr-1-1]) </p></td>
-                </tr>
-                <tr>
-                  <td>results_method</td>
-                  <td><a href="#gnoi.optical.InitiateRequest.ResultsMethod">InitiateRequest.ResultsMethod</a></td>
-                  <td>repeated</td>
-                  <td><p>Describes how the results of the OTDR trace should be made available. More
-than one option may be specified if desired. </p></td>
-                </tr>
-                <tr>
-                  <td>configuration</td>
-                  <td><a href="#gnoi.optical.OTDRConfiguration">OTDRConfiguration</a></td>
-                  <td></td>
-                  <td><p>Describes the configuration used to perform an OTDR trace. </p></td>
-                </tr>
-                <tr>
-                  <td>label</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>If specified, the device will label the OTDR trace so it can be recalled
-later. For example, the initial OTDR trace measured during span
-commissioning might be labeled "baseline". </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.InitiateResponse" href="#gnoi.optical.InitiateResponse">InitiateResponse</a>
-          </p>
-          <p class="subtitle is-6">IntitiateResponse describes the possible response messages that will be
-streamed after the RPC is initiated. While the OTDR is running, "progress"
-messages should be sent at a regular interval. When the OTDR trace is
-completed, a final "results" or "error" message should be streamed before
-the RPC is terminated.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>progress</td>
-                  <td><a href="#gnoi.optical.InitiateProgress">InitiateProgress</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>results</td>
-                  <td><a href="#gnoi.optical.InitiateResults">InitiateResults</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>error</td>
-                  <td><a href="#gnoi.optical.InitiateError">InitiateError</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.InitiateResults" href="#gnoi.optical.InitiateResults">InitiateResults</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>local_path</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>The local path in which the OTDR file is saved on the device. </p></td>
-                </tr>
-                <tr>
-                  <td>otdr_trace</td>
-                  <td><a href="#gnoi.optical.OTDRTrace">OTDRTrace</a></td>
-                  <td></td>
-                  <td><p>The OTDR trace details in a structured format. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.OTDRConfiguration" href="#gnoi.optical.OTDRConfiguration">OTDRConfiguration</a>
-          </p>
-          <p class="subtitle is-6">OTDR configuration options which can be set on the device. It is not required
-that every field be set as some fields may not apply for a given
-implementation.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>acquisition_time_s</td>
-                  <td><a href="#uint32">uint32</a></td>
-                  <td></td>
-                  <td><p>The time in seconds in which the OTDR trace will run continuously to
-collect data. </p></td>
-                </tr>
-                <tr>
-                  <td>pulse_width_ns</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>The pulse width in nanoseconds which defines how long pulses sent by the
-OTDR will be during the test. </p></td>
-                </tr>
-                <tr>
-                  <td>wavelength_mhz</td>
-                  <td><a href="#uint64">uint64</a></td>
-                  <td></td>
-                  <td><p>The wavelength in MHz that will be sent by the OTDR. This may be left blank
-if the OTDR only supports one wavelength. </p></td>
-                </tr>
-                <tr>
-                  <td>range_m</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>The maximum fiber distance range in meters that the OTDR trace will
-support. </p></td>
-                </tr>
-                <tr>
-                  <td>fiber_type</td>
-                  <td><a href="#gnoi.optical.FiberTypeProfile">FiberTypeProfile</a></td>
-                  <td></td>
-                  <td><p>The type of fiber that is being measured. </p></td>
-                </tr>
-                <tr>
-                  <td>sampling_resolution_m</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>The sampling resolution in meters. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.OTDRTrace" href="#gnoi.optical.OTDRTrace">OTDRTrace</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>total_loss_db</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>Total measured loss of the fiber. </p></td>
-                </tr>
-                <tr>
-                  <td>total_length_m</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>Total measured length of the fiber in meters. </p></td>
-                </tr>
-                <tr>
-                  <td>optical_return_loss_db</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>Optical return loss of the fiber in dB. </p></td>
-                </tr>
-                <tr>
-                  <td>average_loss_db_km</td>
-                  <td><a href="#float">float</a></td>
-                  <td></td>
-                  <td><p>Average fiber loss (dB/km) </p></td>
-                </tr>
-                <tr>
-                  <td>discovered_fiber_type</td>
-                  <td><a href="#gnoi.optical.FiberTypeProfile">FiberTypeProfile</a></td>
-                  <td></td>
-                  <td><p>Discovered fiber type, if the OTDR can infer this information. </p></td>
-                </tr>
-                <tr>
-                  <td>events</td>
-                  <td><a href="#gnoi.optical.Event">Event</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.FiberTypeProfile" href="#gnoi.optical.FiberTypeProfile">FiberTypeProfile</a>
-          </p>
-          <p class="subtitle is-6">Type definition for different profiles of fiber types. These match what is
-already defined in OpenConfig under the FIBER_TYPE_PROFILE identityref in
-openconfig-optical-amplifier.yang model.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>FTP_UNKNOWN</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>FTP_DSF</td>
-                  <td>1</td>
-                  <td><p>Dispersion shifted fiber.</p></td>
-                </tr>
-                <tr>
-                  <td>FTP_LEAF</td>
-                  <td>2</td>
-                  <td><p>Large effective area fiber.</p></td>
-                </tr>
-                <tr>
-                  <td>FTP_SSMF</td>
-                  <td>3</td>
-                  <td><p>Standard single mode fiber.</p></td>
-                </tr>
-                <tr>
-                  <td>FTP_TWC</td>
-                  <td>4</td>
-                  <td><p>True wave classic fiber.</p></td>
-                </tr>
-                <tr>
-                  <td>FTP_TWRS</td>
-                  <td>5</td>
-                  <td><p>True wave reduced slope fiber.</p></td>
-                </tr>
-                <tr>
-                  <td>FTP_LS</td>
-                  <td>6</td>
-                  <td><p>LEAF Submarine fiber.</p></td>
-                </tr>
-                <tr>
-                  <td>FTP_TERAWAVE</td>
-                  <td>7</td>
-                  <td><p>TeraWave fiber.</p></td>
-                </tr>
-                <tr>
-                  <td>FTP_TERALIGHT</td>
-                  <td>8</td>
-                  <td><p>TeraLight fiber.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.InitiateError.Type" href="#gnoi.optical.InitiateError.Type">InitiateError.Type</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p>An unspecified error. Must use the detail value to describe the issue.</p></td>
-                </tr>
-                <tr>
-                  <td>ALREADY_IN_PROGRESS</td>
-                  <td>1</td>
-                  <td><p>An existing OTDR trace is already in progress.</p></td>
-                </tr>
-                <tr>
-                  <td>HARDWARE_FAILURE</td>
-                  <td>2</td>
-                  <td><p>The OTDR hardware has failed and cannot complete an OTDR trace.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.InitiateProgress.State" href="#gnoi.optical.InitiateProgress.State">InitiateProgress.State</a>
-          </p>
-          <p class="subtitle is-6">The State enum defines possible states that the OTDR trace may be in
-while running the operation.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>UNKNOWN</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>RUNNING</td>
-                  <td>1</td>
-                  <td><p>The OTDR is currently performing an OTDR trace.</p></td>
-                </tr>
-                <tr>
-                  <td>PENDING</td>
-                  <td>2</td>
-                  <td><p>The OTDR is pending underlying resources being available.</p></td>
-                </tr>
-                <tr>
-                  <td>COMPLETE</td>
-                  <td>3</td>
-                  <td><p>The OTDR trace was completed.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.InitiateRequest.ResultsMethod" href="#gnoi.optical.InitiateRequest.ResultsMethod">InitiateRequest.ResultsMethod</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>RESULTS_UNKNOWN</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>RESULTS_TO_LOCAL_DISK</td>
-                  <td>1</td>
-                  <td><p>Results saved to a file on the device.</p></td>
-                </tr>
-                <tr>
-                  <td>RESULTS_IN_RESPONSE</td>
-                  <td>2</td>
-                  <td><p>Results sent back in the response.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.OTDR" href="#gnoi.optical.OTDR">OTDR</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Initiate</td>
-                    <td><a href="#gnoi.optical.InitiateRequest">InitiateRequest</a></td>
-                    <td><a href="#gnoi.optical.InitiateResponse">InitiateResponse</a> stream</td>
-                    <td><p>Initiate triggers an optical time domain reflectometer (OTDR) trace to
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.OTDR" href="#gnoi.optical.OTDR">OTDR</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>Initiate</td>
+                        <td><a href="#gnoi.optical.InitiateRequest">InitiateRequest</a></td>
+                        <td><a href="#gnoi.optical.InitiateResponse">InitiateResponse</a> stream</td>
+                        <td><p>Initiate triggers an optical time domain reflectometer (OTDR) trace to
 be run on a specified port. The results of the trace may be sent back in
 the response or saved on the device to be retrieved later. If the
 information is saved on the device a path to the file must be returned
@@ -674,13 +201,486 @@ which can later be used by File.Get or File.TransferToRemote. The RPC
 should initiate the OTDR trace and wait until the OTDR trace has completed
 and the device has processed the results before returning. If the RPC is
 cancelled while in operation, the running OTDR trace should stop.</p></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.Event" href="#gnoi.optical.Event">Event</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>distance_m</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>Distance at which the event occurred in meters. </p></td>
+                        </tr>
+                      <tr>
+                          <td>loss_db</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>The fiber loss that occurred at the event in dB. </p></td>
+                        </tr>
+                      <tr>
+                          <td>reflection_db</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>The reflection that occurred at the event in dB. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.InitiateError" href="#gnoi.optical.InitiateError">InitiateError</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>type</td>
+                          <td><a href="#gnoi.optical.InitiateError.Type">InitiateError.Type</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>detail</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.InitiateProgress" href="#gnoi.optical.InitiateProgress">InitiateProgress</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>state</td>
+                          <td><a href="#gnoi.optical.InitiateProgress.State">InitiateProgress.State</a></td>
+                          <td></td>
+                          <td><p>The state of the OTDR trace requested. Note that this does not include
+error states as these should be returned as a gRPC error. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.InitiateRequest" href="#gnoi.optical.InitiateRequest">InitiateRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>component</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td></td>
+                          <td><p>Absolute path to the /components/component list member in the OpenConfig
+model corresponding to the port to perform the OTDR trace from.
+(e.g., /components/component[name=otdr-1-1]) </p></td>
+                        </tr>
+                      <tr>
+                          <td>results_method</td>
+                          <td><a href="#gnoi.optical.InitiateRequest.ResultsMethod">InitiateRequest.ResultsMethod</a></td>
+                          <td>repeated</td>
+                          <td><p>Describes how the results of the OTDR trace should be made available. More
+than one option may be specified if desired. </p></td>
+                        </tr>
+                      <tr>
+                          <td>configuration</td>
+                          <td><a href="#gnoi.optical.OTDRConfiguration">OTDRConfiguration</a></td>
+                          <td></td>
+                          <td><p>Describes the configuration used to perform an OTDR trace. </p></td>
+                        </tr>
+                      <tr>
+                          <td>label</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>If specified, the device will label the OTDR trace so it can be recalled
+later. For example, the initial OTDR trace measured during span
+commissioning might be labeled "baseline". </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.InitiateResponse" href="#gnoi.optical.InitiateResponse">InitiateResponse</a>
+              </p>
+               <p class="subtitle is-6">IntitiateResponse describes the possible response messages that will be
+streamed after the RPC is initiated. While the OTDR is running, "progress"
+messages should be sent at a regular interval. When the OTDR trace is
+completed, a final "results" or "error" message should be streamed before
+the RPC is terminated.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>progress</td>
+                          <td><a href="#gnoi.optical.InitiateProgress">InitiateProgress</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>results</td>
+                          <td><a href="#gnoi.optical.InitiateResults">InitiateResults</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>error</td>
+                          <td><a href="#gnoi.optical.InitiateError">InitiateError</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.InitiateResults" href="#gnoi.optical.InitiateResults">InitiateResults</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>local_path</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p>The local path in which the OTDR file is saved on the device. </p></td>
+                        </tr>
+                      <tr>
+                          <td>otdr_trace</td>
+                          <td><a href="#gnoi.optical.OTDRTrace">OTDRTrace</a></td>
+                          <td></td>
+                          <td><p>The OTDR trace details in a structured format. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.OTDRConfiguration" href="#gnoi.optical.OTDRConfiguration">OTDRConfiguration</a>
+              </p>
+               <p class="subtitle is-6">OTDR configuration options which can be set on the device. It is not required
+that every field be set as some fields may not apply for a given
+implementation.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>acquisition_time_s</td>
+                          <td><a href="#uint32">uint32</a></td>
+                          <td></td>
+                          <td><p>The time in seconds in which the OTDR trace will run continuously to
+collect data. </p></td>
+                        </tr>
+                      <tr>
+                          <td>pulse_width_ns</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>The pulse width in nanoseconds which defines how long pulses sent by the
+OTDR will be during the test. </p></td>
+                        </tr>
+                      <tr>
+                          <td>wavelength_mhz</td>
+                          <td><a href="#uint64">uint64</a></td>
+                          <td></td>
+                          <td><p>The wavelength in MHz that will be sent by the OTDR. This may be left blank
+if the OTDR only supports one wavelength. </p></td>
+                        </tr>
+                      <tr>
+                          <td>range_m</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>The maximum fiber distance range in meters that the OTDR trace will
+support. </p></td>
+                        </tr>
+                      <tr>
+                          <td>fiber_type</td>
+                          <td><a href="#gnoi.optical.FiberTypeProfile">FiberTypeProfile</a></td>
+                          <td></td>
+                          <td><p>The type of fiber that is being measured. </p></td>
+                        </tr>
+                      <tr>
+                          <td>sampling_resolution_m</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>The sampling resolution in meters. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.OTDRTrace" href="#gnoi.optical.OTDRTrace">OTDRTrace</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>total_loss_db</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>Total measured loss of the fiber. </p></td>
+                        </tr>
+                      <tr>
+                          <td>total_length_m</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>Total measured length of the fiber in meters. </p></td>
+                        </tr>
+                      <tr>
+                          <td>optical_return_loss_db</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>Optical return loss of the fiber in dB. </p></td>
+                        </tr>
+                      <tr>
+                          <td>average_loss_db_km</td>
+                          <td><a href="#float">float</a></td>
+                          <td></td>
+                          <td><p>Average fiber loss (dB/km) </p></td>
+                        </tr>
+                      <tr>
+                          <td>discovered_fiber_type</td>
+                          <td><a href="#gnoi.optical.FiberTypeProfile">FiberTypeProfile</a></td>
+                          <td></td>
+                          <td><p>Discovered fiber type, if the OTDR can infer this information. </p></td>
+                        </tr>
+                      <tr>
+                          <td>events</td>
+                          <td><a href="#gnoi.optical.Event">Event</a></td>
+                          <td>repeated</td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.FiberTypeProfile" href="#gnoi.optical.FiberTypeProfile">FiberTypeProfile</a>
+              </p>
+               <p class="subtitle is-6">Type definition for different profiles of fiber types. These match what is
+already defined in OpenConfig under the FIBER_TYPE_PROFILE identityref in
+openconfig-optical-amplifier.yang model.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>FTP_UNKNOWN</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>FTP_DSF</td>
+                        <td>1</td>
+                        <td><p>Dispersion shifted fiber.</p></td>
+                      </tr>
+                    <tr>
+                        <td>FTP_LEAF</td>
+                        <td>2</td>
+                        <td><p>Large effective area fiber.</p></td>
+                      </tr>
+                    <tr>
+                        <td>FTP_SSMF</td>
+                        <td>3</td>
+                        <td><p>Standard single mode fiber.</p></td>
+                      </tr>
+                    <tr>
+                        <td>FTP_TWC</td>
+                        <td>4</td>
+                        <td><p>True wave classic fiber.</p></td>
+                      </tr>
+                    <tr>
+                        <td>FTP_TWRS</td>
+                        <td>5</td>
+                        <td><p>True wave reduced slope fiber.</p></td>
+                      </tr>
+                    <tr>
+                        <td>FTP_LS</td>
+                        <td>6</td>
+                        <td><p>LEAF Submarine fiber.</p></td>
+                      </tr>
+                    <tr>
+                        <td>FTP_TERAWAVE</td>
+                        <td>7</td>
+                        <td><p>TeraWave fiber.</p></td>
+                      </tr>
+                    <tr>
+                        <td>FTP_TERALIGHT</td>
+                        <td>8</td>
+                        <td><p>TeraLight fiber.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.InitiateError.Type" href="#gnoi.optical.InitiateError.Type">InitiateError.Type</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p>An unspecified error. Must use the detail value to describe the issue.</p></td>
+                      </tr>
+                    <tr>
+                        <td>ALREADY_IN_PROGRESS</td>
+                        <td>1</td>
+                        <td><p>An existing OTDR trace is already in progress.</p></td>
+                      </tr>
+                    <tr>
+                        <td>HARDWARE_FAILURE</td>
+                        <td>2</td>
+                        <td><p>The OTDR hardware has failed and cannot complete an OTDR trace.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.InitiateProgress.State" href="#gnoi.optical.InitiateProgress.State">InitiateProgress.State</a>
+              </p>
+               <p class="subtitle is-6">The State enum defines possible states that the OTDR trace may be in
+while running the operation.</p> 
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>UNKNOWN</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>RUNNING</td>
+                        <td>1</td>
+                        <td><p>The OTDR is currently performing an OTDR trace.</p></td>
+                      </tr>
+                    <tr>
+                        <td>PENDING</td>
+                        <td>2</td>
+                        <td><p>The OTDR is pending underlying resources being available.</p></td>
+                      </tr>
+                    <tr>
+                        <td>COMPLETE</td>
+                        <td>3</td>
+                        <td><p>The OTDR trace was completed.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.InitiateRequest.ResultsMethod" href="#gnoi.optical.InitiateRequest.ResultsMethod">InitiateRequest.ResultsMethod</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>RESULTS_UNKNOWN</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>RESULTS_TO_LOCAL_DISK</td>
+                        <td>1</td>
+                        <td><p>Results saved to a file on the device.</p></td>
+                      </tr>
+                    <tr>
+                        <td>RESULTS_IN_RESPONSE</td>
+                        <td>2</td>
+                        <td><p>Results sent back in the response.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">

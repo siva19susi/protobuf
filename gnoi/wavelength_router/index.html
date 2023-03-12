@@ -1,12 +1,12 @@
 <html class="has-navbar-fixed-top">
   <head>
-    <title>gNOI Protobuf Documentation v0.1.0</title>
+    <title>gNOI wavelength_router Service v0.1.0</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="author" content="Siva Sivakumar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
@@ -19,648 +19,221 @@
       <div class="menu-container pt-2">
         <ul class="menu-list">
           <li>
-            <a href="#wavelength_router.proto" class="service has-text-weight-bold is-size-6">wavelength_router.proto</a>
-            <ul>
-              <li>
-                <a class="list-item" href="#gnoi.optical.WavelengthRouter">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-link badge">S</span></div>
-                      <div class="level-item">WavelengthRouter</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustPSDError">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AdjustPSDError</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustPSDProgress">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AdjustPSDProgress</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustPSDRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AdjustPSDRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustPSDResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AdjustPSDResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustSpectrumError">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AdjustSpectrumError</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustSpectrumProgress">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AdjustSpectrumProgress</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustSpectrumRequest">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AdjustSpectrumRequest</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustSpectrumResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">AdjustSpectrumResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.CancelAdjustPSDResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CancelAdjustPSDResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.CancelAdjustSpectrumResponse">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
-                      <div class="level-item">CancelAdjustSpectrumResponse</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustPSDError.Type">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">AdjustPSDError.Type</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustPSDProgress.State">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">AdjustPSDProgress.State</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustPSDRequest.SignalDirection">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">AdjustPSDRequest.SignalDirection</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustSpectrumError.Type">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">AdjustSpectrumError.Type</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustSpectrumProgress.State">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">AdjustSpectrumProgress.State</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="list-item" href="#gnoi.optical.AdjustSpectrumRequest.SignalDirection">
-                  <div class="level is-mobile">
-                    <div class="level-left">
-                      <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
-                      <div class="level-item">AdjustSpectrumRequest.SignalDirection</div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              </ul>
-          </li>
+              <a href="#wavelength_router.proto" class="service has-text-weight-bold is-size-6">wavelength_router.proto</a>
+              <ul>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.WavelengthRouter">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-link badge">S</span></div>
+                          <div class="level-item">WavelengthRouter</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustPSDError">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AdjustPSDError</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustPSDProgress">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AdjustPSDProgress</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustPSDRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AdjustPSDRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustPSDResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AdjustPSDResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustSpectrumError">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AdjustSpectrumError</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustSpectrumProgress">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AdjustSpectrumProgress</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustSpectrumRequest">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AdjustSpectrumRequest</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustSpectrumResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">AdjustSpectrumResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.CancelAdjustPSDResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CancelAdjustPSDResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.CancelAdjustSpectrumResponse">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small has-background-grey-lighter badge">M</span></div>
+                          <div class="level-item">CancelAdjustSpectrumResponse</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustPSDError.Type">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">AdjustPSDError.Type</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustPSDProgress.State">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">AdjustPSDProgress.State</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustPSDRequest.SignalDirection">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">AdjustPSDRequest.SignalDirection</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustSpectrumError.Type">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">AdjustSpectrumError.Type</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustSpectrumProgress.State">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">AdjustSpectrumProgress.State</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <li>
+                    <a class="list-item" href="#gnoi.optical.AdjustSpectrumRequest.SignalDirection">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item"><span class="button is-small is-dark badge">E</span></div>
+                          <div class="level-item">AdjustSpectrumRequest.SignalDirection</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
           </ul>
       </div>
     </aside>
     <nav class="navbar is-mobile is-fixed-top has-header-img">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class='bx bx-menu-alt-left bx-sm'></i></a>
-        <a class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></a>
-        <p class="navbar-item has-text-warning">gNOI Protobuf Documentation</p>
-        <a class="navbar-item has-text-white">v0.1.0</a>
+        <a class="navbar-item has-text-white" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <p class="navbar-item" href="../../"><img src="../../assets/images/nwhite.png" width="65"/></p>
+        <a class="navbar-item has-text-white" href="../../">Home</a>
+        <p class="navbar-item has-text-warning">gNOI wavelength_router Service</p>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item has-text-white">v0.1.0</a>
+          <!-- <div class="navbar-dropdown">
+            <a class="navbar-item">v___1</a>
+            <a class="navbar-item">v___2</a>
+          </div> -->
+        </div>
       </div>
     </nav>
     <div class="section">
       <div class="container">
         <div class="defintion-1">
-          <div class="p-1 mb-5 has-text-centered">
-            <p class="title is-5"><a class="has-text-black service" id="wavelength_router.proto" href="#wavelength_router.proto">wavelength_router.proto</a></p>
-            </div>
-          <hr/>
+            <div class="p-1 mb-5 has-text-centered">
+              <p class="title is-5"><a class="has-text-black service" id="wavelength_router.proto" href="#wavelength_router.proto">wavelength_router.proto</a></p>
+              </div>
+            <hr/>
 
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustPSDError" href="#gnoi.optical.AdjustPSDError">AdjustPSDError</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>type</td>
-                  <td><a href="#gnoi.optical.AdjustPSDError.Type">AdjustPSDError.Type</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>detail</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustPSDProgress" href="#gnoi.optical.AdjustPSDProgress">AdjustPSDProgress</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>state</td>
-                  <td><a href="#gnoi.optical.AdjustPSDProgress.State">AdjustPSDProgress.State</a></td>
-                  <td></td>
-                  <td><p>The state of the OTDR trace requested. Note that this does not include
-error states as these should be returned as a gRPC error. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustPSDRequest" href="#gnoi.optical.AdjustPSDRequest">AdjustPSDRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>component</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td></td>
-                  <td><p>Absolute path to the /components/component list member in the OpenConfig
-model corresponding to the port to perform the adjustment for.
-(e.g., /components/component[name=amp-1-1]) </p></td>
-                </tr>
-                <tr>
-                  <td>direction</td>
-                  <td><a href="#gnoi.optical.AdjustPSDRequest.SignalDirection">AdjustPSDRequest.SignalDirection</a></td>
-                  <td></td>
-                  <td><p>Describes the signal direction that should be adjusted relative to the
-device. For example, "input" would be the signal entering into the device
-from the far end device. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustPSDResponse" href="#gnoi.optical.AdjustPSDResponse">AdjustPSDResponse</a>
-          </p>
-          <p class="subtitle is-6">AdjustPSDResponse describes the possible response messages that will be
-streamed after the RPC is initiated. While the OTDR is running,
-"progress" messages should be sent at a regular interval. When the
-adjustment is completed, an "error" message should be streamed if an
-error is encountered or the RPC should be terminated on success.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>progress</td>
-                  <td><a href="#gnoi.optical.AdjustPSDProgress">AdjustPSDProgress</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>error</td>
-                  <td><a href="#gnoi.optical.AdjustPSDError">AdjustPSDError</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustSpectrumError" href="#gnoi.optical.AdjustSpectrumError">AdjustSpectrumError</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>type</td>
-                  <td><a href="#gnoi.optical.AdjustSpectrumError.Type">AdjustSpectrumError.Type</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>detail</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustSpectrumProgress" href="#gnoi.optical.AdjustSpectrumProgress">AdjustSpectrumProgress</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>state</td>
-                  <td><a href="#gnoi.optical.AdjustSpectrumProgress.State">AdjustSpectrumProgress.State</a></td>
-                  <td></td>
-                  <td><p>The state of the OTDR trace requested. Note that this does not include
-error states as these should be returned as a gRPC error. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustSpectrumRequest" href="#gnoi.optical.AdjustSpectrumRequest">AdjustSpectrumRequest</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>component</td>
-                  <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
-                  <td></td>
-                  <td><p>Absolute path to the /components/component list member in the OpenConfig
-model corresponding to the port to perform the adjustment for.
-(e.g., /components/component[name=wavelength-router-1-1]) </p></td>
-                </tr>
-                <tr>
-                  <td>direction</td>
-                  <td><a href="#gnoi.optical.AdjustSpectrumRequest.SignalDirection">AdjustSpectrumRequest.SignalDirection</a></td>
-                  <td></td>
-                  <td><p>Describes the signal direction that should be adjusted relative to the
-device. For example, "input" would be the signal entering into the device
-from the far end device. </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustSpectrumResponse" href="#gnoi.optical.AdjustSpectrumResponse">AdjustSpectrumResponse</a>
-          </p>
-          <p class="subtitle is-6">AdjustSpectrumResponse describes the possible response messages that will be
-streamed after the RPC is initiated. While the OTDR is running,
-"progress" messages should be sent at a regular interval. When the
-adjustment is completed, an "error" message should be streamed if an
-error is encountered or the RPC should be terminated on success.</p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Field</td>
-                  <td>Type</td>
-                  <td>Label</td>
-                  <td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>progress</td>
-                  <td><a href="#gnoi.optical.AdjustSpectrumProgress">AdjustSpectrumProgress</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                <tr>
-                  <td>error</td>
-                  <td><a href="#gnoi.optical.AdjustSpectrumError">AdjustSpectrumError</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.CancelAdjustPSDResponse" href="#gnoi.optical.CancelAdjustPSDResponse">CancelAdjustPSDResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.CancelAdjustSpectrumResponse" href="#gnoi.optical.CancelAdjustSpectrumResponse">CancelAdjustSpectrumResponse</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustPSDError.Type" href="#gnoi.optical.AdjustPSDError.Type">AdjustPSDError.Type</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p>An unspecified error. Must use the detail value to describe the issue.</p></td>
-                </tr>
-                <tr>
-                  <td>PORT_BUSY</td>
-                  <td>1</td>
-                  <td><p>An adjustment was requested for a port that is busy (e.g., requesting
-input adjustment for a port that is currently running an output
-adjustment)</p></td>
-                </tr>
-                <tr>
-                  <td>HARDWARE_FAILURE</td>
-                  <td>2</td>
-                  <td><p>The hardware has failed and cannot complete an adjustment.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustPSDProgress.State" href="#gnoi.optical.AdjustPSDProgress.State">AdjustPSDProgress.State</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>UNKNOWN</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>RUNNING</td>
-                  <td>1</td>
-                  <td><p>The PSD adjustment is running.</p></td>
-                </tr>
-                <tr>
-                  <td>COMPLETE</td>
-                  <td>2</td>
-                  <td><p>The PSD adjustment completed successfully.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustPSDRequest.SignalDirection" href="#gnoi.optical.AdjustPSDRequest.SignalDirection">AdjustPSDRequest.SignalDirection</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DIRECTION_UNKNOWN</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>DIRECTION_INPUT</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>DIRECTION_OUTPUT</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustSpectrumError.Type" href="#gnoi.optical.AdjustSpectrumError.Type">AdjustSpectrumError.Type</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>UNSPECIFIED</td>
-                  <td>0</td>
-                  <td><p>An unspecified error. Must use the detail value to describe the issue.</p></td>
-                </tr>
-                <tr>
-                  <td>PORT_BUSY</td>
-                  <td>1</td>
-                  <td><p>An adjustment was requested for a port that is busy (e.g., requesting
-input adjustment for a port that is currently running an output
-adjustment)</p></td>
-                </tr>
-                <tr>
-                  <td>HARDWARE_FAILURE</td>
-                  <td>2</td>
-                  <td><p>The hardware has failed and cannot complete an adjustment.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustSpectrumProgress.State" href="#gnoi.optical.AdjustSpectrumProgress.State">AdjustSpectrumProgress.State</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>UNKNOWN</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>RUNNING</td>
-                  <td>1</td>
-                  <td><p>The spectrum adjustment is running.</p></td>
-                </tr>
-                <tr>
-                  <td>COMPLETE</td>
-                  <td>2</td>
-                  <td><p>The spectrum adjustment completed successfully.</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.AdjustSpectrumRequest.SignalDirection" href="#gnoi.optical.AdjustSpectrumRequest.SignalDirection">AdjustSpectrumRequest.SignalDirection</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DIRECTION_UNKNOWN</td>
-                  <td>0</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>DIRECTION_INPUT</td>
-                  <td>1</td>
-                  <td><p></p></td>
-                </tr>
-                <tr>
-                  <td>DIRECTION_OUTPUT</td>
-                  <td>2</td>
-                  <td><p></p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          <p class="title is-6 has-text-weight-normal">
-            <a class="service-item" id="gnoi.optical.WavelengthRouter" href="#gnoi.optical.WavelengthRouter">WavelengthRouter</a>
-          </p>
-          <p class="subtitle is-6"></p>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>AdjustPSD</td>
-                    <td><a href="#gnoi.optical.AdjustPSDRequest">AdjustPSDRequest</a></td>
-                    <td><a href="#gnoi.optical.AdjustPSDResponse">AdjustPSDResponse</a> stream</td>
-                    <td><p>AdjustPSD performs a power spectral density (PSD) adjustment on an optical
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.WavelengthRouter" href="#gnoi.optical.WavelengthRouter">WavelengthRouter</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>AdjustPSD</td>
+                        <td><a href="#gnoi.optical.AdjustPSDRequest">AdjustPSDRequest</a></td>
+                        <td><a href="#gnoi.optical.AdjustPSDResponse">AdjustPSDResponse</a> stream</td>
+                        <td><p>AdjustPSD performs a power spectral density (PSD) adjustment on an optical
 DWDM line system port.
 
 This RPC's initial message triggers adjustments. The target should validate
@@ -674,21 +247,21 @@ updates this way. There is no means by which an adjustment that has been
 triggered by a client can be cancelled unless the CancelAdjustPSD RPC is
 used.
 DEPRECATED, use AdjustSpectrum.</p></td>
-                  </tr>
-                <tr>
-                    <td>CancelAdjustPSD</td>
-                    <td><a href="#gnoi.optical.AdjustPSDRequest">AdjustPSDRequest</a></td>
-                    <td><a href="#gnoi.optical.CancelAdjustPSDResponse">CancelAdjustPSDResponse</a></td>
-                    <td><p>CancelAdjustPSD cancels an in-progress AdjustPSD request. If an
+                      </tr>
+                    <tr>
+                        <td>CancelAdjustPSD</td>
+                        <td><a href="#gnoi.optical.AdjustPSDRequest">AdjustPSDRequest</a></td>
+                        <td><a href="#gnoi.optical.CancelAdjustPSDResponse">CancelAdjustPSDResponse</a></td>
+                        <td><p>CancelAdjustPSD cancels an in-progress AdjustPSD request. If an
 adjustment is not being performed for the provided request, then the RPC
 should return successfully.
 DEPRECATED, use CancelAdjustSpectrum.</p></td>
-                  </tr>
-                <tr>
-                    <td>AdjustSpectrum</td>
-                    <td><a href="#gnoi.optical.AdjustSpectrumRequest">AdjustSpectrumRequest</a></td>
-                    <td><a href="#gnoi.optical.AdjustSpectrumResponse">AdjustSpectrumResponse</a> stream</td>
-                    <td><p>AdjustSpectrum performs a spectrum power adjustment on an optical
+                      </tr>
+                    <tr>
+                        <td>AdjustSpectrum</td>
+                        <td><a href="#gnoi.optical.AdjustSpectrumRequest">AdjustSpectrumRequest</a></td>
+                        <td><a href="#gnoi.optical.AdjustSpectrumResponse">AdjustSpectrumResponse</a> stream</td>
+                        <td><p>AdjustSpectrum performs a spectrum power adjustment on an optical
 DWDM line system port.
 
 This RPC's initial message triggers adjustments. The target should validate
@@ -701,42 +274,471 @@ operation can reconnect, requesting the same operation, and receive status
 updates this way. There is no means by which an adjustment that has been
 triggered by a client can be cancelled unless the CancelAdjustSpectrum
 RPC is used.</p></td>
-                  </tr>
-                <tr>
-                    <td>CancelAdjustSpectrum</td>
-                    <td><a href="#gnoi.optical.AdjustSpectrumRequest">AdjustSpectrumRequest</a></td>
-                    <td><a href="#gnoi.optical.CancelAdjustSpectrumResponse">CancelAdjustSpectrumResponse</a></td>
-                    <td><p>CancelAdjustSpectrum cancels an in-progress AdjustSpectrum request. If an
+                      </tr>
+                    <tr>
+                        <td>CancelAdjustSpectrum</td>
+                        <td><a href="#gnoi.optical.AdjustSpectrumRequest">AdjustSpectrumRequest</a></td>
+                        <td><a href="#gnoi.optical.CancelAdjustSpectrumResponse">CancelAdjustSpectrumResponse</a></td>
+                        <td><p>CancelAdjustSpectrum cancels an in-progress AdjustSpectrum request. If an
 adjustment is not being performed for the provided request, then the RPC
 should return successfully.</p></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-          <h4>Methods with deprecated option</h4>
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <thead class="has-background-light has-text-weight-bold">
-                <tr>
-                  <td>Method Name</td>
-                  <td>Option</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>AdjustPSD</td>
-                  <td><p>true</p></td>
-                </tr>
-                <tr>
-                  <td>CancelAdjustPSD</td>
-                  <td><p>true</p></td>
-                </tr>
-                </tbody>
-            </table>
-          </div>
-          </div>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+              <h4>Methods with deprecated option</h4>
+                  <div class="table-container">
+                    <table class="table is-fullwidth">
+                      <thead class="has-background-light has-text-weight-bold">
+                        <tr>
+                          <td>Method Name</td>
+                          <td>Option</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>AdjustPSD</td>
+                            <td><p>true</p></td>
+                          </tr>
+                        <tr>
+                            <td>CancelAdjustPSD</td>
+                            <td><p>true</p></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustPSDError" href="#gnoi.optical.AdjustPSDError">AdjustPSDError</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>type</td>
+                          <td><a href="#gnoi.optical.AdjustPSDError.Type">AdjustPSDError.Type</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>detail</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustPSDProgress" href="#gnoi.optical.AdjustPSDProgress">AdjustPSDProgress</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>state</td>
+                          <td><a href="#gnoi.optical.AdjustPSDProgress.State">AdjustPSDProgress.State</a></td>
+                          <td></td>
+                          <td><p>The state of the OTDR trace requested. Note that this does not include
+error states as these should be returned as a gRPC error. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustPSDRequest" href="#gnoi.optical.AdjustPSDRequest">AdjustPSDRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>component</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td></td>
+                          <td><p>Absolute path to the /components/component list member in the OpenConfig
+model corresponding to the port to perform the adjustment for.
+(e.g., /components/component[name=amp-1-1]) </p></td>
+                        </tr>
+                      <tr>
+                          <td>direction</td>
+                          <td><a href="#gnoi.optical.AdjustPSDRequest.SignalDirection">AdjustPSDRequest.SignalDirection</a></td>
+                          <td></td>
+                          <td><p>Describes the signal direction that should be adjusted relative to the
+device. For example, "input" would be the signal entering into the device
+from the far end device. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustPSDResponse" href="#gnoi.optical.AdjustPSDResponse">AdjustPSDResponse</a>
+              </p>
+               <p class="subtitle is-6">AdjustPSDResponse describes the possible response messages that will be
+streamed after the RPC is initiated. While the OTDR is running,
+"progress" messages should be sent at a regular interval. When the
+adjustment is completed, an "error" message should be streamed if an
+error is encountered or the RPC should be terminated on success.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>progress</td>
+                          <td><a href="#gnoi.optical.AdjustPSDProgress">AdjustPSDProgress</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>error</td>
+                          <td><a href="#gnoi.optical.AdjustPSDError">AdjustPSDError</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustSpectrumError" href="#gnoi.optical.AdjustSpectrumError">AdjustSpectrumError</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>type</td>
+                          <td><a href="#gnoi.optical.AdjustSpectrumError.Type">AdjustSpectrumError.Type</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>detail</td>
+                          <td><a href="#string">string</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustSpectrumProgress" href="#gnoi.optical.AdjustSpectrumProgress">AdjustSpectrumProgress</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>state</td>
+                          <td><a href="#gnoi.optical.AdjustSpectrumProgress.State">AdjustSpectrumProgress.State</a></td>
+                          <td></td>
+                          <td><p>The state of the OTDR trace requested. Note that this does not include
+error states as these should be returned as a gRPC error. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustSpectrumRequest" href="#gnoi.optical.AdjustSpectrumRequest">AdjustSpectrumRequest</a>
+              </p>
+              
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>component</td>
+                          <td><a href="#gnoi.types.Path">gnoi.types.Path</a></td>
+                          <td></td>
+                          <td><p>Absolute path to the /components/component list member in the OpenConfig
+model corresponding to the port to perform the adjustment for.
+(e.g., /components/component[name=wavelength-router-1-1]) </p></td>
+                        </tr>
+                      <tr>
+                          <td>direction</td>
+                          <td><a href="#gnoi.optical.AdjustSpectrumRequest.SignalDirection">AdjustSpectrumRequest.SignalDirection</a></td>
+                          <td></td>
+                          <td><p>Describes the signal direction that should be adjusted relative to the
+device. For example, "input" would be the signal entering into the device
+from the far end device. </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustSpectrumResponse" href="#gnoi.optical.AdjustSpectrumResponse">AdjustSpectrumResponse</a>
+              </p>
+               <p class="subtitle is-6">AdjustSpectrumResponse describes the possible response messages that will be
+streamed after the RPC is initiated. While the OTDR is running,
+"progress" messages should be sent at a regular interval. When the
+adjustment is completed, an "error" message should be streamed if an
+error is encountered or the RPC should be terminated on success.</p> 
+              <div class="table-container">
+                  <table class="table is-fullwidth">
+                    <thead class="has-background-light has-text-weight-bold">
+                      <tr>
+                        <td>Field</td>
+                        <td>Type</td>
+                        <td>Label</td>
+                        <td>Description</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>progress</td>
+                          <td><a href="#gnoi.optical.AdjustSpectrumProgress">AdjustSpectrumProgress</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      <tr>
+                          <td>error</td>
+                          <td><a href="#gnoi.optical.AdjustSpectrumError">AdjustSpectrumError</a></td>
+                          <td></td>
+                          <td><p> </p></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.CancelAdjustPSDResponse" href="#gnoi.optical.CancelAdjustPSDResponse">CancelAdjustPSDResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.CancelAdjustSpectrumResponse" href="#gnoi.optical.CancelAdjustSpectrumResponse">CancelAdjustSpectrumResponse</a>
+              </p>
+              
+              <br/>
+              <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustPSDError.Type" href="#gnoi.optical.AdjustPSDError.Type">AdjustPSDError.Type</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p>An unspecified error. Must use the detail value to describe the issue.</p></td>
+                      </tr>
+                    <tr>
+                        <td>PORT_BUSY</td>
+                        <td>1</td>
+                        <td><p>An adjustment was requested for a port that is busy (e.g., requesting
+input adjustment for a port that is currently running an output
+adjustment)</p></td>
+                      </tr>
+                    <tr>
+                        <td>HARDWARE_FAILURE</td>
+                        <td>2</td>
+                        <td><p>The hardware has failed and cannot complete an adjustment.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustPSDProgress.State" href="#gnoi.optical.AdjustPSDProgress.State">AdjustPSDProgress.State</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>UNKNOWN</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>RUNNING</td>
+                        <td>1</td>
+                        <td><p>The PSD adjustment is running.</p></td>
+                      </tr>
+                    <tr>
+                        <td>COMPLETE</td>
+                        <td>2</td>
+                        <td><p>The PSD adjustment completed successfully.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustPSDRequest.SignalDirection" href="#gnoi.optical.AdjustPSDRequest.SignalDirection">AdjustPSDRequest.SignalDirection</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>DIRECTION_UNKNOWN</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>DIRECTION_INPUT</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>DIRECTION_OUTPUT</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustSpectrumError.Type" href="#gnoi.optical.AdjustSpectrumError.Type">AdjustSpectrumError.Type</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>UNSPECIFIED</td>
+                        <td>0</td>
+                        <td><p>An unspecified error. Must use the detail value to describe the issue.</p></td>
+                      </tr>
+                    <tr>
+                        <td>PORT_BUSY</td>
+                        <td>1</td>
+                        <td><p>An adjustment was requested for a port that is busy (e.g., requesting
+input adjustment for a port that is currently running an output
+adjustment)</p></td>
+                      </tr>
+                    <tr>
+                        <td>HARDWARE_FAILURE</td>
+                        <td>2</td>
+                        <td><p>The hardware has failed and cannot complete an adjustment.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustSpectrumProgress.State" href="#gnoi.optical.AdjustSpectrumProgress.State">AdjustSpectrumProgress.State</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>UNKNOWN</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>RUNNING</td>
+                        <td>1</td>
+                        <td><p>The spectrum adjustment is running.</p></td>
+                      </tr>
+                    <tr>
+                        <td>COMPLETE</td>
+                        <td>2</td>
+                        <td><p>The spectrum adjustment completed successfully.</p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            <p class="title is-6 has-text-weight-normal">
+                <a class="service-item" id="gnoi.optical.AdjustSpectrumRequest.SignalDirection" href="#gnoi.optical.AdjustSpectrumRequest.SignalDirection">AdjustSpectrumRequest.SignalDirection</a>
+              </p>
+              
+              <div class="table-container">
+                <table class="table is-fullwidth">
+                  <thead class="has-background-light has-text-weight-bold">
+                    <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>DIRECTION_UNKNOWN</td>
+                        <td>0</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>DIRECTION_INPUT</td>
+                        <td>1</td>
+                        <td><p></p></td>
+                      </tr>
+                    <tr>
+                        <td>DIRECTION_OUTPUT</td>
+                        <td>2</td>
+                        <td><p></p></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        <br/>
         <div class="defintion-2">
-          <p class="title is-6 has-text-weight-normal mb-4">
+          <p class="title is-6 has-text-weight-normal">
             <a class="service-item" id="scalar-value-types" href="#scalar-value-types">Scalar Value Types</a>
           </p>
           <div class="table-container">
